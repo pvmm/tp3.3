@@ -1,10 +1,10 @@
-PROGRAM Voorbeeld_SetMem;
+PROGRAM Example_SetMem;
 
-VAR aantal_blokken : BYTE;
+VAR numBlocks : BYTE;
 
 BEGIN
   ClearMem;
-  aantal_blokken:=SetMem(10);
-  READLN;                       { wacht op return }
+  numBlocks:=SetMem(10);
+  READLN;                       { wait for return }
   ClearMem;
 END.

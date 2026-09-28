@@ -1,16 +1,16 @@
-PROGRAM voorbeeld_FWrite;
+PROGRAM example_FWrite;
 
 TYPE str255 = STRING[255];
 
-PROCEDURE FastWrite(zin : str255);     { Kleine hulp procedure }
-VAR tekst : str255;
+PROCEDURE FastWrite(sentence : str255);     { Small helper procedure }
+VAR msgText : str255;
 BEGIN
-  tekst:=zin;
-  FWrite(tekst)
+  msgText:=sentence;
+  FWrite(msgText)
 END;
 
 BEGIN
   REPEAT
-    FastWrite('Deze zin wordt voortdurend op het scherm gezet.')
+    FastWrite('This sentence is continuously placed on the screen.')
   UNTIL KEYPRESSED;
 END.

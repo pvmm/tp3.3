@@ -1,10 +1,10 @@
-PROGRAM voorbeeld_Strig;
+PROGRAM example_Strig;
 
-CONST knop : ARRAY[0..4] OF STRING[15] = ('knop 0 (spatie)',
-                         'knop 1 poort 1','knop 1 poort 2',
-                         'knop 2 poort 1','knop 2 poort 2');
+CONST button : ARRAY[0..4] OF STRING[15] = ('button 0 (space)',
+                         'button 1 port 1','button 1 port 2',
+                         'button 2 port 1','button 2 port 2');
 
-VAR teller : BYTE;
+VAR counter : BYTE;
          k : CHAR;
 
 BEGIN
@@ -12,8 +12,8 @@ BEGIN
   REPEAT
     k:=' ';
     GOTOXY(1,1);
-    FOR teller:=0 TO 4 DO
-      WRITELN(knop[teller],'=',Strig(teller));
+    FOR counter:=0 TO 4 DO
+      WRITELN(button[counter],'=',Strig(counter));
     IF KEYPRESSED THEN READ(KBD,k)
   UNTIL k=#13;
 END.

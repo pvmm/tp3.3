@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_FillBox;
+PROGRAM example_FillBox;
 
 BEGIN
   Screen(5);
@@ -6,6 +6,6 @@ BEGIN
   Logopr:=0;
   Atrbyt:=15;
   FillBox(30,30,70,90);
-  READLN;                { wacht op return }
+  READLN;                { wait for return }
   Screen(0);
 END.

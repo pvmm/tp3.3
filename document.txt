@@ -1,40 +1,40 @@
-1. 	BASIS TAALELEMENTEN
+1. 	BASIC LANGUAGE ELEMENTS
 
-1.1 Basis symbolen
+1.1 Basic symbols
 
-De wezenlijke vocabulaire van Turbo Pascal bestaat uit symbolen, die in letters, cijfers en 
-speciale symbolen ingedeeld kunnen worden:
-
-
-
-Letters: A tot Z, a tot z en _ (onderstreping)
-
-Cijfers: 0 1 2 3 4 5 6 7 8 9
-
-Speciale symbolen: + - * / = ^ < > [ ] ( ) { } . , : ; ' # $
+The essential vocabulary of Turbo Pascal consists of symbols, which can be divided into letters, digits and
+special symbols:
 
 
 
-Tussen hoofd- en kleine letters wordt geen onderscheid gemaakt. Bepaalde operatoren en 
-begrenzers worden uit twee speciale symbolen opgebouwd:
+Letters: A to Z, a to z and _ (underscore)
+
+Digits: 0 1 2 3 4 5 6 7 8 9
+
+Special symbols: + - * / = ^ < > [ ] ( ) { } . , : ; ' # $
 
 
 
-Toewijzingsoperator: :=
+No distinction is made between upper- and lower-case letters. Certain operators and
+delimiters are built from two special symbols:
 
-Relationele operatoren: <> <= >=
 
-Deelbereik begrenzers: ..
 
-Haakjes: ( ) kunnen in plaats van [ ] gebruikt worden.
+Assignment operator: :=
 
-Commentaar: (* *) kunnen in plaats van { } gebruikt worden.
+Relational operators: <> <= >=
 
-1.2 Gereserveerde woorden
+Subrange delimiters: ..
 
-Gereserveerde woorden zijn een vastliggend onderdeel van Turbo Pascal en kunnen niet 
-opnieuw gedefinieerd worden. Ze kunnen niet door de gebruiker als gedefinieerde namen 
-worden gebruikt. De gereserveerde woorden zijn:
+Parentheses: ( ) can be used instead of [ ].
+
+Comments: (* *) can be used instead of { }.
+
+1.2 Reserved words
+
+Reserved words are a fixed part of Turbo Pascal and cannot be
+redefined. They cannot be used by the user as defined names.
+The reserved words are:
 
 
 
@@ -60,17 +60,17 @@ worden gebruikt. De gereserveerde woorden zijn:
 
  end        mod        set        *xor
 
-Tabel 1 - 1
-In de gehele handleiding zijn de gereserveerde woorden vet gedrukt. De sterretjes geven 
-gereserveerde woorden aan die in de Pascal standaard niet gedefinieerd zijn.
+Table 1 - 1
+Throughout the manual the reserved words are printed in bold. The asterisks indicate
+reserved words that are not defined in the standard Pascal.
 
-1.3 Standaard namen
+1.3 Standard names
 
-Turbo Pascal heeft de volgende standaard namen voor voorgedefinieerde typen, 
-constanten, variabelen, procedures en functies. Al deze namen kunnen opnieuw 
-gedefinieerd worden, maar dat betekend, dat hun mogelijkheden worden beperkt. Zulke 
-veranderingen kunnen gemakkelijk tot verwarring leiden. De volgende standaard namen 
-kunnen daarom het best in hun oorspronkelijke definitie worden gelaten:
+Turbo Pascal has the following standard names for predefined types,
+constants, variables, procedures and functions. All these names can be
+redefined, but that means that their capabilities will be limited. Such
+changes can easily lead to confusion. The following standard names
+are therefore best left in their original definition:
 
 
 
@@ -128,35 +128,35 @@ kunnen daarom het best in hun oorspronkelijke definitie worden gelaten:
 
  DelLine    KeyPressed
 
-Tabel 1 - 2
-In de gehele handleiding worden de standaard namen, zoals ook alle andere namen (zie 
-hoofdstuk 3.1 "Namen") met hoofd- en kleine letters geschreven. In de tekst worden ze 
-cursief gedrukt.
+Table 1 - 2
+Throughout the manual the standard names, like all other names (see
+chapter 3.1 "Names") are written with upper- and lower-case letters. In the text they are
+printed in italics.
 
-1.4 Begrenzers
+1.4 Delimiters
 
-Taalelementen moeten minstens door één van de volgende begrenzers gescheiden 
-worden: spatie, tab, nieuwe regel of commentaar.
+Language elements must be separated by at least one of the following delimiters 
+be: space, tab, new line or comment.
 
-1.5 Programma regels
+1.5 Program lines
 
-Programma regels mogen maximaal 127 tekens lang zijn, meer tekens worden door de 
-compiler genegeerd. In eerdere TURBO versies liet de editor ook maar 127 tekens op één 
-regel toe. Nu er gebruik gemaakt moet worden van een externe editor zou de source 
-langere regels kunnen bevatten. In zo'n geval worden de tekens na kolom 127 genegeerd, 
-let u er dus op dat de regels korter blijven.
+Program lines may be at most 127 characters long, more characters are
+ignored by the compiler. In earlier TURBO versions the editor also allowed only 127 characters on one 
+line. Now that an external editor must be used the source
+may contain longer lines. In that case the characters after column 127 are ignored,
+so make sure that the lines remain shorter.
 
 2. 	SCALAIRE STANDAARD TYPEN
 
 Een data type definieert de aard van de waarden, die een variabele kan aannemen. Iedere 
-variabele in een programma moet één data type hebben. Hoewel data typen in Turbo 
+variabele in een programma moet Ã©Ã©n data type hebben. Hoewel data typen in Turbo 
 Pascal zeer complex kunnen zijn, worden ze allemaal uit eenvoudige (ongestructureerde) 
 typen opgebouwd.
 
 
 
 Een eenvoudig type kan of door de programmeur gedefinieerd zijn (het type wordt dan 
-gedeclareerd scalair type genoemd), of het is één van de scalaire standaard typen: 
+gedeclareerd scalair type genoemd), of het is Ã©Ã©n van de scalaire standaard typen: 
 Longint, Integer, Real, Boolean, Char of Byte. Er volgt een beschrijving van deze zes 
 scalaire data typen.
 
@@ -179,16 +179,16 @@ derhalve compatibel met het type Integer, dat betekend dat wanneer een waarde va
 type Byte verwacht wordt er ook een Integer gebruikt mag worden en omgekeerd. Een 
 uitzondering hierop geldt bij de overdracht van parameters. Verder kunnen Bytes en 
 Integers in expressies gemengd worden en Byte variabelen kunnen integer waarden 
-toegewezen krijgen. Een variabele van het type Byte neemt één byte geheugen in beslag.
+toegewezen krijgen. Een variabele van het type Byte neemt Ã©Ã©n byte geheugen in beslag.
 
-2.3 Real (reële getallen)
+2.3 Real (reÃ«le getallen)
 
-Het bereik van reële getallen (data type real) is 1E-38 tot 1E+38. De mantisse heeft tot 11 
-significante cijfers. De opslag van een reëel getal neemt 6 bytes geheugen in beslag.
+Het bereik van reÃ«le getallen (data type real) is 1E-38 tot 1E+38. De mantisse heeft tot 11 
+significante cijfers. De opslag van een reÃ«el getal neemt 6 bytes geheugen in beslag.
 
 
 
-Bij een rekenkundige operatie met reële getallen veroorzaakt een overloop een 
+Bij een rekenkundige operatie met reÃ«le getallen veroorzaakt een overloop een 
 programmastop en de melding van een looptijdfout (runtime error). Een onderschrijding 
 van de bereikgrens leidt tot een resultaat van nul.
 
@@ -199,11 +199,11 @@ tussen het type Real en de andere scalaire typen opgemerkt moeten worden:
 
 
 
-1) 	De functies Pred en Succ mogen geen reële getallen als argument ontvangen.
+1) 	De functies Pred en Succ mogen geen reÃ«le getallen als argument ontvangen.
 
 2) 	Het type Real mag niet bij de indexering van arrays gebruikt worden.
 
-3) 	Het type Real kan niet gebruikt worden om het basis type van een set te definiëren.
+3) 	Het type Real kan niet gebruikt worden om het basis type van een set te definiÃ«ren.
 
 4) 	Het type Real kan niet in de lus opdrachten for en case gebruikt worden.
 
@@ -213,7 +213,7 @@ tussen het type Real en de andere scalaire typen opgemerkt moeten worden:
 
 Een boolse waarheidswaarde kan alleen de logische waarden waar of niet waar, waarvan 
 de standaard namen True respectievelijk False zijn, aannemen. Deze zijn zo gedefinieerd 
-dat True > False. Een boolean variabele neemt één byte geheugen in beslag. De ordinale 
+dat True > False. Een boolean variabele neemt Ã©Ã©n byte geheugen in beslag. De ordinale 
 waarde van True is 1, en van False is 0.
 
 2.5 Char (alfanumerieke tekens)
@@ -232,7 +232,7 @@ Namen (Engl.: identifier) worden gebruikt, om labels, constanten, typen, variabe
 procedures en functies mee te identificeren. Een naam bestaat uit een letter of een 
 onderstreping, gevolgd door een willekeurige combinatie van letters, cijfers en 
 onderstrepingen. De lengte van een naam wordt alleen begrenst door het aantal tekens 
-(127) dat op één regel mag staan en alle letters van de naam zijn significant voor de 
+(127) dat op Ã©Ã©n regel mag staan en alle letters van de naam zijn significant voor de 
 compiler.
 
 
@@ -290,7 +290,7 @@ $123G    mag niet omdat G geen bestaand hexadecimaal cijfer is.
 
 1.2345   mag niet omdat een heel getal geen punt mag bevatten.
 
-Reële getallen
+ReÃ«le getallen
 
 Het type Real heeft een bereik van 1E-38 tot en met 1E+38. Dit betekend een mantisse 
 van 11 significante cijfers. U kunt de exponent schrijfwijze gebruiken, waarbij de letter E 
@@ -326,7 +326,7 @@ er omheen:
 
 
 Een enkelvoudig aanhalingsteken kan in de String staan doordat het dubbel geschreven 
-wordt. Strings die maar één enkel teken bevatten gelden als het standaard type Char. Een 
+wordt. Strings die maar Ã©Ã©n enkel teken bevatten gelden als het standaard type Char. Een 
 String is met een array of char van dezelfde lengte compatibel. Alle string constanten 
 zijn met alle String typen compatibel.
 
@@ -348,7 +348,7 @@ Voorbeelden:
 
 Zoals in het tweede en derde voorbeeld te zien is, wordt een enkelvoudig aanhalingsteken 
 in een String als twee op elkaar volgende aanhalingstekens geschreven. De vier op elkaar 
-volgende aanhalingstekens in het derde voorbeeld stelt een String voor met één enkel 
+volgende aanhalingstekens in het derde voorbeeld stelt een String voor met Ã©Ã©n enkel 
 aanhalingsteken.
 
 Het laatste voorbeeld - aanhalingstekens die geen tekens omsluiten betekenen een lege 
@@ -612,9 +612,9 @@ ook getypeerde constanten worden opgenomen.
 
 Een data type in Pascal mag zowel direct beschreven worden in het variabele declaratie 
 deel, als via een naamsverwijzing in het type definitie deel. Er zijn verschillende 
-standaard typen voorhanden, en de programmeur kan zijn eigen type definiëren via het 
+standaard typen voorhanden, en de programmeur kan zijn eigen type definiÃ«ren via het 
 type declaratie deel. Het gereserveerde woord type gaat vooraf aan het type definitie deel 
-en wordt gevolgd door één of meer type toekenningen, welke gescheiden worden door 
+en wordt gevolgd door Ã©Ã©n of meer type toekenningen, welke gescheiden worden door 
 puntkomma's. Elke type toekenning bestaat uit een naam, gevolgd door het is-gelijk teken 
 (=) en een type.
 
@@ -642,7 +642,7 @@ variabele 'kent'.
 
 
 
-Een variabele declaratie bestaat uit het gereserveerde woord var gevolgd door één of 
+Een variabele declaratie bestaat uit het gereserveerde woord var gevolgd door Ã©Ã©n of 
 meer namen, gescheiden door een komma, en gevolgd door een dubbele punt en een type. 
 Hiermee ontstaat een nieuwe variabele van het gespecificeerde type en aangeduid met 
 zijn eigen naam.
@@ -673,13 +673,13 @@ var
 4.2.5 Procedure en functie declaratie deel
 
 Het procedure declaratie deel wordt gebruikt om een procedure binnen een blok of 
-programma (zie hoofdstuk 15.2.1) te definiëren. Een procedure wordt aangeroepen met 
+programma (zie hoofdstuk 15.2.1) te definiÃ«ren. Een procedure wordt aangeroepen met 
 een procedure opdracht (zie hoofdstuk 6.1.2) en na afloop wordt het programma hervat 
 met de opdracht die volgt direct op de procedure opdracht.
 
 
 
-Een functie declaratie wordt gebruikt om een programmadeel te definiëren dat een 
+Een functie declaratie wordt gebruikt om een programmadeel te definiÃ«ren dat een 
 waarde berekend en aflevert (zie hoofdstuk 15.3). Een functie wordt uitgevoerd als zijn 
 naam als onderdeel van een expressie (zie hoofdstuk 5.2) is gebruikt.
 
@@ -706,11 +706,11 @@ behandeld.
 
 5.1 Operatoren
 
-Operatoren vallen in vijf categorieën, die hier op prioriteit geordend zijn:
+Operatoren vallen in vijf categorieÃ«n, die hier op prioriteit geordend zijn:
 
 
 
-1) 	Monadische min (min met maar één operand).
+1) 	Monadische min (min met maar Ã©Ã©n operand).
 
 2) 	Not operator.
 
@@ -1266,7 +1266,7 @@ Volume (Radius, Hoogte)
 
 Het opdrachtdeel definieert de actie die door het programma (of het subprogramma) 
 uitgevoerd moet worden. Elke opdracht specificeert een deel van de actie. In die zin is 
-Pascal een sequentiële taal: de opdrachten worden sequentieel afgehandeld, nooit 
+Pascal een sequentiÃ«le taal: de opdrachten worden sequentieel afgehandeld, nooit 
 tegelijk. Het opdrachtdeel is omsloten met de gereserveerde woorden begin en end, 
 waarbinnen de opdrachten door puntkomma's gescheiden zijn. Opdrachten kunnen 
 enkelvoudig of gestructureerd zijn.
@@ -1328,7 +1328,7 @@ WerkFileBij (KlantKaart);
 6.1.3 Goto opdracht
 
 Een goto opdracht bestaat uit het gereserveerde woord goto, waarop een labelnaam volgt. 
-De goto opdracht zorgt ervoor dat de sequentiële verwerking van het programma 
+De goto opdracht zorgt ervoor dat de sequentiÃ«le verwerking van het programma 
 onderbroken wordt, en verder gaat op de positie die met de labelnaam is gemarkeerd. De 
 volgende regels moeten bij het gebruik van goto in acht genomen worden.
 
@@ -1364,7 +1364,7 @@ opdracht wordt verschoven naar hoofdstuk 10.2.
 
 6.2.1 Samengestelde opdracht
 
-Een samengestelde opdracht wordt gebruikt als de Pascal syntax maar één opdracht 
+Een samengestelde opdracht wordt gebruikt als de Pascal syntax maar Ã©Ã©n opdracht 
 toestaat maar er meerdere opdrachten gewenst. Het bestaat uit een willekeurig aantal 
 opdrachten, die met puntkomma's gescheiden zijn en door de gereserveerde woorden 
 begin en end ingesloten worden. De aparte opdrachten van de samengestelde opdracht 
@@ -1388,7 +1388,7 @@ end;
 
 6.2.2 Voorwaardelijke opdracht
 
-Een voorwaardelijke opdracht kiest één van zijn deel opdrachten voor de uitvoering uit.
+Een voorwaardelijke opdracht kiest Ã©Ã©n van zijn deel opdrachten voor de uitvoering uit.
 
 6.2.2.1 If opdracht
 
@@ -1416,7 +1416,7 @@ if expr1 then
 
 
 
-wordt vermeden, doordat het als volgt geïnterpreteerd wordt:
+wordt vermeden, doordat het als volgt geÃ¯nterpreteerd wordt:
 
 
 
@@ -1480,7 +1480,7 @@ komma's gescheiden zijn en die gevolgd worden door een dubbele punt. Een deelber
 wordt als twee constanten geschreven die gescheiden worden door de 
 deelbereikbegrenzer '..'. Het type van de constanten moet gelijk zijn aan het type van de 
 sorteerder. De opdracht, die op het case label volgt, wordt uitgevoerd als de waarde van 
-de sorteerder gelijk is aan één van de constanten, of in een deelbereik ligt.
+de sorteerder gelijk is aan Ã©Ã©n van de constanten, of in een deelbereik ligt.
 
 
 
@@ -1537,7 +1537,7 @@ end;
 
 Lus opdrachten geven aan, dat bepaalde opdrachten herhaald uitgevoerd moeten worden. 
 Als het aantal herhalingen vooraf bekend is, dat betekend voordat de herhaling 
-plaatsvindt, is de for opdracht de geëigende opdracht om deze situatie uit te drukken. 
+plaatsvindt, is de for opdracht de geÃ«igende opdracht om deze situatie uit te drukken. 
 Anders zou de while of de repeat opdracht gebruikt moeten worden.
 
 6.2.3.1 For opdracht
@@ -1589,7 +1589,7 @@ eindwaarde bereikt is, moet een goto opdracht gebruikt worden, hoewel zulke
 programmastructuren niet worden aangeraden. Het programma blijft duidelijker als in 
 zo'n geval een while of een repeat opdracht gebruikt wordt.
 
-Na de beëindiging van de for opdracht is de controlevariabele gelijk aan de eindwaarde, 
+Na de beÃ«indiging van de for opdracht is de controlevariabele gelijk aan de eindwaarde, 
 behalve als de opdracht niet wordt uitgevoerd, dan wordt de controlevariabele niet 
 toegewezen.
 
@@ -1626,7 +1626,7 @@ end;
 De expressie, die de herhaling controleert, moet van het type Boolean zijn. De opdrachten 
 sequentie die tussen de gereserveerde woorden repeat en until staat wordt zo vaak 
 herhaald, tot de expressie waar (True) wordt. Het onderscheid met de while opdracht is 
-dat de repeat opdracht minstens één keer wordt uitgevoerd, omdat pas aan het einde de 
+dat de repeat opdracht minstens Ã©Ã©n keer wordt uitgevoerd, omdat pas aan het einde de 
 afbreekvoorwaarde gecontroleerd wordt.
 
 
@@ -1674,7 +1674,7 @@ type
 
 
 
-Variabelen van het type Kaart kunnen één van de vier waarden (schoppen, klaver, harten 
+Variabelen van het type Kaart kunnen Ã©Ã©n van de vier waarden (schoppen, klaver, harten 
 of ruiten) aannemen. De ordinale waarden zijn:
 
 
@@ -1753,7 +1753,7 @@ type
 
   Graden      = (Celsius, Fahrenheit, Kelvin);
 
-  Wijn        = (Rood, Wit, Rosé, Mousserend);
+  Wijn        = (Rood, Wit, RosÃ©, Mousserend);
 
 
 
@@ -1868,7 +1868,7 @@ end.
 Turbo Pascal biedt u het data type String, om tekenreeksen te verwerken. Tekenreeksen 
 zijn aaneenschakelingen van tekens. Het type String is gestructureerd en lijkt veel op het 
 array (hoofdstuk 9). Er is echter een groot verschil: het aantal tekens in een String en zijn 
-lengte kan dynamisch variëren tussen 0 en een bovengrens, terwijl het aantal elementen 
+lengte kan dynamisch variÃ«ren tussen 0 en een bovengrens, terwijl het aantal elementen 
 in een array vaststaat.
 
 8.1 String type definitie
@@ -2258,7 +2258,7 @@ Pot[Speler4]   :=50;
 
 
 Omdat toewijzingen tussen twee willekeurige variabelen toegestaan is, mits ze van 
-hetzelfde type zijn, kunnen hele arrays met behulp van één toewijzing gecopieerd 
+hetzelfde type zijn, kunnen hele arrays met behulp van Ã©Ã©n toewijzing gecopieerd 
 worden.
 
 
@@ -2383,7 +2383,7 @@ waarde wordt eerst van de bijbehorende poort opgehaald.
 
 
 Bij het Port array geldt de beperking dat deze niet zonder een index mag worden 
-gebruikt. Het is dus niet mogelijk alle poort waarden in één toekenning aan een ander 
+gebruikt. Het is dus niet mogelijk alle poort waarden in Ã©Ã©n toekenning aan een ander 
 array toe te wijzen.
 
 10. 	RECORD TYPE
@@ -2398,9 +2398,9 @@ een record.
 De definitie van het data type record bestaat uit het gereserveerde woord record, waarop 
 een lijst van de aparte velden volgt (de field list). Daarna komt het gereserveerde woord 
 end. De veldenlijst is een opeenvolging van regels (record sections), die door 
-puntkomma's gescheiden zijn. Elke regel bestaat uit één of meer veldnamen, gevolgd 
+puntkomma's gescheiden zijn. Elke regel bestaat uit Ã©Ã©n of meer veldnamen, gevolgd 
 door een dubbele punt en een datatypenaam of een datatypeomschrijving. Zo bepaald 
-elke regel het type en de naam van één of meer velden.
+elke regel het type en de naam van Ã©Ã©n of meer velden.
 
 
 
@@ -2579,9 +2579,9 @@ De maximale diepte van de nesting van de with opdracht is in te stellen met de W
 compiler opdracht. Standaard is de diepte 2 {$W2}. Dit kan echter per versie van Turbo 
 Pascal verschillend zijn.
 
-10.3 Variërende records
+10.3 VariÃ«rende records
 
-De schrijfwijze van het record type voorziet ook in variërende records, met andere 
+De schrijfwijze van het record type voorziet ook in variÃ«rende records, met andere 
 woorden een record structuur waar binnen een record de velden kunnen veranderen, 
 meestal afhankelijk van de waarde van een keuzeveld.
 
@@ -2622,7 +2622,7 @@ type
 
 
 
-In deze variërende record definitie kan een keuze veld op dezelfde manier bewerkt 
+In deze variÃ«rende record definitie kan een keuze veld op dezelfde manier bewerkt 
 worden als normale velden. Dus als Passagier van het type Persoon is zijn de volgende 
 opdrachten toegestaan:
 
@@ -2637,8 +2637,8 @@ with Passagier, Voornaam do
 
 
 Het vaststaande deel van een record, het deel dat de normale velden bevat, moet altijd 
-voorafgaan aan het variërende deel. In het bovenstaande voorbeeld zijn de velden 
-Voornaam en GeboorteDatum de vaststaande velden. In het variërende deel moeten de 
+voorafgaan aan het variÃ«rende deel. In het bovenstaande voorbeeld zijn de velden 
+Voornaam en GeboorteDatum de vaststaande velden. In het variÃ«rende deel moeten de 
 veldnamen tussen ronde haken staan, ook al staat er niets binnen deze haken.
 
 
@@ -2736,7 +2736,7 @@ weergaven van sets en set operatoren.
 
 11.2.1 Weergave van de set
 
-De weergave van een verzameling bestaat uit één of meer, door komma's gescheiden en 
+De weergave van een verzameling bestaat uit Ã©Ã©n of meer, door komma's gescheiden en 
 door blokhaken omgeven element bepalingen. Een element bepaling is een expressie, van 
 hetzelfde data type als het basis type van de verzameling, of het is een bereik, die door 
 twee van zulke expressies gescheiden door twee opeenvolgende punten wordt bepaald.
@@ -2867,7 +2867,7 @@ end;
 
 Getypeerde constanten zijn een specialiteit van Turbo Pascal. Een getypeerde constante 
 mag precies hetzelfde gebruikt worden als een variabele van hetzelfde type. Getypeerde 
-constanten kunnen dus worden gezien als geïnitialiseerde variabelen omdat de waarde 
+constanten kunnen dus worden gezien als geÃ¯nitialiseerde variabelen omdat de waarde 
 van een getypeerde constante vast ligt. De waarde van een variabele is niet gedefinieerd 
 totdat er een eerste toewijzing aan heeft plaatsgehad. Er moet natuurlijk wel op gelet 
 worden dat er geen toewijzingen plaatsvinden aan constanten die daadwerkelijk als 
@@ -2876,7 +2876,7 @@ constant bedoeld zijn.
 
 
 Het gebruik van getypeerde constanten bespaart code als de constante vaak in een 
-programma wordt gebruikt. Dit komt omdat een getypeerde constante maar één keer in de 
+programma wordt gebruikt. Dit komt omdat een getypeerde constante maar Ã©Ã©n keer in de 
 code wordt opgenomen en een niet getypeerde constante iedere keer wordt ingevuld als 
 de constante gebruikt wordt.
 
@@ -2890,7 +2890,7 @@ constante.
 
 12.1 Ongestructureerde getypeerde constanten
 
-Een niet gestructureerde getypeerde constante is een constante die gedefinieerd is als één 
+Een niet gestructureerde getypeerde constante is een constante die gedefinieerd is als Ã©Ã©n 
 van de scalaire typen:
 
 
@@ -2913,7 +2913,7 @@ In tegenstelling tot niet getypeerde constanten kan een getypeerde constante wor
 gebruikt in plaats van een variabele parameter naar een procedure of functie.
 
 Omdat een getypeerde constante in werkelijkheid een variabele met een constante waarde 
-is, mag een getypeerde constante niet gebruikt worden voor het definiëren van andere 
+is, mag een getypeerde constante niet gebruikt worden voor het definiÃ«ren van andere 
 constanten of typen. Als Min en Max getypeerde constanten zijn dan is de volgende 
 constructie niet toegestaan:
 
@@ -3082,14 +3082,14 @@ const
 
 De veld constanten moeten in dezelfde volgorde worden gespecificeerd als de volgorde in 
 de record definitie. Als er in een record een veld van het type Pointer voorkomt, dan kan 
-dit record niet in een constante definitie worden opgenomen. Indien er een variërend 
+dit record niet in een constante definitie worden opgenomen. Indien er een variÃ«rend 
 record moet worden opgenomen, dan is het de verantwoordelijkheid van de programmeur 
 om alleen geldige velden te specificeren. Als er een keuze veld aanwezig is, dan moet die 
 waarde worden gespecificeerd.
 
 12.2.4 Set constanten
 
-Een set constante bestaat uit één of meer elementen specificaties gescheiden door 
+Een set constante bestaat uit Ã©Ã©n of meer elementen specificaties gescheiden door 
 komma's en omgeven door rechte haken. Een element specificatie moet een constante 
 zijn of een element bepaling bestaande uit twee constanten gescheiden door twee 
 opvolgende punten (..).
@@ -3222,7 +3222,7 @@ mismatch' teruggegeven en GetError geeft dan de waarde 61 terug.
 
 Syntax: Read (FilVar, Varx);
 
-Varx staat voor één of meer variabelen van het component type van FilVar gescheiden 
+Varx staat voor Ã©Ã©n of meer variabelen van het component type van FilVar gescheiden 
 door komma's. Elke variabele wordt gelezen uit de file en na ieder gelezen component 
 wordt de file wijzer opgehoogd naar het volgende component.
 
@@ -3232,7 +3232,7 @@ Deze procedure is qua gebruik hetzelfde gebleven.
 
 Syntax: Write (FilVar, Varx);
 
-Varx staat voor één of meer variabelen van het component type van FilVar gescheiden 
+Varx staat voor Ã©Ã©n of meer variabelen van het component type van FilVar gescheiden 
 door komma's. Elke variabele wordt geschreven naar de file en na ieder gelezen 
 component wordt de file wijzer opgehoogd naar het volgende component.
 
@@ -3244,7 +3244,7 @@ Syntax: Seek (FilVar, N);
 
 Seek verplaatst de file wijzer naar het component N van de file toegekend aan FilVar. N is 
 een Longint expressie. De positie van het eerste component is 0. Merk op dat het mogelijk 
-is om met Seek de file wijzer één component voorbij het laatste component van de file te 
+is om met Seek de file wijzer Ã©Ã©n component voorbij het laatste component van de file te 
 plaatsen. De opdracht:
 
 
@@ -3254,7 +3254,7 @@ plaatsen. De opdracht:
 
 
 Plaatst de file wijzer aan het einde van de file (FileSize geeft het aantal componenten in 
-de file weer, beginnend bij 0. Het terug gegeven aantal is dus één groter dan het laatste 
+de file weer, beginnend bij 0. Het terug gegeven aantal is dus Ã©Ã©n groter dan het laatste 
 component).
 
 13.2.7 Flush
@@ -3412,7 +3412,7 @@ leiden tot het verlies van data omdat de directory niet goed is bijgewerkt.
 
 
 
-Het volgende programma creëert een diskfile genaamd 'product.dat' en schrijft honderd 
+Het volgende programma creÃ«ert een diskfile genaamd 'product.dat' en schrijft honderd 
 records van het type product naar de diskfile. Dit initialiseerd de diskfile voor 
 willekeurige toegang (records kunnen overal worden gelezen en geschreven in de file).
 
@@ -3582,7 +3582,7 @@ is de tekst file gestructureerd in regels. Elke regel wordt afgesloten met een
 EOL-markering. De EOL-markering is de letterkombinatie CR/LF ofwel de return 
 gevolgd door een regelopvoer (ASCII-waarden 13 en 10). De file is verder afgesloten met 
 een EOF-markering, de CTRL-Z (ASCII-waarde 26). Omdat de lengte van de regels kan 
-variëren is het niet mogelijk om de beginpositie van een regel te berekenen. Tekst files 
+variÃ«ren is het niet mogelijk om de beginpositie van een regel te berekenen. Tekst files 
 kunnen daarom alleen sequentieel worden gelezen of geschreven. Daarnaast is het 
 onmogelijk om in dezelfde file zowel te lezen als te schrijven.
 
@@ -3594,7 +3594,7 @@ toewijzing met Assign en de file moet geopend zijn met Reset of Rewrite.
 
 
 
-Rewrite wordt gebruikt om een nieuwe file te creëren en hierna is het alleen mogelijk om 
+Rewrite wordt gebruikt om een nieuwe file te creÃ«ren en hierna is het alleen mogelijk om 
 regels toe te voegen aan de file. Na een Close opdracht wordt automatisch de 
 EOF-markering toegevoegd. Reset wordt gebruikt bij een bestaande file en het is alleen 
 mogelijk om uit de file te lezen. Het is dus niet mogelijk om regels aan een bestaande file 
@@ -3756,14 +3756,14 @@ hoofdstuk 13.7 en 13.8.
 Het terminal apparaat. Ook hier wordt het toetsenbord gelezen en het beeldscherm 
 gebruikt voor weergave, tenzij het besturingssysteem hier een ander apparaat aan heeft 
 gekoppeld. Invoer karakters worden weer teruggestuurd naar de uitvoer (het zogenaamde 
-echoën), tenzij het controle karakters zijn. Het enige controle karakter dat wel wordt 
+echoÃ«n), tenzij het controle karakters zijn. Het enige controle karakter dat wel wordt 
 teruggestuurd is de CR (Carriage Return) en deze wordt teruggestuurd als CR/LF.
 
 13.6.3 Kbd:
 
 Het toetsenbord. Alleen invoer is hiervan mogelijk. Invoer wordt verkregen van de 
 console input van het besturingssysteem normaal gesproken het toetsenbord. De invoer 
-wordt niet geëchoed.
+wordt niet geÃ«choed.
 
 13.6.4 Lst:
 
@@ -3772,7 +3772,7 @@ het besturingssysteem. Meestal is dit de printer.
 
 13.6.5 Aux:
 
-Aansturing van hulpapparatuur. Deze uitbreiding wordt toegankelijk als er een serieële 
+Aansturing van hulpapparatuur. Deze uitbreiding wordt toegankelijk als er een serieÃ«le 
 poort in de computer aanwezig is.
 
 13.6.6 Usr:
@@ -3900,14 +3900,14 @@ toegestaan is.
 
 Als de Read procedure wordt gebruikt zonder dat er een file naam is opgegeven, wordt er 
 altijd een regel ingelezen. De regel moet worden afgesloten met een return. Een 
-ingetoetste CTRL-Z wordt genegeerd en de ingegeven return wordt niet geëchoed. Intern 
+ingetoetste CTRL-Z wordt genegeerd en de ingegeven return wordt niet geÃ«choed. Intern 
 wordt een CTRL-Z aan de regel toegevoegd. Wanneer er dus minder gegevens zijn 
 gespecificeerd in de ingegeven regel dan worden Char variabelen gevuld met een 
 CRTL-Z, Strings zijn leeg en numerieke variabelen zijn ongedefinieerd.
 
 
 
-De compiler aanwijzing B wordt gebruikt om deze geforceerde Read te beïnvloeden. De 
+De compiler aanwijzing B wordt gebruikt om deze geforceerde Read te beÃ¯nvloeden. De 
 standaard waarde is {$B+} en in deze stand wordt de Read opdracht zonder een file 
 variabele altijd gelezen van het bedieningspaneel. Als de {$B-} compiler aanwijzing 
 geplaatst is aan het begin van het programma (voor het declaratie deel) wordt voor invoer 
@@ -4028,7 +4028,7 @@ end.
 
 In- en uitvoer van data in leesbare vorm gebeurd door middel van tekst files zoals 
 beschreven in hoofdstuk 13.5.1. Een tekst file kan worden gekoppeld aan een willekeurig 
-apparaat, dus aan een diskfile of aan één van de standaard I/O apparaten. In- en uitvoer op 
+apparaat, dus aan een diskfile of aan Ã©Ã©n van de standaard I/O apparaten. In- en uitvoer op 
 tekst files wordt gedaan met de standaard procedures Read, ReadLn, Write en WriteLn. 
 Hierbij wordt een speciale syntax gebruikt voor de parameters waardoor een zeer flexibel 
 in- en uitvoer systeem ontstaat.
@@ -4064,7 +4064,7 @@ daarvoor toegekend is aan FilVar en gereed gemaakt is om uit te lezen.
 
 
 
-Bij een variabele van het type Char leest Read één karakter uit de file en kent deze toe 
+Bij een variabele van het type Char leest Read Ã©Ã©n karakter uit de file en kent deze toe 
 aan de variabele. Als de file een tekst file is wordt Eoln True als het volgende karakter 
 een CR of een CTRL-Z is. Eof is True als het volgende karakter een CTRL-Z is of het 
 fysieke einde van de file is bereikt. Als de file een logisch apparaat is (inclusief de 
@@ -4088,10 +4088,10 @@ moet gevolgd worden door een spatie, tab, CR of een CTRL-Z. Als de String niet
 overeenkomt met het verwachte formaat zal er een looptijd fout (nr. 10) optreden. Is het 
 formaat wel goed dan zal de karakter rij worden omgezet naar een waarde van het juiste 
 type en toegekend worden aan de variabele. Als er gelezen wordt van een diskfile en de 
-invoer rij is beëindigd met een spatie of een tab dan zal de volgende Read of ReadLn 
+invoer rij is beÃ«indigd met een spatie of een tab dan zal de volgende Read of ReadLn 
 beginnen met het karakter dat direct volgt op die spatie of tab. Voor zowel diskfiles als 
-logische apparaten geldt dat Eoln is True als de String was beëindigd met CR of een 
-CTRL-Z. Eof is True als de String was beëindigd met een CTRL-Z.
+logische apparaten geldt dat Eoln is True als de String was beÃ«indigd met CR of een 
+CTRL-Z. Eof is True als de String was beÃ«indigd met een CTRL-Z.
 
 
 
@@ -4114,7 +4114,7 @@ De volgende bewerkingsmogelijkheden zijn beschikbaar:
 
 Backspace of Del
 
-Gaat één karakter terug en verwijderd het karakter dat daar staat. Backspace wordt 
+Gaat Ã©Ã©n karakter terug en verwijderd het karakter dat daar staat. Backspace wordt 
 ingegeven door de toets BS of door CTRL-H.
 
 
@@ -4127,7 +4127,7 @@ Gaat terug naar het begin van de regel en verwijderd alle ingevoerde karakters.
 
 CTRL-D 
 
-Haalt één karakter terug van de vorige ingegeven regel.
+Haalt Ã©Ã©n karakter terug van de vorige ingegeven regel.
 
 
 
@@ -4139,7 +4139,7 @@ Haalt de vorige ingegeven regel terug.
 
 Return of CTRL-M 
 
-Beëindigd de invoer en plaatst een markering voor het einde van de regel (CR/LF 
+BeÃ«indigd de invoer en plaatst een markering voor het einde van de regel (CR/LF 
 combinatie) in de regel buffer. De CR/LF wordt niet terug gestuurd naar het scherm.
 
 
@@ -4160,7 +4160,7 @@ CTRL-Z gezet, Strings blijven leeg en numerieke variabelen blijven ongewijzigd.
 
 Het maximaal aantal karakters dat kan worden ingegeven via het toetsenbord is 126. U 
 kunt dit echter verlagen door een waarde toe te kennen aan de voorgedefinieerde 
-variabele BufLen. Deze waarde van variëren van 0 t/m 126.
+variabele BufLen. Deze waarde van variÃ«ren van 0 t/m 126.
 
 
 
@@ -4414,7 +4414,7 @@ eventueel opgegeven recordgrootte.
 
 
 Het volgende programma gebruikt niet getypeerde files om een willekeurige file te 
-copiëren. Merk op dat de optionele vierde parameter in BlockRead wordt gebruikt om te 
+copiÃ«ren. Merk op dat de optionele vierde parameter in BlockRead wordt gebruikt om te 
 kijken hoeveel records er daadwerkelijk zijn gelezen van de source file.
 
 
@@ -4490,7 +4490,7 @@ de functie IOResult een nul teruggeeft is de in- of uitvoer operatie geslaagd. I
 G staat een overzicht van de foutmeldingen en het bijbehorende nummer.
 
 Merk op dat de foutconditie wordt gewist bij het opvragen van IOResult. Als IOResult 
-meer dan één keer wordt aangeroepen zullen alle andere keren dus de waarde nul 
+meer dan Ã©Ã©n keer wordt aangeroepen zullen alle andere keren dus de waarde nul 
 teruggeven totdat er weer een fout optreed.
 
 
@@ -4598,7 +4598,7 @@ GetError functie ook fouten als 'Disk not ready' kunnen worden opgevraagd.
 De variabelen die tot nu toe zijn besproken zijn allemaal statisch. De vorm en het formaat 
 zijn allemaal voorgedefinieerd en bestaan allemaal gedurende het hele blok waarin ze zijn 
 gedeclareerd. Programma's kunnen echter behoefte hebben aan data structuren die 
-variëren in vorm en formaat tijdens uitvoering van het programma. Voor dit doel worden 
+variÃ«ren in vorm en formaat tijdens uitvoering van het programma. Voor dit doel worden 
 dynamische variabelen gebruikt die worden aangemaakt als ze nodig zijn en kunnen 
 nadien gewist worden.
 
@@ -4655,9 +4655,9 @@ die nog niet is gedefinieerd, dit is alleen bij wijzers mogelijk.
 Voordat het enig zin heeft om deze wijzer variabele te gebruiken moeten we natuurlijk 
 eerst een variabele hebben waar we naar kunnen wijzen. Nieuwe variabelen van een 
 willekeurig type worden aangemaakt met de standaard procedure New. De procedure 
-heeft één parameter welke een wijzer moet zijn naar een variabele van het type dat we 
-willen creëren. Een nieuwe variabele van het type PersoonRecord kan worden 
-gecreëerd met de opdracht:
+heeft Ã©Ã©n parameter welke een wijzer moet zijn naar een variabele van het type dat we 
+willen creÃ«ren. Een nieuwe variabele van het type PersoonRecord kan worden 
+gecreÃ«erd met de opdracht:
 
 
 
@@ -4677,7 +4677,7 @@ False).
 
 
 
-De wijzer waarde nil is compatibel met alle wijzer typen. Nil wijst naar geen één 
+De wijzer waarde nil is compatibel met alle wijzer typen. Nil wijst naar geen Ã©Ã©n 
 dynamische variabele en mag worden toegekend aan een wijzer variabele om aan te 
 geven dat er geen bruikbare wijzer aanwezig is. Nil kan ook worden gebruikt in 
 vergelijkingen.
@@ -4728,8 +4728,8 @@ geheugen er nog beschikbaar is.
 14.4 Het gebruik van wijzers
 
 Stel dat we de bewerking New hebben gebruikt om een serie records van het type 
-PersoonRecord te creëren (zoals in het voorbeeld in hoofdstuk 3). Het veld Volgende in 
-elk record wijst naar het volgende PersoonRecord dat is gecreëerd. Het volgende 
+PersoonRecord te creÃ«ren (zoals in het voorbeeld in hoofdstuk 3). Het veld Volgende in 
+elk record wijst naar het volgende PersoonRecord dat is gecreÃ«erd. Het volgende 
 voorbeeld zal door de lijst heen lopen en de inhoud van elk record afdrukken 
 (EerstePersoon wijst naar de eerste persoon in de lijst):
 
@@ -4862,7 +4862,7 @@ De schrijfwijzen van Dispose is:
 
 Hierbij is PVar een wijzer variabele.
 
-Met Dispose is het mogelijk om het geheugen dat gebruikt wordt door één speciale wijzer 
+Met Dispose is het mogelijk om het geheugen dat gebruikt wordt door Ã©Ã©n speciale wijzer 
 variabele vrij te geven in tegenstelling tot Mark en Release welke het gehele geheugen 
 vanaf een bepaalde wijzer en hoger vrij geeft.
 
@@ -4968,7 +4968,7 @@ verantwoordelijkheid van de programmeur dat een wijzer naar een toegestaan adres
 
 15. 	PROCEDURES EN FUNCTIES
 
-Een Pascal programma bestaat uit één of meer blokken, die weer in blokken verdeeld 
+Een Pascal programma bestaat uit Ã©Ã©n of meer blokken, die weer in blokken verdeeld 
 kunnen zijn, enzovoort. Zo'n blok kan een procedure zijn of een functie (algemeen 
 subprogramma genoemd). Een procedure is dus een zelfstandig deel in het programma en 
 kan door een procedure aanroep vanuit een willekeurige plaats in het programma worden 
@@ -5540,11 +5540,11 @@ gedeclareerd scalair of een subrange), een String type of een pointer type.
 Het declaratie deel van de functie is hetzelfde als bij een procedure.
 
 Het opdrachtendeel van een functie ziet eruit als een samengestelde opdracht zoals 
-omschreven in hoofdstuk 6.2. Binnen het opdrachtendeel moet minimaal één toekenning 
+omschreven in hoofdstuk 6.2. Binnen het opdrachtendeel moet minimaal Ã©Ã©n toekenning 
 voorkomen aan de functie naam. De laatste toekenning die is uitgevoerd bepaald het 
 resultaat van de functie. Als de functie aanroep in het opdrachtendeel zelf voorkomt zal 
 de functie recursief worden aangeroepen. Maar alleen als de {$A-} compiler aanwijzing 
-vóór het functie hoofd actief was, zie appendix C.
+vÃ³Ã³r het functie hoofd actief was, zie appendix C.
 
 
 
@@ -6016,7 +6016,7 @@ bewezen kan worden dat het voor elke ingegeven heel getal stopt!
 
 Het overlay systeem biedt de mogelijkheid om programma's te maken die veel groter zijn 
 dan het werkgeheugen van de computer. De gebruikte techniek bestaat uit het verzamelen 
-van deelprogramma's (procedures en/of functies) in één of meer files, apart van het 
+van deelprogramma's (procedures en/of functies) in Ã©Ã©n of meer files, apart van het 
 hoofdprogramma. Deze delen worden dan automatisch tijdens de uitvoer van het 
 programma geladen. Voor de verschillende delen kan dan hetzelfde geheugengebied 
 worden gebruikt.
@@ -6024,7 +6024,7 @@ worden gebruikt.
 
 
 Figuur 16 - 1 toont een programma dat gebruik maakt van een overlay file met daarin vijf 
-overlay deelprogramma's. De vijf deelprogramma's zijn verzameld in één overlay groep. 
+overlay deelprogramma's. De vijf deelprogramma's zijn verzameld in Ã©Ã©n overlay groep. 
 Alle deelprogramma's gebruiken hetzelfde stuk van het werkgeheugen.
 
 
@@ -6104,9 +6104,9 @@ zal bestaan uit een drie cijferig nummer tussen 000 en 099.
 
 
 
-Opeenvolgende overlay routines zullen bij elkaar gevoegd worden in één overlay file. 
+Opeenvolgende overlay routines zullen bij elkaar gevoegd worden in Ã©Ã©n overlay file. 
 Met andere woorden, zolang er geen procedures of functies tussen staan zonder de 
-toevoeging overlay zullen alle overlay routines in één overlay file terecht komen.
+toevoeging overlay zullen alle overlay routines in Ã©Ã©n overlay file terecht komen.
 
 
 
@@ -6142,7 +6142,7 @@ end;
 
 
 
-Deze drie overlay procedures zullen bij elkaar in één overlay file worden geplaatst. Als 
+Deze drie overlay procedures zullen bij elkaar in Ã©Ã©n overlay file worden geplaatst. Als 
 dit de eerste groep van overlay routines is dan zal de extensie van de overlay file .000 
 zijn.
 
@@ -6273,7 +6273,7 @@ ingeladen vanuit de juiste overlay file.
 
 
 
-In deze versie van Turbo Pascal kan men zelf een procedure definiëren die de gewenste 
+In deze versie van Turbo Pascal kan men zelf een procedure definiÃ«ren die de gewenste 
 overlay routine inlaad. Dit geeft de mogelijkheid om b.v. een overlay file vooraf in de 
 memory mapper in te laden om daarna vanuit de mapper de overlay routines in te laden.
 
@@ -6304,7 +6304,7 @@ diskdrive, een harddisk of een ramdisk.
 
 
 Om zo veel mogelijk ruimte in het hoofdprogramma te besparen is het aan te bevelen zo 
-veel mogelijk routines in één overlay file te plaatsen. Puur vanuit besparings oogpunt 
+veel mogelijk routines in Ã©Ã©n overlay file te plaatsen. Puur vanuit besparings oogpunt 
 gezien is het plaatsen van veel routines in een overlay file het meest economische. Dit 
 moet echter wel worden afgewogen tegen de benodigde extra tijd zoals hierboven is 
 besproken.
@@ -6402,7 +6402,7 @@ Deze laad procedure heeft de volgende declaratie:
 
 Address is het adres waar de code van de overlay moet komen te staan.
 
-Pos is de positie binnen de overlay file waar de code staat, deze is byte-georiënteerd.
+Pos is de positie binnen de overlay file waar de code staat, deze is byte-georiÃ«nteerd.
 
 DataLength is de lengte van de te lezen overlay code.
 
@@ -6414,7 +6414,7 @@ naam van de overlay staat.
 
 
 Een goed voorbeeld voor het gebruik van de laad procedure is b.v. het vooraf inlezen van 
-één of meerdere overlay files in de memory mapper welke m.b.v. de GIOS procedures 
+Ã©Ã©n of meerdere overlay files in de memory mapper welke m.b.v. de GIOS procedures 
 SetChannel en ReadMem benaderd kunnen worden.
 
 
@@ -6448,7 +6448,7 @@ OverlayBaseAddress staan.
 
 17. 	Systeem
 
-Dit hoofdstuk beschrijft de speciale mogelijkheden van de compiler om er efficiënt 
+Dit hoofdstuk beschrijft de speciale mogelijkheden van de compiler om er efficiÃ«nt 
 gebruik van te kunnen maken. Aan het eind worden er een aantal technische 
 mogelijkheden uitgelegd voor de ervaren programmeur, zoals machinecode routines.
 
@@ -6486,14 +6486,14 @@ Syntax: TURBO <filename> [/C|/H] [/Sxxxx] [/Exxxx] [/Fxxxx]
 
 Syntax:	/C
 
-Met deze optie wordt er door de compiler een COM-file gecreëerd. Dit is de default 
+Met deze optie wordt er door de compiler een COM-file gecreÃ«erd. Dit is de default 
 instelling.
 
 17.1.2 Compileren naar CHAIN-file
 
 Syntax:	/H
 
-Met deze optie wordt er door de compiler een CHN-file gecreëerd. Deze kan worden 
+Met deze optie wordt er door de compiler een CHN-file gecreÃ«erd. Deze kan worden 
 gestart d.m.v. de procedure Chain.
 
 17.1.3 Startadres
@@ -6643,7 +6643,7 @@ huidige programma en het ge-Chain-de programma moeten hetzelfde startadres hebbe
 
 De Execute procedure kan gebruikt worden om iedere .COM file uit te voeren, dus 
 iedere file die uitvoerbare code bevat. Dit kan een file zijn die door Turbo Pascal 
-gecreëerd is met de /C optie, zie 17.1.1 "Compileren naar COM-file". Het programma 
+gecreÃ«erd is met de /C optie, zie 17.1.1 "Compileren naar COM-file". Het programma 
 wordt geladen en uitgevoerd vanaf adres $100, zoals de CP/M standaard het voorschrijft.
 
 Als de file niet bestaat op de disk, treed er een I/O fout op. Deze fout wordt afgehandeld 
@@ -6867,7 +6867,7 @@ De standaard maximum diepte van het nesten van with statements is 2, maar de W
 directive kan gebruikt worden om deze waarde te veranderen tussen de 0 en de 9. Voor 
 ieder blok gebruiken with opdrachten 2 bytes voor elk toegestaan niveau. Beperken van 
 het aantal geneste with opdrachten kan de grootte van het data gebied in programma's 
-met veel subprogramma dus sterk beïnvloeden.
+met veel subprogramma dus sterk beÃ¯nvloeden.
 
 
 
@@ -6956,7 +6956,7 @@ behalve dan, dat het resultaat de waarde van het Z80 registerpaar HL is.
 
 Voor sommige applicaties is het praktisch voor de programmeur om zijn eigen I/O 
 drivers (routines die de invoer en uitvoer van karakters van en naar externe apparaten 
-verzorgen) te kunnen definiëren. De volgende drivers zijn deel van de Turbo Pascal 
+verzorgen) te kunnen definiÃ«ren. De volgende drivers zijn deel van de Turbo Pascal 
 omgeving en worden gebruikt door de standaard I/O (hoewel ze niet beschikbaar zijn als 
 standaard procedures en functies):
 
@@ -7283,7 +7283,7 @@ basis-pagina. (Merk op dat RST 0 niet gebruikt kan worden, omdat CP/M de locatie
 
 
 
-Als mode 2 (IM 2) interupts worden gebruikt, moet de programmeur een geïnitialiseerde 
+Als mode 2 (IM 2) interupts worden gebruikt, moet de programmeur een geÃ¯nitialiseerde 
 sprong-tabel genereren (een array van integers) op een absolute adres en het I register 
 initialiseren met een inline statement aan het begin van het programma.
 
@@ -7307,7 +7307,7 @@ minder dan 256 mogelijke waarden. Dit byte bevat de ordinale waarde van de varia
 
 
 De volgende scalairen worden allemaal bewaard in twee bytes: Integers, Integer sub-
-bereiken met één of beide grenzen buiten het bereik 0..255 en gedeclareerde scalairen met 
+bereiken met Ã©Ã©n of beide grenzen buiten het bereik 0..255 en gedeclareerde scalairen met 
 meer dat 256 mogelijke waarden. Deze bytes bevatten een 2-complements 16-bit waarde 
 waarvan de minst belangrijke byte (LSB) op het laagste adres staat.
 
@@ -7340,7 +7340,7 @@ Als de exponent nul is, wordt de 'floating-point' waarde nul verondersteld.
 
 De waarde van de mantisse wordt verkregen door de 40-bits integer zonder teken te delen 
 door 2^40. De mantisse is altijd genormaliseerd (de belangrijkste bit (bit 7 van byte @+5) 
-moet als een 1 geïnterpreteerd worden. Het teken van de mantisse wordt in dit bit 
+moet als een 1 geÃ¯nterpreteerd worden. Het teken van de mantisse wordt in dit bit 
 bewaard, een 1 geeft aan dat de waarde negatief is en een 0 geeft aan dat het om een 
 positief getal gaat.
 
@@ -7397,7 +7397,7 @@ bits en de rest van de bits zodanig te roteren dat het eerste bit van het eerste
 eerste element van de Set zou bevatten. Zulke roteer instructies zijn echter behoorlijk 
 traag en Turbo Pascal werkt daarom met een compromis: Alleen hele bytes die altijd 0 
 zijn worden niet opgeslagen (bytes waarvan geen enkel bit gebruikt wordt). Deze 
-compressie methode is zeer snel en is in de meeste gevallen even efficiënt met het 
+compressie methode is zeer snel en is in de meeste gevallen even efficiÃ«nt met het 
 geheugen als de rotatie methode.
 
 
@@ -7587,7 +7587,7 @@ sector 0, byte 3:		Record lengte (MSB)
 Text Bestanden
 
 De basis componenten van een tekst bestand zijn karakters, maar een tekst bestand is ook 
-onderverdeeld in regels. Elke regel bestaat uit een aantal karakters beëindigd met een
+onderverdeeld in regels. Elke regel bestaat uit een aantal karakters beÃ«indigd met een
 
 CR/LF sequentie (ASCII $0D/$0A). Het bestand wordt afgesloten met een Ctrl-Z
 
@@ -7605,7 +7605,7 @@ zelf van de stack halen.
 
 
 Bij binnenkomst van een externe subroutine, bevat de top van de stack altijd het terugkeer 
-adres (één woord). De parameters (als die er zijn) staan onder het terugkeer adres (dat wil 
+adres (Ã©Ã©n woord). De parameters (als die er zijn) staan onder het terugkeer adres (dat wil 
 zeggen op een hoger adres op de stack). Om de parameters dus te benaderen moet eerst 
 het terugkeer adres van de stack gehaald worden, daarna alle parameters om daarna het 
 terugkeer adres weer terug op de stack te zetten.
@@ -7623,7 +7623,7 @@ beschreven wordt in de volgende passages.
 Scalairen
 
 Integer, Booleans en Chars en gedeclareerde scalairen worden doorgegeven aan de stack 
-als één woord. Als de variabele maar 1 byte beslaat, wordt de belangrijkste byte nul 
+als Ã©Ã©n woord. Als de variabele maar 1 byte beslaat, wordt de belangrijkste byte nul 
 gemaakt. Normaal gesproken wordt dit woord van de stack afgehaald door een instructie 
 als POP HL.
 
@@ -7849,7 +7849,7 @@ over de bodem van de recursie stack komt. Om dit te laten gebeuren moet een recu
 routine zich zo'n 300-400 keer aanroepen, wat als een zeldzame gebeurtenis wordt 
 beschouwd. Als een programma dit echter wel nodig heeft, kan de volgende opdracht 
 uitgevoerd worden, die de recursie stack omlaag verplaatst om een grotere CPU stack te 
-creëren:
+creÃ«ren:
 
 
 
@@ -7936,7 +7936,7 @@ kunt uitpakken in uw eigen programma. Zie hier voor Expand of MemExpand.
 COMPRESS.COM is speciaal gemaakt om grafische afbeeldingen in het COPY-formaat te 
 comprimeren. Om het weergeven van een plaatje zo snel mogelijk te laten verlopen is er 
 voor gekozen om op byte niveau te werken. Dit houdt in dat op scherm 5 en 7 uw plaatje 
-op een even X-coördinaat moet beginnen en op een oneven X-coördinaat moet eindigen. 
+op een even X-coÃ¶rdinaat moet beginnen en op een oneven X-coÃ¶rdinaat moet eindigen. 
 Op scherm 6 moet dit zelfs een veelvoud van vier zijn.
 
 De plaatjes kunnen in BASIC met het COPY-commando worden gemaakt of in Pascal 
@@ -7946,10 +7946,10 @@ met SavePicture of MemSavePicture.
 
 Op het moment dat u een Pascal programma start, wordt de runtime bibliotheek 
 geinitialiseerd. Tijdens deze installatie wordt gecontroleerd of MEMMAN.COM, 
-GIOS.TSR en GIOS.COM geladen zijn. Als één van deze programma's niet geladen is, 
-of een verkeerd versie nummer hebben, start uw programma wél normaal op. Pas op het 
-moment dat er gebruik wordt gemaakt van een GIOS procedure of functie en één van 
-deze onderdelen is niet goed geïnstalleerd dan wordt het programma afgebroken met een 
+GIOS.TSR en GIOS.COM geladen zijn. Als Ã©Ã©n van deze programma's niet geladen is, 
+of een verkeerd versie nummer hebben, start uw programma wÃ©l normaal op. Pas op het 
+moment dat er gebruik wordt gemaakt van een GIOS procedure of functie en Ã©Ã©n van 
+deze onderdelen is niet goed geÃ¯nstalleerd dan wordt het programma afgebroken met een 
 runtime error.
 
 
@@ -7990,14 +7990,14 @@ versie nummer is hierbij niet van belang.
 MemmanVersion 
 
 Integer. Hiermee kunt u zien welke versie van MEMMAN 
-geïnstalleerd is. Dit versie nummer wordt weergegeven volgens 
+geÃ¯nstalleerd is. Dit versie nummer wordt weergegeven volgens 
 de MEMMAN specificaties. Voor het GIOS moet u minimaal 
 beschikken over MEMMAN 2.4. Als u de waarde opvraagt moet 
 deze minimaal $0204 zijn.
 
 GiosPresent 
 
-Boolean. Deze is True is als het GIOS volledig is geïnstalleerd 
+Boolean. Deze is True is als het GIOS volledig is geÃ¯nstalleerd 
 (zowel TSR als COM file) en de minimaal vereiste versie 
 nummers aanwezig zijn. Als GiosPresent de waarde False 
 heeft kunt u controleren of de TSR geladen is (zie functie 
@@ -8007,7 +8007,7 @@ controleren.
 GiosVersion
 
 Integer. Hiermee kunt u zien welke versie van het GIOS 
-geïnstalleerd is. Dit versie nummer moet minimaal $0223 zijn en 
+geÃ¯nstalleerd is. Dit versie nummer moet minimaal $0223 zijn en 
 is 0 als GIOS.COM niet is geladen.
 
 Tabel 18 - 1
@@ -8036,9 +8036,9 @@ waar ook MSX-BASIC gebruik van maakt.
 
 
 
-In de uitleg bij de diverse procedures en functies staat regelmatig één van de typen 
+In de uitleg bij de diverse procedures en functies staat regelmatig Ã©Ã©n van de typen 
 Str63 en InfoBlock vermeld. Deze typen zijn niet in Pascal gedefinieerd. U zult 
-deze dus zelf moeten definiëren. De reden dat deze variabelen niet voorgedefinieerd zijn 
+deze dus zelf moeten definiÃ«ren. De reden dat deze variabelen niet voorgedefinieerd zijn 
 is dat het nu eenvoudig mogelijk is om de gegevens in een eigen structuur op te vragen, 
 let er wel op dat deze eigen structuur 64 bytes groot is. Als de typen voorgedefinieerd 
 zouden zijn zou dit niet kunnen.
@@ -8221,7 +8221,7 @@ recursief doorlopen van de directory-structuur.
 Onder DOS 1.x wordt er intern een positie bij gehouden waar men gebleven is, de 
 informatie in het InfoBlock is hier dus alleen een copie van deze interne informatie. 
 Het gevolg hiervan is dat men onder DOS 1.x de aanroep van FindFirst t/m de laatste 
-aanroep van FindNext in één keer moet uitvoeren.
+aanroep van FindNext in Ã©Ã©n keer moet uitvoeren.
 
 
 
@@ -8238,7 +8238,7 @@ Gebruik:	RealResult:=GetChannel(Channel);
 Variabelen:	-
 
 Haalt de positie op van het opgegeven kanaal in Channel. Deze positie varieert van 0 
-tot en met (Setmem(0) * 16384)-1. Het kanaal nummer mag variëren van 0 t/m 
+tot en met (Setmem(0) * 16384)-1. Het kanaal nummer mag variÃ«ren van 0 t/m 
 15. Als het kanaal nummer ongeldig is of het kanaal stond op een ongeldige positie dan 
 wordt er een -1.0 teruggeven. Ongeldige positie's komen voor als men een positie 
 opgeeft die groter is of gelijk aan het aantal gereserveerde pagina's * 16384.
@@ -8304,7 +8304,7 @@ van de disk kunnen via deze functie een foutmelding terug geven.
 
 Als er geen fout is opgetreden levert deze functie de waarde 0 op. Door de waarde van 
 deze functie op te vragen wordt de waarde teruggezet naar 0. U kunt de waarde daarom 
-maar één keer opvragen.
+maar Ã©Ã©n keer opvragen.
 
 
 
@@ -8401,7 +8401,7 @@ Variabelen:	-
 
 Haalt de ID-code van de pagina op waar het opgegeven kanaal Channel naar wijst. 
 Deze ID-code is de 16 bits code die volgens MemMan 2.4 is gespecificeerd. Het kanaal 
-nummer mag variëren van 0 t/m 15. Als het kanaal nummer ongeldig is of het kanaal 
+nummer mag variÃ«ren van 0 t/m 15. Als het kanaal nummer ongeldig is of het kanaal 
 staat op een ongeldige positie dan wordt er een -1 teruggegeven.
 
 
@@ -8427,7 +8427,7 @@ aangesloten. Aan elk van de zes input lijnen (vier voor de richting en twee voor
 vuurknoppen) van elke aansluiting kan een paddle aangesloten worden, zodat er in totaal 
 twaalf mogelijk zijn.
 
-Number mag variëren van 1 t/m 12 waarbij geldt dat de oneven waarden een paddle aan 
+Number mag variÃ«ren van 1 t/m 12 waarbij geldt dat de oneven waarden een paddle aan 
 joystick poort 1 voorstellen en de even waarden een paddle aan joystick poort 2.
 
 Elke paddle is in de grond een monostabiele pulsgenerator, waarvan de pulslengte door 
@@ -8455,14 +8455,14 @@ Gebruik:	ByteResult:=Point(X,Y);
 
 Variabelen:	ActPage
 
-Deze routine leest het pixel met coördinaat (X,Y) van de actieve pagina ActPage. De 
-video processor kan het volledige geheugen adresseren met behulp van coördinaten. De Y 
-waarde kan daarom variëren van 0 t/m 255. En NIET alleen maar van 0 t/m 211 zoals 
+Deze routine leest het pixel met coÃ¶rdinaat (X,Y) van de actieve pagina ActPage. De 
+video processor kan het volledige geheugen adresseren met behulp van coÃ¶rdinaten. De Y 
+waarde kan daarom variÃ«ren van 0 t/m 255. En NIET alleen maar van 0 t/m 211 zoals 
 MSX2-BASIC doet geloven.
 
 
 
-De videoprocessor maskeert zelf de ingevulde (X,Y) coördinaat. De X wordt in scherm 6 
+De videoprocessor maskeert zelf de ingevulde (X,Y) coÃ¶rdinaat. De X wordt in scherm 6 
 en 7 gemaskeerd d.m.v. van 'X and 511'. In alle andere schermen is dit 'X and 255'. 
 De Y zal altijd begrenst worden op 255. Om een Y waarde van 258 te kunnen 
 beschrijven moet men eigenlijk kiezen voor ActPage = 1 en Y = 2.
@@ -8482,7 +8482,7 @@ Gebruik:	ByteResult:=ReadPsg(Register);
 Variabelen:	-
 
 Leest de inhoud van het opgegeven registernummer van de PSG. Het registernummer 
-mag variëren van 0 t/m 15. De registers 14 en 15 zijn geen registers die te maken hebben 
+mag variÃ«ren van 0 t/m 15. De registers 14 en 15 zijn geen registers die te maken hebben 
 met geluid maar worden gebruikt om de status op te vragen van de twee verschillende 
 joystick poorten.
 
@@ -8505,7 +8505,7 @@ Gebruik:	ByteResult:=ReadStatus(Register);
 Variabelen:	-
 
 Leest de inhoud van een status register Register van de VDP. Het statusregister mag 
-variëren van 0 t/m 9. Een hogere waarde dan 9 geeft een niet gedefinieerde waarde terug. 
+variÃ«ren van 0 t/m 9. Een hogere waarde dan 9 geeft een niet gedefinieerde waarde terug. 
 Voor de volledigheid staat hieronder een tabel met de overeenkomsten tussen GIOS en 
 BASIC:
 
@@ -8581,7 +8581,7 @@ Gebruik:	ByteResult:=ReadVDP(Register);
 Variabelen:	-
 
 Leest de inhoud van een VDP register Register terug. Het register nummer mag 
-variëren van 0 t/m 23 of 25 t/m 27. Alle andere waarden resulteren altijd in een 0 als 
+variÃ«ren van 0 t/m 23 of 25 t/m 27. Alle andere waarden resulteren altijd in een 0 als 
 resultaat.
 
 Omdat de VDP geen mogelijkheid biedt om de inhoud van een register terug te lezen 
@@ -8628,7 +8628,7 @@ Gebruik:	IntegerResult:=Search(X, Y, Color, Condition);
 
 Variabelen:	ActPage
 
-Deze functie zoekt vanaf het opgegeven coördinaat (X,Y) naar pixels die hetzij gelijk zijn 
+Deze functie zoekt vanaf het opgegeven coÃ¶rdinaat (X,Y) naar pixels die hetzij gelijk zijn 
 aan de opgegeven kleur Color of die ongelijk zijn aan de opgegeven kleur. Het zoeken 
 gebeurd alleen op een horizontale lijn.
 
@@ -8646,10 +8646,10 @@ De opgegeven parameter Condition geeft aan hoe er gezocht wordt:
 
 
 
-Het resultaat van deze functie is de X-coördinaat van de pixel die het eerste voldoet aan 
+Het resultaat van deze functie is de X-coÃ¶rdinaat van de pixel die het eerste voldoet aan 
 de opgegeven conditie. Als de conditie zich niet voordoet voordat het einde van het 
 scherm wordt bereikt of als de clipping aan staat, voor het einde van de viewport dan 
-wordt als resultaat de X-coördinaat van de rechter/linker kant van het scherm/viewport 
+wordt als resultaat de X-coÃ¶rdinaat van de rechter/linker kant van het scherm/viewport 
 als resultaat teruggegeven. Om een verschil aan te geven tussen een gevonden conditie en 
 een niet gevonden conditie wordt er $8000 bij de niet gevonden conditie opgeteld. In 
 praktijk betekend een gevonden waarde dus een positief resultaat en een niet gevonden 
@@ -8657,7 +8657,7 @@ een negatief resultaat.
 
 
 
-Als de clipping aanstaat en het opgegeven coördinaat (X,Y) valt buiten het viewport, dan 
+Als de clipping aanstaat en het opgegeven coÃ¶rdinaat (X,Y) valt buiten het viewport, dan 
 wordt er wel gezocht naar de opgegeven conditie en als normaal een resultaat 
 teruggegeven. Er wordt dus niet gecontroleerd of het begin punt ook binnen de viewport 
 valt.
@@ -8690,8 +8690,8 @@ onveranderd.
 
 
 
-Year mag variëren van 1980 t/m 2079, Month varieert van 1 t/m 12 en Day mag 
-variëren van 1 t/m 31.
+Year mag variÃ«ren van 1980 t/m 2079, Month varieert van 1 t/m 12 en Day mag 
+variÃ«ren van 1 t/m 31.
 
 
 
@@ -8734,7 +8734,7 @@ onveranderd.
 
 
 
-Hour mag variëren van 0 t/m 23, Minute mag variëren van 0 t/m 59 en Second mag 
+Hour mag variÃ«ren van 0 t/m 23, Minute mag variÃ«ren van 0 t/m 59 en Second mag 
 van 0 t/m 59.
 
 
@@ -8751,9 +8751,9 @@ Gebruik:	BoolResult:=SimulatedDisk(DriveNr);
 
 Variabelen:	-
 
-Met deze functie kunt u opvragen of een diskdrive wordt gesimuleerd. Als er maar één 
+Met deze functie kunt u opvragen of een diskdrive wordt gesimuleerd. Als er maar Ã©Ã©n 
 fysieke diskdrive aanwezig is (harde schijven doen niet mee), dan zal er door de DISK-
-ROM altijd een tweede drive gemaakt worden om b.v. het copiëren van diskette naar 
+ROM altijd een tweede drive gemaakt worden om b.v. het copiÃ«ren van diskette naar 
 diskette mogelijk te maken.
 
 
@@ -8785,7 +8785,7 @@ Voor DriveNr is 0 voor drive A, 1 voor drive B etc.
 
 
 
-Deze functie kan het best gebruikt worden voor dat men b.v. een bestand opent, creëert of 
+Deze functie kan het best gebruikt worden voor dat men b.v. een bestand opent, creÃ«ert of 
 iedere andere functie of procedure die de diskdrive benaderd en waarbij men van te voren 
 niet zeker weet of er een diskwisseling zal plaats vinden. De functie SimulatedDisk 
 benaderd dan zelf eerst de diskdrive en `vangt' eventuele meldingen af.
@@ -8881,7 +8881,7 @@ Gebruik:	BoolResult:=Strig(Number);
 
 Variabelen:	-
 
-Met deze functie kunt u opvragen of de spatiebalk of één van de 4 mogelijke 
+Met deze functie kunt u opvragen of de spatiebalk of Ã©Ã©n van de 4 mogelijke 
 vuurknoppen is ingedrukt.
 
 
@@ -9052,7 +9052,7 @@ Gebruik:	BSave(Address1,Page1,Address2,Page2,Name);
 
 Variabelen:	-
 
-Deze procedure creëert een bload file met de opgegeven naam. Het VRAM gebied dat 
+Deze procedure creÃ«ert een bload file met de opgegeven naam. Het VRAM gebied dat 
 wordt weggeschreven is datgene dat zich tussen de opgegeven start en eindadres op de 
 opgegeven pagina bevindt. Om de pagina en het adres te combineren wordt intern de 
 volgende formule gebruikt:
@@ -9093,7 +9093,7 @@ Bload procedure.
 Ook met deze procedure is het mogelijk om het externe VRAM te benaderen op dezelfde 
 manier als bij de Bload procedure maar dan moeten beide pagina's wel groter of gelijk 
 zijn aan 4 voor de schermen 0 t/m 6 en groter of gelijk aan 2 voor de schermen 7, 8 en 10 
-t/m 12. Het is niet mogelijk het normale VRAM en het extended VRAM in één file weg 
+t/m 12. Het is niet mogelijk het normale VRAM en het extended VRAM in Ã©Ã©n file weg 
 te schrijven.
 
 
@@ -9131,7 +9131,7 @@ Gebruik:	ChangeScreen(ScreenNr)
 
 Variabelen:	-
 
-Deze procedure wijzigt de scherm mode, zonder daarbij het VRAM te beïnvloeden, in de 
+Deze procedure wijzigt de scherm mode, zonder daarbij het VRAM te beÃ¯nvloeden, in de 
 opgegeven schermmode ScreenNr. Bij keuze van scherm mode 0 wordt afhankelijk 
 van de inhoud van systeem adres $F3B0 gekozen voor een 40 koloms mode (inhoud 
 $F3B0 kleiner dan 41) of anders een 80 koloms mode.
@@ -9145,7 +9145,7 @@ VDP beschreven en de YAE en YJK bits in register 25.
 
 Het normale Screen commando initialiseerd ook VDP registers voor b.v. de sprites 
 zodat deze op de standaard adressen komen te staan, maar deze worden dus niet door 
-deze procedure beïnvloed.
+deze procedure beÃ¯nvloed.
 
 
 
@@ -9246,7 +9246,7 @@ Gebruik:	DefinePicture(X1,Y1,X2,Y2,OffsetX,OffsetY,Page);
 Variabelen:	-
 
 Deze routine definieert het plaatje zoals dat gebruikt moet worden bij een PFillShape 
-of een PPaint. Dit plaatje wordt gedefinieerd met behulp van twee coördinaten paren 
+of een PPaint. Dit plaatje wordt gedefinieerd met behulp van twee coÃ¶rdinaten paren 
 (X1,Y1) en (X2,Y2) en de pagina waar het plaatje staat. OffsetX en OffsetY geven 
 hierbij een verschuiving aan.
 
@@ -9292,7 +9292,7 @@ Gebruik:	DisplayPage(PageNr);
 Variabelen:	-
 
 Deze procedure laat de pagina PageNr zien, in de grafische mode. Deze functie werkt 
-alleen goed in één van de grafische modes vanaf scherm 5.
+alleen goed in Ã©Ã©n van de grafische modes vanaf scherm 5.
 
 
 
@@ -9359,8 +9359,8 @@ of:	Expand(X,Y,Page,Name,Pos);
 Variabelen:	-
 
 Deze routine expandeert een met het 'compress.com' programma gecomprimeerd 
-plaatje direct in het VRAM vanaf de opgegeven coördinaat (X,Y) in één van de vier 
-mogelijke richtingen. Deze procedure is byte-georiënteerd.
+plaatje direct in het VRAM vanaf de opgegeven coÃ¶rdinaat (X,Y) in Ã©Ã©n van de vier 
+mogelijke richtingen. Deze procedure is byte-georiÃ«nteerd.
 
 
 
@@ -9389,15 +9389,15 @@ Gebruik:	Fastbox(X1,Y1,X2,Y2);
 Variabelen:	ActPage, AtrByt
 
 Deze procedure tekent een rechthoek die begint op (X1,Y1) en eindigt op (X2,Y2) op de 
-actieve pagina ActPage. Deze functie is byte-georiënteerd en kent daarom geen 
+actieve pagina ActPage. Deze functie is byte-georiÃ«nteerd en kent daarom geen 
 logische operaties.
 
 
 
 De variabele AtrByt wordt gebruikt bij het bepalen van de kleur. Dit gebeurd op byte 
-niveau, dit betekend dat op de schermen 5, 6 en 7 er 2 of 4 pixels met één byte worden 
+niveau, dit betekend dat op de schermen 5, 6 en 7 er 2 of 4 pixels met Ã©Ã©n byte worden 
 gevuld. Het is hierdoor mogelijk om b.v. op de schermen 5 en 7 een streepeffect te 
-krijgen door in de hoge en lage nibble van AtrByt een andere kleur te definiëren.
+krijgen door in de hoge en lage nibble van AtrByt een andere kleur te definiÃ«ren.
 
 
 
@@ -9425,14 +9425,14 @@ Het origineel staat op de actieve pagina ActPage.
 
 
 
-Het copiëren gebeurt afhankelijk van de ligging van de coördinaten (X1,Y1) en (X2,Y2) 
-in één van de vier mogelijk richtingen. Het copiëren gebeurt byte-georiënteerd hetgeen 
+Het copiÃ«ren gebeurt afhankelijk van de ligging van de coÃ¶rdinaten (X1,Y1) en (X2,Y2) 
+in Ã©Ã©n van de vier mogelijk richtingen. Het copiÃ«ren gebeurt byte-georiÃ«nteerd hetgeen 
 een aanzienlijke snelheidsverbetering opleverd t.o.v. GCopy. Er is dan ook geen logische 
 operatie mogelijk.
 
 
 
-Het is mogelijk om met deze procedure van en naar het externe VRAM te copiëren.
+Het is mogelijk om met deze procedure van en naar het externe VRAM te copiÃ«ren.
 
 
 
@@ -9449,7 +9449,7 @@ Gebruik:	FillBox(X1,Y1,X2,Y2);
 Variabelen:	AtrByt, ActPage, LogOpr
 
 Deze procedure tekent een rechthoek die begint op (X1,Y1) en eindigt op (X2,Y2) op de 
-actieve pagina ActPage. Deze functie is pixel-georiënteerd en kent daarom logische 
+actieve pagina ActPage. Deze functie is pixel-georiÃ«nteerd en kent daarom logische 
 operaties die via de variabele LogOpr kunnen worden opgegeven.
 
 
@@ -9470,13 +9470,13 @@ Gebruik:	FillShape(X,Y,Color);
 
 Variabele:	ActPage, Logopr
 
-Deze routine kleurt vanaf het coördinaat (X,Y) alle aanliggende pixels met dezelfde kleur 
-als op het begin coördinaat (X,Y) in met de opgegeven kleur Color. Het resultaat komt 
+Deze routine kleurt vanaf het coÃ¶rdinaat (X,Y) alle aanliggende pixels met dezelfde kleur 
+als op het begin coÃ¶rdinaat (X,Y) in met de opgegeven kleur Color. Het resultaat komt 
 op de pagina in ActPage.
 
 
 
-Er wordt meteen gestopt als de opgegeven (X,Y) coördinaat buiten het scherm valt of niet 
+Er wordt meteen gestopt als de opgegeven (X,Y) coÃ¶rdinaat buiten het scherm valt of niet 
 binnen de gedefinieerde viewport valt. Ook op deze functie is clipping van toepassing.
 
 
@@ -9531,14 +9531,14 @@ Het origineel staat op de actieve pagina ActPage.
 
 
 
-Het copiëren gebeurt afhankelijk van de ligging van de coördinaten (X1,Y1) en (X2,Y2) 
-in één van de vier mogelijke richtingen. Het copiëren gebeurt pixel-georiënteerd hetgeen 
+Het copiÃ«ren gebeurt afhankelijk van de ligging van de coÃ¶rdinaten (X1,Y1) en (X2,Y2) 
+in Ã©Ã©n van de vier mogelijke richtingen. Het copiÃ«ren gebeurt pixel-georiÃ«nteerd hetgeen 
 het gebruik van een logische operatie mogelijk maakt. De logische operatie kan worden 
 opgegeven via de variabele LogOpr.
 
 
 
-Het is mogelijk om met deze procedure van en naar het externe VRAM te copiëren.
+Het is mogelijk om met deze procedure van en naar het externe VRAM te copiÃ«ren.
 
 
 
@@ -9563,7 +9563,7 @@ voor System de waarde $0232. Onder DOS 1 zijn beide waarden gelijk aan $0100.
 
 
 
-In het algemeen zal men alleen geïnteresseerd zijn of men werkt onder DOS 1 of DOS 2.
+In het algemeen zal men alleen geÃ¯nteresseerd zijn of men werkt onder DOS 1 of DOS 2.
 
 
 
@@ -9581,7 +9581,7 @@ standaard instelling bij het opstarten van de GIOS, namelijk (0,0,255,255).
 
 
 
-In het coördinaat (X1,Y1) staat de linkerbovenhoek en in (X2,Y2) staat de 
+In het coÃ¶rdinaat (X1,Y1) staat de linkerbovenhoek en in (X2,Y2) staat de 
 rechteronderhoek.
 
 
@@ -9604,8 +9604,8 @@ operatie LogOpr.
 
 
 
-Het tekenen gebeurt afhankelijk van de ligging van de coördinaten (X1,Y1) en (X2,Y2) in 
-één van de vier mogelijke richtingen.
+Het tekenen gebeurt afhankelijk van de ligging van de coÃ¶rdinaten (X1,Y1) en (X2,Y2) in 
+Ã©Ã©n van de vier mogelijke richtingen.
 
 
 
@@ -9627,7 +9627,7 @@ Gebruik:	LoadPicture(X,Y,Page,Name);
 Variabelen:	LogOpr
 
 Deze procedure laad een plaatje vanuit de file Name in het VRAM beginnend op de 
-opgegeven coördinaat (X,Y) en op de opgegeven pagina Page. De breedte en hoogte van 
+opgegeven coÃ¶rdinaat (X,Y) en op de opgegeven pagina Page. De breedte en hoogte van 
 het plaatje staan als eerste in de data van het plaatje en hoeven dus niet te worden 
 opgegeven.
 
@@ -9639,11 +9639,11 @@ data correct aan te bieden.
 
 
 
-Deze functie zal als het kan byte-georiënteerd uitgevoerd worden. Dit hangt af van: 
+Deze functie zal als het kan byte-georiÃ«nteerd uitgevoerd worden. Dit hangt af van: 
 
 LogOpr (deze moet 0 zijn),
 
-de begin X-coördinaat en
+de begin X-coÃ¶rdinaat en
 
 de breedte van het plaatje.
 
@@ -9718,7 +9718,7 @@ Variabelen:	-
 Deze procedure copieert data van het Source kanaal naar het Destination kanaal, 
 hierbij worden maximaal Length bytes gecopieerd.
 
-Het copiëren gebeurd in oplopende volgorde. Na afloop is het Source kanaal in totaal 
+Het copiÃ«ren gebeurd in oplopende volgorde. Na afloop is het Source kanaal in totaal 
 Length bytes opgehoogd of ongeldig geworden, hetzelfde geldt voor het 
 Destination kanaal.
 
@@ -9766,14 +9766,14 @@ Variabelen:	-
 
 Deze routine expandeert een, met het 'compress.com' programma, gecomprimeerd 
 plaatje. Dit plaatje wordt direct weergegeven op het scherm op de opgegeven (X,Y) 
-coördinaat en de opgegeven pagina Page.
+coÃ¶rdinaat en de opgegeven pagina Page.
 
 
 
 Van de waarde van X en Y wordt de absolute waarde genomen en waarna ze pas worden 
 gebruikt. Als X en/of Y negatief zijn dan wordt de richting van de MemExpand gewijzigd 
 in respectievelijk rechts naar links of van omlaag naar omhoog. Omdat de MemExpand 
-byte georiënteerd is, is er een beperking op de X-coördinaten in scherm 5, 6 en 7.
+byte georiÃ«nteerd is, is er een beperking op de X-coÃ¶rdinaten in scherm 5, 6 en 7.
 
 
 
@@ -9797,7 +9797,7 @@ bytes groot.
 
 3.	Breedte en Hoogte van het plaatje. Dit is eigenlijk een copie van de eerste 4 
 bytes van de originele file. Er wordt dus vanuit gegaan dat de originele file b.v. 
-is gemaakt d.m.v. één van de procedures SavePicture, 
+is gemaakt d.m.v. Ã©Ã©n van de procedures SavePicture, 
 MemSavePicture of het COPY-commando van BASIC.
 
 4.	De data van het plaatje zelf.
@@ -9884,14 +9884,14 @@ Gebruik:	MemLoadPicture(X,Y,Page,Channel);
 Variabelen:	LogOpr
 
 Deze procedure laadt een plaatje vanuit de memory mapper in het VRAM beginnend op 
-de opgegeven coördinaat (X,Y) en op de opgegeven pagina Page. De breedte en hoogte 
+de opgegeven coÃ¶rdinaat (X,Y) en op de opgegeven pagina Page. De breedte en hoogte 
 van het plaatje staan als eerste in de data van het plaatje en hoeven dus niet te worden 
 opgegeven. Het plaatje begint op de plek waar het waar opgegeven kanaal Channel 
 naar wijst.
 
 
 
-Het kanaal mag variëren van 0 t/m 15. Als het kanaal nummer ongeldig is of het kanaal 
+Het kanaal mag variÃ«ren van 0 t/m 15. Als het kanaal nummer ongeldig is of het kanaal 
 stond op een ongeldige positie dan wordt deze procedure niet uitgevoerd.
 
 Als er vanaf de positie van het gegeven kanaal niet genoeg ruimte of exact genoeg ruimte 
@@ -9904,11 +9904,11 @@ data correct aan te bieden.
 
 
 
-Deze functie zal als het kan byte-georiënteerd uitgevoerd worden. Dit hangt af van: 
+Deze functie zal als het kan byte-georiÃ«nteerd uitgevoerd worden. Dit hangt af van: 
 
 LogOpr (deze moet 0 zijn),
 
-de begin X-coördinaat en
+de begin X-coÃ¶rdinaat en
 
 de breedte van het plaatje.
 
@@ -9966,14 +9966,14 @@ Channel.
 
 
 
-Het kanaal nummer mag variëren van 0 t/m 15. Als het kanaal nummer ongeldig is of het 
+Het kanaal nummer mag variÃ«ren van 0 t/m 15. Als het kanaal nummer ongeldig is of het 
 kanaal stond op een ongeldige positie dan wordt er geen melding teruggegeven. Als er 
 vanaf het opgegeven kanaal niet genoeg ruimte of exact genoeg ruimte is dan is het 
 kanaal na afloop ongeldig gemaakt.
 
 
 
-Het coördinaat (X1,Y1) is het beginpunt en (X2,Y2) is het eindpunt. Merk op dat er dus in 
+Het coÃ¶rdinaat (X1,Y1) is het beginpunt en (X2,Y2) is het eindpunt. Merk op dat er dus in 
 vier schillende richtingen kan worden gewerkt.
 
 
@@ -10046,7 +10046,7 @@ Gebruik:	PPaint(X,Y,Border);
 
 Variabelen:	ActPage, AtrByt, LogOpr
 
-Deze routine kleurt vanaf het coördinaat (X,Y) alle pixels in binnen de opgegeven 
+Deze routine kleurt vanaf het coÃ¶rdinaat (X,Y) alle pixels in binnen de opgegeven 
 randkleur met de kleur de is gegeven in de variabele AtrByt. Het resultaat komt op de 
 pagina in ActPage.
 
@@ -10069,14 +10069,14 @@ Gebruik:	PFillShape(X,Y);
 
 Variabelen:	ActPage, LogOpr
 
-Deze routine kleurt vanaf het coördinaat (X,Y) alle aanliggende pixels met dezelfde kleur 
-als op het begin coördinaat (X,Y) in met de inhoud van de, bij het DefinePicture 
+Deze routine kleurt vanaf het coÃ¶rdinaat (X,Y) alle aanliggende pixels met dezelfde kleur 
+als op het begin coÃ¶rdinaat (X,Y) in met de inhoud van de, bij het DefinePicture 
 genoemde, `achterliggende' scherm. Het resultaat komt op de pagina in ActPage.
 
 
 
 Het inkleuren gebeurd d.m.v. GCopy commando's, hierbij kan LogOpr ook gebruikt 
-worden. Omdat het gebruikte inkleur algoritme alle pixels maar één keer bekijkt maakt 
+worden. Omdat het gebruikte inkleur algoritme alle pixels maar Ã©Ã©n keer bekijkt maakt 
 het niet uit of een pixel na de GCopy commando's dezelfde kleur krijgt als de kleur 
 waarnaar gezocht wordt.
 
@@ -10094,7 +10094,7 @@ Gebruik:	PPaint(X,Y,Border);
 
 Variabelen:	ActPage, LogOpr
 
-Deze routine kleurt vanaf het coördinaat (X,Y) alle pixels in binnen de opgegeven 
+Deze routine kleurt vanaf het coÃ¶rdinaat (X,Y) alle pixels in binnen de opgegeven 
 randkleur met de inhoud van de, bij het DefinePicture genoemde, `achterliggende' 
 scherm. Het resultaat komt op de pagina in ActPage.
 
@@ -10117,7 +10117,7 @@ Gebruik:	PSet(X,Y);
 
 Variabelen:	ActPage, LogOpr, AtrByt
 
-Deze procedure tekent een pixel met kleur AtrByt op het coördinaat (X,Y) op de actieve 
+Deze procedure tekent een pixel met kleur AtrByt op het coÃ¶rdinaat (X,Y) op de actieve 
 pagina aangegeven met ActPage. Er kan gebruik gemaakt worden van een logische 
 operatie LogOpr.
 
@@ -10137,7 +10137,7 @@ Gebruik:	PutSprite(X,Y,SpriteNumber,PlaneNumber);
 
 Variabelen:	-
 
-Deze procedure plaatst een sprite figuur op de opgegeven coördinaat (X,Y) en met als 
+Deze procedure plaatst een sprite figuur op de opgegeven coÃ¶rdinaat (X,Y) en met als 
 patroon nummer SpriteNumber. De sprite wordt geplaatst op het opgegeven 
 PlaneNumber.
 
@@ -10163,7 +10163,7 @@ Gebruik:	ReadMem(Channel,Address,Size);
 Variabelen:	-
 
 Deze procedure leest Size bytes vanaf de positie van het opgegeven kanaal en schrijft 
-deze naar het opgegeven adres in het werkgeheugen. Het kanaal mag variëren van 0 t/m 
+deze naar het opgegeven adres in het werkgeheugen. Het kanaal mag variÃ«ren van 0 t/m 
 15. Als het kanaal nummer ongeldig is of de positie is ongeldig dan wordt deze 
 procedure afgebroken.
 
@@ -10229,7 +10229,7 @@ BASIC. Het plaatje wordt direct vanuit het VRAM bewaard in de opgegeven file.
 
 
 
-Het coördinaat (X1,Y1) is het beginpunt en (X2,Y2) is het eindpunt. Merk op dat er dus in 
+Het coÃ¶rdinaat (X1,Y1) is het beginpunt en (X2,Y2) is het eindpunt. Merk op dat er dus in 
 vier schillende richtingen kan worden gewerkt.
 
 
@@ -10261,7 +10261,7 @@ Deze procedure is gelijk aan het SCREEN-commando van BASIC.
 
 
 
-ScreenNr mag variëren van 0 t/m 12. De schermodes 10 t/m 12 zullen op een MSX-2 
+ScreenNr mag variÃ«ren van 0 t/m 12. De schermodes 10 t/m 12 zullen op een MSX-2 
 hetzelfde resultaat geven als een SCREEN(8).
 
 
@@ -10273,7 +10273,7 @@ opgegeven in Border.
 
 
 Bij het gebruik van de procedure wordt meteen de viewport aangepast aan de resoluties 
-van de scherm mode. De linkerbovenhoek wordt altijd teruggezet op coördinaat (0,0). De 
+van de scherm mode. De linkerbovenhoek wordt altijd teruggezet op coÃ¶rdinaat (0,0). De 
 rechteronderhoek wordt voor de schermodes 6 en 7 op (511,255) gezet en voor alle 
 andere schermmodes op (255,255).
 
@@ -10396,14 +10396,14 @@ Gebruik:	SetViewPort(X1,Y1,X2,Y2);
 
 Variabelen:	-
 
-Deze procedure stelt de viewport in met behulp van de twee opgegeven coördinaten 
+Deze procedure stelt de viewport in met behulp van de twee opgegeven coÃ¶rdinaten 
 (X1,Y1) en (X2,Y2). Hierbij stelt (X1,Y1) de linkerbovenhoek voor en (X2,Y2) de 
 rechter onderhoek.
 
 Van Y1 en Y2 wordt alleen gekeken naar het lage byte aangezien er geen enkel scherm is 
 dat meer dan 256 beeldlijnen kan bevatten. Als X1 groter is als X2 dan worden de twee 
-verwisselt, evenzo voor Y1 en Y2. Bij het ophalen van de beide coördinaten door middel 
-van GetViewPort krijgt men dan de verwisselde en dus correcte coördinaten terug als 
+verwisselt, evenzo voor Y1 en Y2. Bij het ophalen van de beide coÃ¶rdinaten door middel 
+van GetViewPort krijgt men dan de verwisselde en dus correcte coÃ¶rdinaten terug als 
 linkerbovenhoek en rechteronderhoek
 
 
@@ -10446,7 +10446,7 @@ Gebruik:	SpriteAttributeAddress(Address);
 
 Variabelen:	-
 
-Deze procedure selecteert één van de 128 mogelijke spriteattribuuttabellen.
+Deze procedure selecteert Ã©Ã©n van de 128 mogelijke spriteattribuuttabellen.
 
 
 
@@ -10530,7 +10530,7 @@ Gebruik:	SpritePatternAdress(Address);
 
 Variabelen:	-
 
-Deze procedure selecteert één van de 64 mogelijke spritepatroontabellen.
+Deze procedure selecteert Ã©Ã©n van de 64 mogelijke spritepatroontabellen.
 
 
 
@@ -10769,7 +10769,7 @@ LoadVRAM
 
 MoveVRAM
 
-Als een commando uit de bovenste tabel nog niet klaar is en men gebruikt één van de 
+Als een commando uit de bovenste tabel nog niet klaar is en men gebruikt Ã©Ã©n van de 
 commando's uit de onderste tabel, dat in hetzelfde gebied werkt als het eerste commando, 
 dan is de kans groot dat deze twee commando's elkaar dwars zitten. Het kan ook zijn dat 
 de Z80 op 3.57 Mhz te traag is om het vorige statement dat een VDP-commando gebruikt 
@@ -10790,7 +10790,7 @@ Gebruik:	WriteMem(Channel,Address,Size);
 Variabelen:	-
 
 Deze procedure schrijft Size bytes vanaf het opgegeven adres in het werkgeheugen naar 
-de positie van het opgegeven kanaal. Het kanaal mag variëren van 0 t/m 15. Als het 
+de positie van het opgegeven kanaal. Het kanaal mag variÃ«ren van 0 t/m 15. Als het 
 kanaal nummer ongeldig is of de positie is ongeldig dan wordt deze procedure 
 afgebroken.
 
@@ -12198,7 +12198,7 @@ Er wordt een toekenning gemaakt waarbij de typen niet overeenkomen.
 
 String constant exceeds line
 
-String constanten moeten op één regel worden geschreven.
+String constanten moeten op Ã©Ã©n regel worden geschreven.
 
 56
 
@@ -12206,14 +12206,14 @@ Error in integer constant
 
 Een integer constante voldoet niet aan de schrijfwijze zoals deze is 
 omschreven in hoofdstuk 2.1 "Integer (hele getallen)" of de constante blijft niet 
-binnen het bereik -32768..32767. Gehele reële getallen moeten worden 
+binnen het bereik -32768..32767. Gehele reÃ«le getallen moeten worden 
 geschreven met een punt gevolgd door een nul. Bijvoorbeeld 123456789.0.
 
 57
 
 Error in real constant
 
-De schrijfwijze van de real staat beschreven in hoofdstuk 2.3 "Real (reële 
+De schrijfwijze van de real staat beschreven in hoofdstuk 2.3 "Real (reÃ«le 
 getallen)".
 
 58
@@ -12294,7 +12294,7 @@ Inline error
 
 Illegal use of ABSOLUTE
 
-1) er mag maar één naam staan voor de dubbele punt in een absolute variabele
+1) er mag maar Ã©Ã©n naam staan voor de dubbele punt in een absolute variabele
 
     declaratie.
 
@@ -12370,7 +12370,7 @@ Disk or directory full
 
 +
 
-De com-file kon niet worden gecreëerd vanwege een te volle directory of een 
+De com-file kon niet worden gecreÃ«erd vanwege een te volle directory of een 
 
 APPENDIX G
 
@@ -12716,56 +12716,56 @@ APPENDIX H
 
 Overzicht VRAM adressering
 
-Hieronder volgt een overzicht van de vier mogelijke coördinaten stelsels die kunnen 
+Hieronder volgt een overzicht van de vier mogelijke coÃ¶rdinaten stelsels die kunnen 
 worden gehanteerd voor een aantal van de GIOS procedures en functies die met 
-coördinaten werken.
+coÃ¶rdinaten werken.
 
 
 
 
 
-Pixel-georiënteerde adressering
+Pixel-georiÃ«nteerde adressering
 
-Een eigenschap van een pixel-georiënteerde adressering is, dat men logische operaties 
+Een eigenschap van een pixel-georiÃ«nteerde adressering is, dat men logische operaties 
 kan gebruiken, zie appendix I voor details over de te gebruiken logische operaties. Het 
 gebruik van logische operaties brengt altijd een verlies van performance met zich mee.
 
 
 
 Een andere eigenschap is dat van alle kleur waarden die kunnen worden opgegeven (b.v. 
-via AtrByt) alleen de bits die nodig zijn voor één pixel worden gebruikt. Voor scherm 5 
+via AtrByt) alleen de bits die nodig zijn voor Ã©Ã©n pixel worden gebruikt. Voor scherm 5 
 zijn dit de bits 0-3, voor scherm 6 de bits 0-1, voor scherm 7 de bits 0-3 en voor scherm 8 
 de bits 0-7. Voor scherm 10 t/m 12 is dit geheel anders, maar de opgegeven kleur wordt 
 in ieder geval voor de volle 8 bits overgenomen.
 
 
 
-Byte-georiënteerde adressering
+Byte-georiÃ«nteerde adressering
 
-Een eigenschap van een byte-georiënteerde adressering is, dat men geen logische 
+Een eigenschap van een byte-georiÃ«nteerde adressering is, dat men geen logische 
 operaties kan gebruiken. Deze adresseer methode is daarom ook veel sneller dan de pixel-
-georiënteerde adressering.
+georiÃ«nteerde adressering.
 
 
 
-De tweede eigenschap van een byte-georiënteerde adressering is dat men afhankelijk van 
+De tweede eigenschap van een byte-georiÃ«nteerde adressering is dat men afhankelijk van 
 het huidige scherm, 1 pixel, 2 pixels of 4 pixels leest of beschrijft. In het geval van 1 pixel 
-per byte (scherm 8 en hoger) is er geen beperking in de X-coördinaten en alleen op de 
-logische operaties na is er ook geen verschil met een pixel-georiënteerde adressering.
+per byte (scherm 8 en hoger) is er geen beperking in de X-coÃ¶rdinaten en alleen op de 
+logische operaties na is er ook geen verschil met een pixel-georiÃ«nteerde adressering.
 
 In het geval van 2 pixels staat het linker pixel (linker 4 bits) altijd op een even
 
-X-coördinaat. Bij 4 pixels in één byte staat het linker pixel (linker 2 bits) altijd op een
+X-coÃ¶rdinaat. Bij 4 pixels in Ã©Ã©n byte staat het linker pixel (linker 2 bits) altijd op een
 
-X-coördinaat die deelbaar is door 2.
+X-coÃ¶rdinaat die deelbaar is door 2.
 
 
 
 Als er een procedure als FastBox of FastCopy wordt gebruikt moet men er voor 
-zorgen dat de coördinatenparen (X1,Y1) en (X2,Y2) altijd zodanig worden opgegeven 
-dat de kleinste X-coördinaat altijd het meest linkse pixel aangeeft en de grootste
+zorgen dat de coÃ¶rdinatenparen (X1,Y1) en (X2,Y2) altijd zodanig worden opgegeven 
+dat de kleinste X-coÃ¶rdinaat altijd het meest linkse pixel aangeeft en de grootste
 
-X-coördinaat altijd het meest rechtse pixel. B.v. in scherm 6: X1 = 0 en X2 = 3 of 
+X-coÃ¶rdinaat altijd het meest rechtse pixel. B.v. in scherm 6: X1 = 0 en X2 = 3 of 
 andersom.
 
 
@@ -12777,7 +12777,7 @@ het VRAM kunnen het externe VRAM aanspreken.
 
 
 
-Dit extra VRAM heeft een aantal beperkingen en één daarvan is dat het nooit op het 
+Dit extra VRAM heeft een aantal beperkingen en Ã©Ã©n daarvan is dat het nooit op het 
 scherm weergegeven kan worden, maar dat wil niet zeggen dat het niet gebruikt kan 
 worden. In de tabel hieronder staat aangegeven welke pagina's er bij zijn gekomen om dit 
 externe VRAM te kunnen benutten.
@@ -13213,7 +13213,7 @@ blokgrootte van 128 bytes, maar deze kan optioneel worden opgegeven.
 
 	-	complete ondersteuning onder DOS 2 van padnamen.
 
-	-	wegens de byte geörienteerde file I/O is het nu mogelijk om files te maken die veel groter 
+	-	wegens de byte geÃ¶rienteerde file I/O is het nu mogelijk om files te maken die veel groter 
 kunnen zijn dan oorspronkelijk. De procedure Seek heeft nu als parameter een longint, 
 waardoor men dus ruim boven de standaard 65535 records uit kan komen. Hierdoor zijn 
 de getypeerde files niet meer compatibel. Een tweede voordeel hievan is dat de I/O zelf 
@@ -13326,7 +13326,7 @@ Read
 
 Syntax: Read (FilVar, Varx);
 
-Varx staat voor één of meer variabelen van het component type van FilVar gescheiden 
+Varx staat voor Ã©Ã©n of meer variabelen van het component type van FilVar gescheiden 
 door komma's. Elke variabele wordt gelezen uit de file en na ieder gelezen component 
 wordt de file wijzer opgehoogd naar het volgende component.
 
@@ -13336,7 +13336,7 @@ Write
 
 Syntax: Write (FilVar, Varx);
 
-Varx staat voor één of meer variabelen van het component type van FilVar gescheiden 
+Varx staat voor Ã©Ã©n of meer variabelen van het component type van FilVar gescheiden 
 door komma's. Elke variabele wordt geschreven naar de file en na ieder gelezen 
 component wordt de file wijzer opgehoogd naar het volgende component.
 
@@ -13348,7 +13348,7 @@ Syntax: Seek (FilVar, N);
 
 Seek verplaatst de file wijzer naar het component N van de file toegekend aan FilVar. N is 
 een Longint expressie. De positie van het eerste component is 0. Merk op dat het mogelijk 
-is om met Seek de file wijzer één component voorbij het laatste component van de file te 
+is om met Seek de file wijzer Ã©Ã©n component voorbij het laatste component van de file te 
 plaatsen. De opdracht:
 
 
@@ -13358,7 +13358,7 @@ plaatsen. De opdracht:
 
 
 Plaatst de file wijzer aan het einde van de file (FileSize geeft het aantal componenten in 
-de file weer, beginnend bij 0. Het terug gegeven aantal is dus één groter dan het laatste 
+de file weer, beginnend bij 0. Het terug gegeven aantal is dus Ã©Ã©n groter dan het laatste 
 component).
 
 Flush

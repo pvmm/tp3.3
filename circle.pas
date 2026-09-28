@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_Circle;
+PROGRAM example_Circle;
 
 BEGIN
   Screen(5);
@@ -6,6 +6,6 @@ BEGIN
   Logopr:=0;
   Atrbyt:=15;
   Circle(100,100,50);
-  READLN;               { wacht op return }
+  READLN;               { wait for return }
   Screen(0);
 END.

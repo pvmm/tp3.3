@@ -1,17 +1,17 @@
-PROGRAM voorbeeld_ScreenOn_Off;
+PROGRAM example_ScreenOn_Off;
 
-VAR teller  : BYTE;
+VAR counter  : BYTE;
 
 BEGIN
   Screen(7);
   ScreenOff;
   Actpage:=0;
-  FOR teller:=1 TO 100 DO
+  FOR counter:=1 TO 100 DO
     BEGIN
       Atrbyt:=random(255);
       FastBox(random(512),random(212),random(512),random(212))
     END;
   ScreenOn;
-  READLN;                         { wacht op return }
+  READLN;                         { wait for return }
   Screen(0);
 END.

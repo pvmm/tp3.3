@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_FillShape;
+PROGRAM example_FillShape;
 
 BEGIN
   Screen(5);
@@ -11,6 +11,6 @@ BEGIN
   Logopr:=3;
   FillShape(140,140,1);
   FillShape(200,140,15);
-  READLN;                       { wacht op return }
+  READLN;                       { wait for return }
   Screen(0);
 END.

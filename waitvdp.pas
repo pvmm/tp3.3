@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_WaitVDP;
+PROGRAM example_WaitVDP;
 
 BEGIN
   Screen(5);

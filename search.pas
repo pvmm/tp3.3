@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_search;
+PROGRAM example_search;
 
 VAR x : INTEGER;
 
@@ -7,9 +7,9 @@ BEGIN
   Actpage:=0;
   Logopr:=0;
   Atrbyt:=12;
-  Line(10,10,100,200);           { teken een lijn in kleur 12 }
-  x:=Search(100,100,12,2);       { zoek naar links tot kleur 12 }
+  Line(10,10,100,200);           { draw a line in color 12 }
+  x:=Search(100,100,12,2);       { search to the left for color 12 }
   READLN;
   Screen(0);
-  WRITELN('Op y-waarde 100 passert de lijn op x=',x);
+  WRITELN('At y-value 100 the line passes x=',x);
 END.

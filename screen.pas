@@ -1,7 +1,7 @@
-PROGRAM voorbeeld_Screen;
+PROGRAM example_Screen;
 
 BEGIN
   Screen(5);
-  READLN;         { wacht op return }
+  READLN;         { wait for return }
   Screen(0);
 END.

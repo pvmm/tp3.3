@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_Line;
+PROGRAM example_Line;
 
 BEGIN
   Screen(5);
@@ -6,6 +6,6 @@ BEGIN
   Logopr:=0;
   Atrbyt:=15;
   Line(0,0,255,255);
-  READLN;               { wacht op return }
+  READLN;               { wait for return }
   Screen(0);
 END.

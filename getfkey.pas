@@ -1,13 +1,13 @@
-PROGRAM voorbeeld_GetFkey;
+PROGRAM example_GetFkey;
 
-VAR welke : INTEGER;
+VAR which : INTEGER;
 
 BEGIN
   CLRSCR;
   REPEAT
-    welke:=GetFkey;
+    which:=GetFkey;
     GOTOXY(1,4);
-    IF welke<>0 THEN
-      WRITELN('U heeft funktietoets ',welke,' ingedrukt.   ')
+    IF which<>0 THEN
+      WRITELN('You pressed function key ',which,'.   ')
   UNTIL KEYPRESSED;
 END.

@@ -1,7 +1,7 @@
-PROGRAM voorbeeld_ClearMem;
+PROGRAM example_ClearMem;
 
 BEGIN
   ClearMem;
-  READLN;                       {-wacht op return-}
+  READLN;                       {-wait for return-}
   ClearMem;
 END.

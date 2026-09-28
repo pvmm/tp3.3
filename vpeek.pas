@@ -1,8 +1,8 @@
-PROGRAM voorbeeld_VPeek;
+PROGRAM example_VPeek;
 
-VAR teller : INTEGER;
+VAR counter : INTEGER;
 
 BEGIN
-  FOR teller:=0 TO 239 DO
-    WRITE (CHR(VPeek(teller)));
+  FOR counter:=0 TO 239 DO
+    WRITE (CHR(VPeek(counter)));
 END.

@@ -1,4 +1,4 @@
-PROGRAM voorbeeld_Paint;
+PROGRAM example_Paint;
 
 BEGIN
   Screen(5);

@@ -1,18 +1,18 @@
-PROGRAM voorbeeld_SetDate;
+PROGRAM example_SetDate;
 
-VAR jaar              : INTEGER;
-    maand,dag,weekdag : BYTE;
-    mogelijk          : BOOLEAN;
+VAR year              : INTEGER;
+    month,day,weekday : BYTE;
+    success           : BOOLEAN;
 
 BEGIN
   REPEAT
     CLRSCR;
-    WRITELN('dag (1..31):');
-    READLN(dag);
-    WRITELN('maand (1..12):');
-    READLN(maand);
-    WRITELN('jaar :');
-    READLN(jaar);
-    mogelijk:=SetDATE(jaar,maand,dag);
-  UNTIL mogelijk;
+    WRITELN('day (1..31):');
+    READLN(day);
+    WRITELN('month (1..12):');
+    READLN(month);
+    WRITELN('year :');
+    READLN(year);
+    success:=SetDATE(year,month,day);
+  UNTIL success;
 END.
