@@ -1,5 +1,8 @@
 # Turbo Pascal 3.3f for MSX-DOS (English translation)
 
+> **Archived.** This English translation is now archived and no longer
+> updated. The original Dutch version is preserved in the `original` branch.
+
 Z80 TURBO Pascal compiler, Version 3.3.
 
 ## Author and copyright
