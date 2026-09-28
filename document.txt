@@ -146,135 +146,135 @@ line. Now that an external editor must be used the source
 may contain longer lines. In that case the characters after column 127 are ignored,
 so make sure that the lines remain shorter.
 
-2. 	SCALAIRE STANDAARD TYPEN
+2. 	STANDARD SCALAR TYPES
 
-Een data type definieert de aard van de waarden, die een variabele kan aannemen. Iedere 
-variabele in een programma moet één data type hebben. Hoewel data typen in Turbo 
-Pascal zeer complex kunnen zijn, worden ze allemaal uit eenvoudige (ongestructureerde) 
-typen opgebouwd.
-
-
-
-Een eenvoudig type kan of door de programmeur gedefinieerd zijn (het type wordt dan 
-gedeclareerd scalair type genoemd), of het is één van de scalaire standaard typen: 
-Longint, Integer, Real, Boolean, Char of Byte. Er volgt een beschrijving van deze zes 
-scalaire data typen.
-
-2.1 Integer (hele getallen)
-
-Integers zijn hele getallen. In Turbo Pascal hebben deze het bereik van -32768 tot 32767. 
-Hele getallen nemen twee bytes geheugen in beslag.
+A data type defines the nature of the values that a variable can assume. Every
+variable in a program must have one data type. Although data types in Turbo
+Pascal can be very complex, they are all built from simple (unstructured)
+types.
 
 
 
-Overlopen van rekenkundige operaties met hele getallen wordt niet ontdekt. Let u er 
-vooral op, dat tussenresultaten in Integer expressies binnen de bereikgrenzen voor hele 
-getallen moeten liggen. Zo geeft bijvoorbeeld de expressie 1000*100/50 niet 2000, omdat 
-de vermenigvuldiging tot een overloop leidt.
+A simple type can either be defined by the programmer (the type is then
+called a declared scalar type), or it is one of the standard scalar types:
+Longint, Integer, Real, Boolean, Char or Byte. What follows is a description of these six
+scalar data types.
+
+2.1 Integer (whole numbers)
+
+Integers are whole numbers. In Turbo Pascal these have the range from -32768 to 32767.
+Whole numbers occupy two bytes of memory.
+
+
+
+Overflow of arithmetic operations with whole numbers is not detected. Please note
+in particular that intermediate results in Integer expressions must remain within the range limits for whole
+numbers. For example, the expression 1000*100/50 does not yield 2000, because
+the multiplication causes an overflow.
 
 2.2 Byte
 
-Het type Byte is een deelbereik van het type Integer met als grenzen 0 en 255. Bytes zijn 
-derhalve compatibel met het type Integer, dat betekend dat wanneer een waarde van het 
-type Byte verwacht wordt er ook een Integer gebruikt mag worden en omgekeerd. Een 
-uitzondering hierop geldt bij de overdracht van parameters. Verder kunnen Bytes en 
-Integers in expressies gemengd worden en Byte variabelen kunnen integer waarden 
-toegewezen krijgen. Een variabele van het type Byte neemt één byte geheugen in beslag.
+The type Byte is a subrange of the type Integer with limits 0 and 255. Bytes are
+therefore compatible with the type Integer, which means that when a value of the
+type Byte is expected an Integer may also be used and vice versa. One
+exception to this applies when passing parameters. Furthermore, Bytes and
+Integers can be mixed in expressions and Byte variables can be assigned integer values.
+A variable of the type Byte occupies one byte of memory.
 
-2.3 Real (reële getallen)
+2.3 Real (real numbers)
 
-Het bereik van reële getallen (data type real) is 1E-38 tot 1E+38. De mantisse heeft tot 11 
-significante cijfers. De opslag van een reëel getal neemt 6 bytes geheugen in beslag.
-
-
-
-Bij een rekenkundige operatie met reële getallen veroorzaakt een overloop een 
-programmastop en de melding van een looptijdfout (runtime error). Een onderschrijding 
-van de bereikgrens leidt tot een resultaat van nul.
+The range of real numbers (data type real) is 1E-38 to 1E+38. The mantissa has up to 11
+significant digits. Storing a real number occupies 6 bytes of memory.
 
 
 
-Hoewel het type Real tot de scalaire data typen hoort, zou het volgende onderscheid 
-tussen het type Real en de andere scalaire typen opgemerkt moeten worden:
+In an arithmetic operation with real numbers, an overflow causes a
+program halt and the report of a runtime error (runtime error). Underflow
+of the range limit leads to a result of zero.
 
 
 
-1) 	De functies Pred en Succ mogen geen reële getallen als argument ontvangen.
+Although the type Real belongs to the scalar data types, the following distinction
+between the type Real and the other scalar types should be noted:
 
-2) 	Het type Real mag niet bij de indexering van arrays gebruikt worden.
 
-3) 	Het type Real kan niet gebruikt worden om het basis type van een set te definiëren.
 
-4) 	Het type Real kan niet in de lus opdrachten for en case gebruikt worden.
+1) 	The functions Pred and Succ may not receive real numbers as arguments.
 
-5) 	Deelbereiken van het type Real zijn niet toegestaan.
+2) 	The type Real may not be used when indexing arrays.
 
-2.4 Boolean (boolse waarheidswaarden)
+3) 	The type Real cannot be used to define the base type of a set.
 
-Een boolse waarheidswaarde kan alleen de logische waarden waar of niet waar, waarvan 
-de standaard namen True respectievelijk False zijn, aannemen. Deze zijn zo gedefinieerd 
-dat True > False. Een boolean variabele neemt één byte geheugen in beslag. De ordinale 
-waarde van True is 1, en van False is 0.
+4) 	The type Real cannot be used in the loop statements for and case.
 
-2.5 Char (alfanumerieke tekens)
+5) 	Subranges of the type Real are not allowed.
 
-De (alfanumerieke) waarde van het type Char komt overeen met een teken uit de ASCII-
-tekenset. De tekens zijn volgens hun ASCII-waarde gerangschikt, bijvoorbeeld 'A' < 'B'. 
-De ordinale waarden (ASCII-waarden) van de tekens loopt van 0 tot 255. Een Char 
-neemt een byte geheugen in beslag.
+2.4 Boolean (boolean truth values)
 
-3. 	ZELFGEDEFINIEERDE 
-TAALELEMENTEN
+A boolean truth value can only assume the logical values true or false, whose
+standard names are True and False respectively. These are defined such
+that True > False. A boolean variable occupies one byte of memory. The ordinal
+value of True is 1, and of False is 0.
 
-3.1 Namen
+2.5 Char (alphanumeric characters)
 
-Namen (Engl.: identifier) worden gebruikt, om labels, constanten, typen, variabelen, 
-procedures en functies mee te identificeren. Een naam bestaat uit een letter of een 
-onderstreping, gevolgd door een willekeurige combinatie van letters, cijfers en 
-onderstrepingen. De lengte van een naam wordt alleen begrenst door het aantal tekens 
-(127) dat op één regel mag staan en alle letters van de naam zijn significant voor de 
+The (alphanumeric) value of the type Char corresponds to a character from the ASCII
+character set. The characters are ordered by their ASCII value, for example 'A' < 'B'.
+The ordinal values (ASCII values) of the characters range from 0 to 255. A Char
+occupies one byte of memory.
+
+3. 	USER-DEFINED
+LANGUAGE ELEMENTS
+
+3.1 Names
+
+Names (Engl.: identifier) are used to identify labels, constants, types, variables,
+procedures and functions. A name consists of a letter or an
+underscore, followed by an arbitrary combination of letters, digits and
+underscores. The length of a name is only limited by the number of characters
+(127) allowed on one line and all letters of the name are significant to the
 compiler.
 
 
 
-Voorbeelden:
+Examples:
 
 TURBO
 
-vierkant
+square
 
-getelde_personen
+counted_persons
 
-GeboorteDatum
+BirthDate
 
-3eMacht       mag niet omdat er een cijfer aan het begin staat.
+3rdPower      not allowed because it starts with a digit.
 
-twee Woorden     mag niet omdat er geen spatie in mag zitten.
-
-
-
-Omdat Turbo Pascal geen verschil maakt tussen hoofd- en kleine letters, heeft het gebruik 
-van hoofd- en kleine letters bij bijvoorbeeld GeboorteDatum geen invloed. Het gebruik 
-van hoofd- en kleine letters wordt echter toch aangeraden, omdat het de leesbaarheid 
-verhoogd. Voor het menselijk oog is ZeerLangeNaam nu eenmaal gemakkelijker te lezen 
-dan ZEERLANGENAAM. De gemengde toepassing van hoofd- en kleine letters wordt 
-door de hele handleiding voor namen gebruikt.
-
-3.2 Getallen
-
-Gehele getallen
-
-Getallen zijn constanten van het type Longint, Integer of Real. Integer constanten zijn 
-hele getallen, die in decimale of hexadecimale notatie worden uitgedrukt. Hexadecimale 
-getallen worden gekenmerkt doordat ze vooraf gegaan worden door een dollarteken: 
-$ABC is een hexadecimale constante. Het bereik van de decimale Longint is van 
--2147483648 tot en met +2147483647 en het hexadecimale Longint bereik loopt van 
-$00000000 tot en met $FFFFFFFF. Het bereik van de decimale Integer is van -32768 tot 
-en met +32767 en het hexadecimale Integer bereik loopt van $0000 tot en met $FFFF.
+two Words     not allowed because it may not contain a space.
 
 
 
-Voorbeelden:
+Because Turbo Pascal makes no distinction between upper- and lower-case letters, the use
+of upper- and lower-case letters in e.g. BirthDate has no effect. The use
+of upper- and lower-case letters is nevertheless recommended, because it improves readability.
+To the human eye VeryLongName is simply easier to read
+than VERYLONGNAME. The mixed use of upper- and lower-case letters is
+used throughout the manual for names.
+
+3.2 Numbers
+
+Whole numbers
+
+Numbers are constants of the type Longint, Integer or Real. Integer constants are
+whole numbers expressed in decimal or hexadecimal notation. Hexadecimal
+numbers are characterized by being preceded by a dollar sign:
+$ABC is a hexadecimal constant. The range of the decimal Longint is from
+-2147483648 to +2147483647 and the hexadecimal Longint range runs from
+$00000000 to $FFFFFFFF. The range of the decimal Integer is from -32768 to
++32767 and the hexadecimal Integer range runs from $0000 to $FFFF.
+
+
+
+Examples:
 
 1
 
@@ -286,21 +286,21 @@ $123
 
 $ABC
 
-$123G    mag niet omdat G geen bestaand hexadecimaal cijfer is.
+$123G    not allowed because G is not an existing hexadecimal digit.
 
-1.2345   mag niet omdat een heel getal geen punt mag bevatten.
+1.2345   not allowed because a whole number may not contain a point.
 
-Reële getallen
+Real numbers
 
-Het type Real heeft een bereik van 1E-38 tot en met 1E+38. Dit betekend een mantisse 
-van 11 significante cijfers. U kunt de exponent schrijfwijze gebruiken, waarbij de letter E 
-de exponent factor vooraf gaat en betekend '10 tot de macht'. Een Integer constante is 
-overal geoorloofd waar een Real constante mag staan. Er mogen geen scheidingstekens 
-binnen het getal staan.
+The type Real has a range from 1E-38 to 1E+38. This means a mantissa
+of 11 significant digits. You can use the exponent notation, where the letter E
+precedes the exponent factor and means '10 to the power'. An Integer constant is
+allowed everywhere a Real constant may appear. No separators may appear
+within the number.
 
 
 
-Voorbeelden:
+Examples:
 
 1234.5678
 
@@ -312,27 +312,27 @@ Voorbeelden:
 
 -1.2345678901E+12
 
-1                     toegestaan, maar dit is geen Real, maar een Integer.
+1                     allowed, but this is not a Real, it is an Integer.
 
 3.3 Strings
 
-Een String constante is een opeenvolging van tekens, met enkelvoudige aanhalingstekens 
-er omheen:
+A String constant is a sequence of characters enclosed in single quotes:
+ 
 
 
 
-'Dit is een string constante'
+'This is a string constant'
 
 
 
-Een enkelvoudig aanhalingsteken kan in de String staan doordat het dubbel geschreven 
-wordt. Strings die maar één enkel teken bevatten gelden als het standaard type Char. Een 
-String is met een array of char van dezelfde lengte compatibel. Alle string constanten 
-zijn met alle String typen compatibel.
+A single quote can appear in the String by writing it twice.
+Strings containing only a single character count as the standard type Char. A
+String is compatible with an array of char of the same length. All string constants
+are compatible with all String types.
 
 
 
-Voorbeelden:
+Examples:
 
 'TURBO'
 
@@ -346,45 +346,45 @@ Voorbeelden:
 
 
 
-Zoals in het tweede en derde voorbeeld te zien is, wordt een enkelvoudig aanhalingsteken 
-in een String als twee op elkaar volgende aanhalingstekens geschreven. De vier op elkaar 
-volgende aanhalingstekens in het derde voorbeeld stelt een String voor met één enkel 
-aanhalingsteken.
+As can be seen in the second and third examples, a single quote
+in a String is written as two consecutive quotes. The four consecutive
+quotes in the third example represent a String with a single
+quote.
 
-Het laatste voorbeeld - aanhalingstekens die geen tekens omsluiten betekenen een lege 
-String - is alleen met het String type compatibel.
+The last example - quotes enclosing no characters meaning an empty
+String - is only compatible with the String type.
 
-3.4 Controle karakters
+3.4 Control characters
 
-Turbo Pascal biedt ook de mogelijkheid om controle karakters in een String op te nemen. 
-Er zijn twee manieren om deze op te nemen in een String:
+Turbo Pascal also offers the possibility to include control characters in a String.
+There are two ways to include them in a String:
 
-1. Het teken # gevolgd door een gehele constante binnen het bereik van 0 tot en met 255 
-komt overeen met het ASCII-karakter van dezelfde waarde.
+1. The character # followed by an integer constant within the range 0 to 255
+corresponds to the ASCII character of the same value.
 
-2. Het teken ^ gevolgd door een letter komt overeen met het overeenkomstige controle 
-karakter, ASCII-waarde is ordinale waarde van de letter (hoofdletters) min 64.
-
-
-
-Voorbeelden:
+2. The character ^ followed by a letter corresponds to the matching control
+character, ASCII value is the ordinal value of the letter (capitals) minus 64.
 
 
 
-#10    ASCII 10 decimaal regel opvoer 	= Line Feed
+Examples:
+
+
+
+#10    ASCII 10 decimal line feed 	= Line Feed
 
 #$1B   ASCII 1B hex 	= Escape
 
 ^G     Control-G 	= Bell
 
-^L     Control-L pagina opvoer 	= Form Feed
+^L     Control-L form feed 	= Form Feed
 
 ^[     Control-[	= Escape
 
 
 
-Opeenvolgende controle karakters kunnen als een String worden samengevoegd door ze 
-te schrijven zonder begrenzers tussen de verschillende controle karakters.
+Consecutive control characters can be joined as a String by writing them
+without delimiters between the different control characters.
 
 
 
@@ -396,60 +396,60 @@ te schrijven zonder begrenzers tussen de verschillende controle karakters.
 
 
 
-De bovenstaande Strings bevatten respectievelijk 2, 3 en 4 karakters. Controle karakters 
-kunnen ook worden gecombineerd met tekst Strings:
+The above Strings contain 2, 3 and 4 characters respectively. Control characters
+can also be combined with text Strings:
 
 
 
-'Ik wacht op invoer! '^G^G^G' Wakker worden'
+'I'm waiting for input! '^G^G^G' Wake up'
 
 #27'U'
 
-'Dit is de volgende regel met tekst '^M^J
+'This is the next line of text '^M^J
 
 
 
-Deze drie regels bevatten respectievelijk 37, 3 en 37 karakters.
+These three lines contain 37, 3 and 37 characters respectively.
 
-3.5 Commentaar
+3.5 Comments
 
-Commentaar mag overal in de tekst worden opgenomen waar begrenzers toegestaan zijn. 
-Commentaar moet worden omsloten door de tekens { } of door (* *).
-
-
-
-Voorbeelden: 
-
-{dit is commentaar }
-
-(* en dit ook *)
+Comments may be included anywhere in the text where delimiters are allowed.
+Comments must be enclosed by the characters { } or by (* *).
 
 
 
-Commentaar geschreven tussen { } mag niet omsloten worden door ander commentaar 
-dat met { } is omsloten en voor commentaar dat omsloten is met (* *) geldt hetzelfde. 
-Commentaar binnen { } mag echter wel omsloten worden door (* *) en omgekeerd. 
-Hierdoor is het mogelijk om hele stukken van de broncode als commentaar op te nemen, 
-zelfs als binnen dit stuk al commentaar staat.
+Examples:
 
-3.6 Compiler aanwijzingen
+{this is a comment }
 
- Een aantal mogelijkheden van de Turbo Pascal compiler worden gestuurd door compiler 
-aanwijzingen (compiler directives). Een compiler aanwijzing wordt in de broncode 
-opgenomen als commentaar dat op een speciale manier is geschreven. Een compiler 
-aanwijzing mag dus overal voorkomen waar commentaar mag staan.
+(* and so is this *)
 
 
 
-Een compiler aanwijzing bestaat uit een openingshaakje direct gevolgd door een 
-dollarteken en weer direct gevolgd door een compiler aanwijzing letter of een lijst letters 
-gescheiden door komma's. De schrijfwijze van de letter of van de lijst letters hangt af van 
-het type aanwijzing. Een volledige omschrijving van iedere compiler aanwijzing vindt u 
-in de appendix C.
+Comments written between { } may not be enclosed by other comments
+enclosed with { }, and the same applies to comments enclosed with (* *).
+Comments inside { } may however be enclosed by (* *) and vice versa.
+This makes it possible to include whole sections of source code as comments,
+even if that section already contains comments.
+
+3.6 Compiler directives
+
+ A number of capabilities of the Turbo Pascal compiler are controlled by compiler
+directives. A compiler directive is included in the source code
+as a comment written in a special way. A compiler
+directive may therefore appear anywhere comments are allowed.
 
 
 
-Voorbeelden: 
+A compiler directive consists of an opening parenthesis directly followed by a
+dollar sign and directly followed by a compiler directive letter or a list of letters
+separated by commas. The notation of the letter or list of letters depends on
+the type of directive. A full description of each compiler directive can be found
+in appendix C.
+
+
+
+Examples:
 
 {$I-}
 
@@ -461,114 +461,113 @@ Voorbeelden:
 
 
 
-Merk op dat er geen spaties voor of achter het dollarteken mogen staan, anders wordt het 
-opgevat als commentaar.
+Note that no spaces may appear before or after the dollar sign, otherwise it is
+interpreted as a comment.
 
-4. 	PROGRAMMAHOOFD EN BLOK
+4. 	PROGRAM HEADER AND BLOCK
 
-Een Pascal programma bestaat uit een programmahoofd, gevolgd door een 
-programmablok. Het programmablok is verder onderverdeeld in een declaratie deel, 
-waarin alle in het programma voorkomende objecten gedefinieerd worden, en een 
-uitvoeringsdeel, waarin alle acties gespecificeerd worden, die met deze objecten 
-uitgevoerd moeten worden. Beide delen worden in het navolgende nauwkeurig 
-beschreven.
+A Pascal program consists of a program header, followed by a
+program block. The program block is further subdivided into a declaration part,
+in which all objects occurring in the program are defined, and an
+execution part, in which all actions to be performed with these objects
+are specified. Both parts are described in detail below.
 
-4.1 Programmahoofd
+4.1 Program header
 
-Bij Turbo Pascal is het programmahoofd optioneel en heeft geen betekenis. Indien 
-aanwezig, geeft het aan het programma een naam en kan de parameters opsommen, 
-waardoor het programma met zijn omgeving communiceerd. Deze lijst bestaat uit een rij 
-van namen, die tussen haakjes staat en door komma's gescheiden zijn.
-
-
-
-Voorbeelden:
-
-program Cirkels;
-
-program BoekHouding (Input, Output);
-
-program Schrijver (Input, Printer);
-
-4.2 Declaratie deel
-
-Het declaratie deel van een blok, declareert alle namen, die in het opdrachtdeel van het 
-blok (en mogelijkerwijs andere blokken binnen dit blok) gebruikt worden. Het declaratie 
-deel is in vijf verschillende delen ingedeeld:
+In Turbo Pascal the program header is optional and has no meaning. If
+present, it gives the program a name and may list parameters
+through which the program communicates with its environment. This list consists of a series
+of names enclosed in parentheses and separated by commas.
 
 
 
-1) 	Label declaratie deel
+Examples:
 
-2) 	Constante definitie deel
+program Circles;
 
-3) 	Type definitie deel
+program Bookkeeping (Input, Output);
 
-4) 	Variabelen declaratie deel
+program Writer (Input, Printer);
 
-5) 	Procedure- en/of functie declaratie deel
+4.2 Declaration part
 
-
-
-Terwijl de standaard Pascal voorschrijft dat elk blok of niet, of slechts eenmaal mag 
-voorkomen in de bovenstaande volgorde, laat Turbo Pascal toe dat elk van de delen 
-willekeurig vaak en in elke volgorde in het declaratie deel mogen optreden.
-
-4.2.1 Label declaratie deel
-
-Elke opdracht in het programma mag van een label worden voorzien, wat het mogelijk 
-maakt met een goto opdracht direct naar deze opdracht toe te springen. Een label bestaat 
-uit een labelnaam, die gevolgd wordt door een komma. Voor het gebruik moet eerst het 
-label declaratie deel gedeclareerd worden. Het gereserveerde woord label staat aan het 
-begin van dit deel, daarna volgt een lijst met labelnamen, die met komma's gescheiden 
-worden waarna het geheel afgesloten wordt door een puntkomma.
+The declaration part of a block declares all names used in the statement part of the
+block (and possibly other blocks within this block). The declaration
+part is divided into five different parts:
 
 
 
-Voorbeeld:
+1) 	Label declaration part
+
+2) 	Constant definition part
+
+3) 	Type definition part
+
+4) 	Variable declaration part
+
+5) 	Procedure and/or function declaration part
 
 
 
-label 10, Fout, 999, Afbreek;
+While standard Pascal prescribes that each block may occur not at all or only once
+in the above order, Turbo Pascal allows each of the parts
+to occur any number of times and in any order in the declaration part.
+
+4.2.1 Label declaration part
+
+Every statement in the program may be given a label, which makes it possible
+to jump directly to that statement with a goto statement. A label consists
+of a label name followed by a colon. Before use, the
+label declaration part must be declared. The reserved word label appears at the
+start of this part, followed by a list of label names separated by commas
+after which the whole is terminated by a semicolon.
 
 
 
-Terwijl standaard Pascal de labels tot getallen van vier cijfers beperkt, mag men met 
-Turbo Pascal zowel getallen als namen als label gebruiken.
-
-4.2.2 Constanten definitie deel
-
-Het constante definitie deel voert namen als synoniemen in voor de constante waarden. 
-Het gereserveerde woord const staat aan het begin van dit deel, daarna volgt een lijst met 
-constanten toewijzingen, die door puntkomma's gescheiden worden. Elke constante 
-toewijzing bestaat uit een naam, waarop een is-teken en de constante waarde volgt. 
-Constanten zijn of Strings, of getallen, die, zoals beschreven in hoofdstuk 3.2 "Getallen" 
-en 3.3 "Strings", gedefinieerd zijn.
+Example:
 
 
 
-Voorbeeld:
+label 10, Error, 999, Abort;
 
-const 
 
-  Limiet = 255;
 
-  CodeWoord = 'SESAM';
+While standard Pascal limits labels to four-digit numbers, with
+Turbo Pascal you may use both numbers and names as labels.
+
+4.2.2 Constant definition part
+
+The constant definition part introduces names as synonyms for constant values.
+The reserved word const appears at the start of this part, followed by a list of
+constant assignments separated by semicolons. Each constant
+assignment consists of a name followed by an equals sign and the constant value.
+Constants are either Strings or numbers as described in chapter 3.2 "Numbers"
+and 3.3 "Strings".
+
+
+
+Example:
+
+const
+
+  Limit = 255;
+
+  CodeWord = 'SESAM';
 
   CursHome = ^['V';
 
 
 
-De volgende constanten zijn voor gedefinieerd in Turbo Pascal en kunnen worden 
-gebruikt zonder voorafgaande declaratie:
+The following constants are predefined in Turbo Pascal and can be used
+without prior declaration:
 
 
 
-Naam
+Name
 
 Type
 
-Waarde
+Value
 
 Pi
 
@@ -580,15 +579,15 @@ False
 
 Boolean
 
-Logische waarde False, 
-ordinale waarde 0
+Logical value False,
+ordinal value 0
 
 True
 
 Boolean
 
-Logische waarde False, 
-ordinale waarde 0
+Logical value True,
+ordinal value 1
 
 Maxint
 
@@ -602,134 +601,133 @@ Longint
 
 2147483647
 
-Tabel 4 - 1
+Table 4 - 1
 
 
-Zoals beschreven is in hoofdstuk 13. "FILE TYPEN", mogen in een constante definitie 
-ook getypeerde constanten worden opgenomen.
+As described in chapter 13. "FILE TYPES", typed constants may also be included in a constant definition.
 
-4.2.3 Type definitie deel
+4.2.3 Type definition part
 
-Een data type in Pascal mag zowel direct beschreven worden in het variabele declaratie 
-deel, als via een naamsverwijzing in het type definitie deel. Er zijn verschillende 
-standaard typen voorhanden, en de programmeur kan zijn eigen type definiëren via het 
-type declaratie deel. Het gereserveerde woord type gaat vooraf aan het type definitie deel 
-en wordt gevolgd door één of meer type toekenningen, welke gescheiden worden door 
-puntkomma's. Elke type toekenning bestaat uit een naam, gevolgd door het is-gelijk teken 
-(=) en een type.
-
-
-
-Voorbeelden:
-
-type 
-
-  Getal = Integer;
-
-  Dag   = (Maan, Dins, Woens, Donder, Vrij, Zater, Zon);
-
-  Lijst = array[1..10] of Real;
+A data type in Pascal may be described either directly in the variable declaration
+part or via a name reference in the type definition part. Various
+standard types are available, and the programmer can define his own type through the
+type declaration part. The reserved word type precedes the type definition part
+and is followed by one or more type assignments separated by
+semicolons. Each type assignment consists of a name followed by the equals sign
+(=) and a type.
 
 
 
-Meer voorbeelden van type definities vindt u in de volgende hoofdstukken.
+Examples:
 
-4.2.4 Variabelen declaratie deel
+type
 
-Elke variabele die in het programma voorkomt moet worden gedeclareerd. De declaratie 
-moet in de tekst plaatsvinden voordat de variabele gebruikt wordt, zodat de compiler de 
-variabele 'kent'.
+  Number = Integer;
 
+  Day   = (Mon, Tue, Wed, Thu, Fri, Sat, Sun);
 
-
-Een variabele declaratie bestaat uit het gereserveerde woord var gevolgd door één of 
-meer namen, gescheiden door een komma, en gevolgd door een dubbele punt en een type. 
-Hiermee ontstaat een nieuwe variabele van het gespecificeerde type en aangeduid met 
-zijn eigen naam.
+  List = array[1..10] of Real;
 
 
 
-De variabele met een naam is toegankelijk binnen het blok waarin de naam is 
-gedeclareerd, en elk subblok binnen dit blok. Merk echter wel op dat binnen elk subblok 
-in dit blok de naam opnieuw kan worden gebruikt voor het declareren van een andere 
-variabele. De variabele wordt lokaal ten opzichte van het subblok genoemd (en elk 
-subblok binnen dit subblok), en de variabele die op een hoger niveau is gedeclareerd (de 
-globale variabele) wordt ontoegankelijk.
+More examples of type definitions can be found in the following chapters.
+
+4.2.4 Variable declaration part
+
+Every variable occurring in the program must be declared. The declaration
+must appear in the text before the variable is used, so that the compiler
+'knows' the variable.
 
 
 
-Voorbeeld:
-
-var 
-
-  resultaat, Balans, SubTotaal : Real;
-
-  I, J, X, Y                   : Integer;
-
-  Aanvaard, Toegestaan         : Boolean;
-
-  Buffer                       : array[0..127] of Byte;
-
-4.2.5 Procedure en functie declaratie deel
-
-Het procedure declaratie deel wordt gebruikt om een procedure binnen een blok of 
-programma (zie hoofdstuk 15.2.1) te definiëren. Een procedure wordt aangeroepen met 
-een procedure opdracht (zie hoofdstuk 6.1.2) en na afloop wordt het programma hervat 
-met de opdracht die volgt direct op de procedure opdracht.
+A variable declaration consists of the reserved word var followed by one or
+more names separated by commas and followed by a colon and a type.
+This creates a new variable of the specified type denoted by
+its own name.
 
 
 
-Een functie declaratie wordt gebruikt om een programmadeel te definiëren dat een 
-waarde berekend en aflevert (zie hoofdstuk 15.3). Een functie wordt uitgevoerd als zijn 
-naam als onderdeel van een expressie (zie hoofdstuk 5.2) is gebruikt.
-
-4.2.6 Opdrachtendeel
-
-Het opdrachtendeel is het laatste deel van een blok. Hierin staan de opdrachten in 
-volgorde van uitvoering opgenomen. Het volledige opdrachtendeel heeft dezelfde vorm 
-als een samengestelde opdracht gevolgd door een punt.
-
-Een samengestelde opdracht begint met het gereserveerde woord begin, gevolgd door 
-een lijst met opdrachten die gescheiden worden door een puntkomma en afgesloten 
-worden met het gereserveerde woord end.
-
-5. 	EXPRESSIES
-
-Expressies zijn algoritmische constructies, die regels voor de berekening van waarden 
-aangeven. Ze bestaan uit operanden, dat zijn variabelen, constanten en functienamen, die 
-door operatoren gecombineerd worden.
-
-Dit hoofdstuk beschrijft, hoe de expressies met de standaard typen Integer, Longint, Real, 
-Boolean en Char gemaakt worden. Expressies, die de gedeclareerde, scalaire typen, 
-String- en Set typen bevatten worden respectievelijk in hoofdstuk 7.1, 8.2 en 11.2 
-behandeld.
-
-5.1 Operatoren
-
-Operatoren vallen in vijf categorieën, die hier op prioriteit geordend zijn:
+The variable with a name is accessible within the block in which the name is
+declared, and every subblock within this block. Note however that within each subblock
+in this block the name can be reused to declare another
+variable. The variable is said to be local to the subblock (and every
+subblock within this subblock), and the variable declared at a higher level (the
+global variable) becomes inaccessible.
 
 
 
-1) 	Monadische min (min met maar één operand).
+Example:
+
+var
+
+  result, Balance, SubTotal : Real;
+
+  I, J, X, Y                : Integer;
+
+  Accepted, Allowed         : Boolean;
+
+  Buffer                    : array[0..127] of Byte;
+
+4.2.5 Procedure and function declaration part
+
+The procedure declaration part is used to define a procedure within a block or
+program (see chapter 15.2.1). A procedure is invoked with
+a procedure statement (see chapter 6.1.2) and on completion the program resumes
+with the statement directly following the procedure statement.
+
+
+
+A function declaration is used to define a program section that calculates
+and returns a value (see chapter 15.3). A function is executed when its
+name is used as part of an expression (see chapter 5.2).
+
+4.2.6 Statement part
+
+The statement part is the last part of a block. It contains the statements in
+order of execution. The complete statement part has the same form
+as a compound statement followed by a period.
+
+A compound statement starts with the reserved word begin, followed by
+a list of statements separated by semicolons and terminated
+with the reserved word end.
+
+5. 	EXPRESSIONS
+
+Expressions are algorithmic constructs that specify rules for the calculation of values.
+They consist of operands, which are variables, constants and function names, combined
+by operators.
+
+This chapter describes how expressions with the standard types Integer, Longint, Real,
+Boolean and Char are made. Expressions containing the declared scalar types and
+String and Set types are treated in chapters 7.1, 8.2 and 11.2
+respectively.
+
+5.1 Operators
+
+Operators fall into five categories, ordered here by priority:
+
+
+
+1) 	Monadic minus (minus with only one operand).
 
 2) 	Not operator.
 
-3) 	Vermenigvuldigingsoperatoren: *, /, div, mod, and, shl en shr.
+3) 	Multiplicative operators: *, /, div, mod, and, shl and shr.
 
-4) 	Opteloperatoren: +, -, or en xor.
+4) 	Additive operators: +, -, or and xor.
 
-5) 	Relationeleoperatoren: =, <>, <, >, <=, >= en in.
-
-
-
-Operatoren van dezelfde prioriteit worden van links naar rechts afgehandeld. Expressies 
-tussen haakjes worden eerst berekend, onafhankelijk van de operatoren hierna of 
-hiervoor.
+5) 	Relational operators: =, <>, <, >, <=, >= and in.
 
 
 
-Het resulterend type van een vermenigvuldigings- of optellingsoperator is altijd gelijk 
-aan het type met de hoogste significantie.
+Operators of the same priority are handled from left to right. Expressions
+in parentheses are calculated first, regardless of the operators before or
+after them.
+
+
+
+The resulting type of a multiplicative or additive operator is always equal
+to the type with the highest significance.
 
 
 
@@ -765,15 +763,15 @@ Real
 
 Real
 
-Tabel 5 - 1
-5.1.1 Monadische min
+Table 5 - 1
+5.1.1 Monadic minus
 
-De monadische min betekend een teken omkering van zijn operand, deze kan van het 
-type Integer, Longint of Real zijn (positief wordt negatief en andersom).
+The monadic minus means a sign reversal of its operand, which can be of the
+type Integer, Longint or Real (positive becomes negative and vice versa).
 
 5.1.2 Not operator
 
-De not operator keert de logische waarde om van zijn boolse operand:
+The not operator reverses the logical value of its boolean operand:
 
 
 
@@ -783,12 +781,12 @@ not False = True
 
 
 
-Turbo Pascal laat ook toepassing van de not operator toe op operanden van het type 
-Integer en Longint, in dat geval wordt een bitgewijze omkering uitgevoerd.
+Turbo Pascal also allows application of the not operator to operands of the type
+Integer and Longint, in which case a bitwise inversion is performed.
 
 
 
-Voorbeelden:
+Examples:
 
 not 0     = -1      (Longint = $FFFFFFFF , Integer = $FFFF)
 
@@ -798,19 +796,19 @@ not $2345 = $DCBA
 
 
 
-5.1.3 Vermenigvuldigingsoperatoren
+5.1.3 Multiplicative operators
 
 Operator
 
-Bewerking
+Operation
 
 Operand type
 
-Resulterend type
+Resulting type
 
 *
 
-Vermenigvuldiging
+Multiplication
 
 Real
 
@@ -818,7 +816,7 @@ Real
 
 *
 
-Vermenigvuldiging
+Multiplication
 
 Longint
 
@@ -826,7 +824,7 @@ Longint
 
 *
 
-Vermenigvuldiging
+Multiplication
 
 Integer
 
@@ -834,7 +832,7 @@ Integer
 
 *
 
-Vermenigvuldiging
+Multiplication
 
 Real, Longint
 
@@ -842,7 +840,7 @@ Real
 
 *
 
-Vermenigvuldiging
+Multiplication
 
 Real, Integer
 
@@ -850,7 +848,7 @@ Real
 
 *
 
-Vermenigvuldiging
+Multiplication
 
 Longint, Integer
 
@@ -858,7 +856,7 @@ Longint
 
 /
 
-Deling
+Division
 
 Real
 
@@ -866,7 +864,7 @@ Real
 
 /
 
-Deling
+Division
 
 Longint
 
@@ -874,7 +872,7 @@ Real
 
 /
 
-Deling
+Division
 
 Integer
 
@@ -882,7 +880,7 @@ Real
 
 /
 
-Deling
+Division
 
 Real, Longint
 
@@ -890,7 +888,7 @@ Real
 
 /
 
-Deling
+Division
 
 Real, Integer
 
@@ -898,7 +896,7 @@ Real
 
 /
 
-Deling
+Division
 
 Longint, Integer
 
@@ -906,7 +904,7 @@ Real
 
 div
 
-Integer deling
+Integer division
 
 Integer
 
@@ -914,7 +912,7 @@ Integer
 
 div
 
-Integer deling
+Integer division
 
 Longint
 
@@ -922,7 +920,7 @@ Longint
 
 div
 
-Integer deling
+Integer division
 
 Integer, Longint
 
@@ -954,7 +952,7 @@ Longint
 
 and
 
-Rekenkundige and
+Arithmetic and
 
 Integer
 
@@ -962,7 +960,7 @@ Integer
 
 and
 
-Rekenkundige and
+Arithmetic and
 
 Longint
 
@@ -970,7 +968,7 @@ Longint
 
 and
 
-Rekenkundige and
+Arithmetic and
 
 Integer, Longint
 
@@ -978,7 +976,7 @@ Longint
 
 and
 
-Logische and
+Logical and
 
 Boolean
 
@@ -986,7 +984,7 @@ Boolean
 
 shl
 
-Schuif links
+Shift left
 
 Integer
 
@@ -994,7 +992,7 @@ Integer
 
 shl
 
-Schuif links
+Shift left
 
 Longint
 
@@ -1002,7 +1000,7 @@ Longint
 
 shr
 
-Schuif rechts
+Shift right
 
 Integer
 
@@ -1010,14 +1008,14 @@ Integer
 
 shr
 
-Schuif rechts
+Shift right
 
 Longint
 
 Longint
 
-Tabel 5 - 2
-Voorbeelden:
+Table 5 - 2
+Examples:
 
 12 * 34        = 408
 
@@ -1035,19 +1033,19 @@ True and False = False
 
 256 shr 7      = 2
 
-5.1.4 Opteloperatoren
+5.1.4 Additive operators
 
 Operator
 
-Bewerking
+Operation
 
 Operand type
 
-Resulterend type
+Resulting type
 
 +
 
-Optellen
+Addition
 
 Real
 
@@ -1055,7 +1053,7 @@ Real
 
 +
 
-Optellen
+Addition
 
 Integer
 
@@ -1063,7 +1061,7 @@ Integer
 
 +
 
-Optellen
+Addition
 
 Longint
 
@@ -1071,7 +1069,7 @@ Longint
 
 +
 
-Optellen
+Addition
 
 Real, Integer
 
@@ -1079,7 +1077,7 @@ Real
 
 +
 
-Optellen
+Addition
 
 Real, Longint
 
@@ -1087,7 +1085,7 @@ Real
 
 +
 
-Optellen
+Addition
 
 Longint, Integer
 
@@ -1095,7 +1093,7 @@ Longint
 
 -
 
-Aftrekken
+Subtraction
 
 Real
 
@@ -1103,7 +1101,7 @@ Real
 
 -
 
-Aftrekken
+Subtraction
 
 Integer
 
@@ -1111,7 +1109,7 @@ Integer
 
 -
 
-Aftrekken
+Subtraction
 
 Longint
 
@@ -1119,7 +1117,7 @@ Longint
 
 -
 
-Aftrekken
+Subtraction
 
 Real, Integer
 
@@ -1127,7 +1125,7 @@ Real
 
 -
 
-Aftrekken
+Subtraction
 
 Real, Longint
 
@@ -1135,7 +1133,7 @@ Real
 
 -
 
-Aftrekken
+Subtraction
 
 Longint, Integer
 
@@ -1143,7 +1141,7 @@ Longint
 
 or
 
-Rekenkundige or
+Arithmetic or
 
 Longint
 
@@ -1151,7 +1149,7 @@ Longint
 
 or
 
-Rekenkundige or
+Arithmetic or
 
 Integer
 
@@ -1159,7 +1157,7 @@ Integer
 
 or
 
-Logische or
+Logical or
 
 Boolean
 
@@ -1167,7 +1165,7 @@ Boolean
 
 xor
 
-Rekenkundige xor
+Arithmetic xor
 
 Longint
 
@@ -1175,7 +1173,7 @@ Longint
 
 xor
 
-Rekenkundige xor
+Arithmetic xor
 
 Integer
 
@@ -1183,16 +1181,16 @@ Integer
 
 xor
 
-Logische xor
+Logical xor
 
 Boolean
 
 Boolean
 
-Tabel 5 - 3
+Table 5 - 3
 
 
-Voorbeelden:
+Examples:
 
 123 + 456      = 579
 
@@ -1206,53 +1204,53 @@ True xor False = True
 
 12 xor 22      = 26
 
-5.1.5 Relationele operatoren
+5.1.5 Relational operators
 
-Relationele operatoren gelden voor alle scalaire standaard typen: Integer, Real, Boolean, 
-Char en Byte. Operanden van het type Integer, Real en Byte kunnen gemengd worden. 
-Het type van het resultaat is altijd Boolean, dat betekend True of False (waar of onwaar).
-
-
-
-=    is gelijk
-
-<>   is ongelijk
-
->    is groter dan
-
-<    is kleiner dan
-
->=   is groter of gelijk
-
-<=   is kleiner of gelijk
+Relational operators apply to all standard scalar types: Integer, Real, Boolean,
+Char and Byte. Operands of the type Integer, Real and Byte can be mixed.
+The type of the result is always Boolean, which means True or False (true or false).
 
 
 
-Voorbeelden:
+=    equals
 
-a =  b  is waar, als a gelijk is aan b
+<>   not equal
 
-a <> b  is waar, als a ongelijk is aan b
+>    greater than
 
-a >  b  is waar, als a groter is dan b
+<    less than
 
-a <  b  is waar, als a kleiner is dan b
+>=   greater than or equal
 
-a >= b  is waar, als a groter dan of gelijk is aan b
-
-a <= b  is waar, als a kleiner dan of gelijk is aan b
-
-5.2 Functie aanroep
-
-De functie aanroep is een functienaam, die door een parameterlijst gevolgd kan worden. 
-De parameterlijst kan bestaan uit constanten, variabelen en/of expressies, die door 
-komma's gescheiden zijn en door haakjes omgeven moeten worden. Een functie wordt 
-geactiveerd als binnen een expressie de naam van de functie voorkomt. Als die functie 
-geen standaard functie is moet deze voor de activering gedeclareerd worden.
+<=   less than or equal
 
 
 
-Voorbeelden:
+Examples:
+
+a =  b  is true if a equals b
+
+a <> b  is true if a is not equal to b
+
+a >  b  is true if a is greater than b
+
+a <  b  is true if a is less than b
+
+a >= b  is true if a is greater than or equal to b
+
+a <= b  is true if a is less than or equal to b
+
+5.2 Function call
+
+The function call is a function name that may be followed by a parameter list.
+The parameter list can consist of constants, variables and/or expressions separated
+by commas and enclosed in parentheses. A function is
+activated when the name of the function appears within an expression. If that function
+is not a standard function it must be declared before activation.
+
+
+
+Examples:
 
 Round (PlotPos)
 
@@ -1260,147 +1258,146 @@ WriteLn (Pi*(Sqr(R)))
 
 (Max (X, Y) < 25) and (Z > Sqrt (X*Y))
 
-Volume (Radius, Hoogte)
+Volume (Radius, Height)
 
-6. 	OPDRACHTEN
+6. 	STATEMENTS
 
-Het opdrachtdeel definieert de actie die door het programma (of het subprogramma) 
-uitgevoerd moet worden. Elke opdracht specificeert een deel van de actie. In die zin is 
-Pascal een sequentiële taal: de opdrachten worden sequentieel afgehandeld, nooit 
-tegelijk. Het opdrachtdeel is omsloten met de gereserveerde woorden begin en end, 
-waarbinnen de opdrachten door puntkomma's gescheiden zijn. Opdrachten kunnen 
-enkelvoudig of gestructureerd zijn.
+The statement part defines the action to be performed by the program (or subprogram).
+Each statement specifies part of the action. In this sense
+Pascal is a sequential language: statements are handled sequentially, never
+simultaneously. The statement part is enclosed in the reserved words begin and end,
+within which statements are separated by semicolons. Statements can be
+simple or structured.
 
-6.1 Enkelvoudige opdrachten
+6.1 Simple statements
 
-Enkelvoudige opdrachten bevatten geen andere opdrachten. Enkelvoudige opdrachten 
-zijn de toewijzings-, procedure-, goto- en de lege opdracht.
+Simple statements contain no other statements. Simple statements
+are the assignment, procedure, goto and empty statements.
 
-6.1.1 Toewijzingsopdracht
+6.1.1 Assignment statement
 
-De meest elementaire opdracht van alle opdrachten is de toewijzingsopdracht. Deze 
-wordt gebruikt, om aan te geven dat aan een bepaalde variabele een bepaalde waarde 
-toegewezen moet worden. Een toewijzing bestaat uit een variabelenaam, de 
-toewijzingsoperator := gevolgd door een expressie.
-
-
-
-Toewijzingen zijn voor variabelen van elk type (behalve bestanden) mogelijk, zolang de 
-variabele en de expressie van hetzelfde type zijn. Als uitzondering hierop mag bij een 
-Real variabele, de expressie van het type Integer of Longint zijn, en bij een Longint mag 
-de expressie van het type Integer zijn.
+The most elementary of all statements is the assignment statement. It is
+used to indicate that a particular value must be assigned to a particular variable.
+An assignment consists of a variable name, the
+assignment operator := followed by an expression.
 
 
 
-Voorbeelden:
-
-Hoek      := Hoek * Pi;
-
-ToegangOk := False;
-
-Toegang   := Antwoord=Password;
-
-BolVol    := 4*Pi*R*R;
-
-6.1.2 Procedure opdracht
-
-De procedure opdracht dient ervoor, een voordien door de gebruiker gedefinieerde of 
-voor gedefinieerde standaard procedure te activeren. De opdracht bestaat uit een 
-procedurenaam, al of niet gevolgd door een parameterlijst. Deze parameterlijst is een lijst 
-van variabelen of expressies, die door komma's gescheiden en door haakjes omgeven 
-zijn. Als bij de uitvoering van het programma de procedure opdracht bereikt wordt, wordt 
-de controle aan de procedure overgedragen, de waarden van de eventuele parameters 
-worden ook aan de procedure overgedragen. Als de procedure afgelopen is, gaat de 
-uitvoering van het programma verder met de opdracht, die op de procedure aanroep volgt.
+Assignments are possible for variables of any type (except files), as long as the
+variable and the expression are of the same type. As an exception, with a
+Real variable the expression may be of the type Integer or Longint, and with a Longint
+the expression may be of the type Integer.
 
 
 
-Voorbeelden:
+Examples:
 
-Zoek (Naam, Adres);
+Angle     := Angle * Pi;
 
-Sorteer (Adres);
+AccessOk  := False;
 
-HoofdLetters (Tekst);
+Access    := Answer=Password;
 
-WerkFileBij (KlantKaart);
+SphereVol := 4*Pi*R*R;
 
-6.1.3 Goto opdracht
+6.1.2 Procedure statement
 
-Een goto opdracht bestaat uit het gereserveerde woord goto, waarop een labelnaam volgt. 
-De goto opdracht zorgt ervoor dat de sequentiële verwerking van het programma 
-onderbroken wordt, en verder gaat op de positie die met de labelnaam is gemarkeerd. De 
-volgende regels moeten bij het gebruik van goto in acht genomen worden.
-
-
-
-1) 	Voor gebruik moeten labels gedeclareerd worden. De declaratie gebeurd in het label 
-declaratie deel van het blok, waarin ze gebruikt wordt.
-
-2) 	De reikwijdte van het label is het blok, waarin het gedefinieerd werd. Daarom is het niet 
-mogelijk, in of uit procedures en functies te springen.
-
-6.1.4 Lege opdracht
-
-Een lege opdracht bevat geen symbolen en heeft geen werking. Deze mag voorkomen 
-waar Pascal een opdracht verwacht, maar waar geen acties plaats moeten vinden.
+The procedure statement serves to activate a previously user-defined or
+predefined standard procedure. The statement consists of a
+procedure name, optionally followed by a parameter list. This parameter list is a list
+of variables or expressions separated by commas and enclosed in parentheses.
+When the procedure statement is reached during execution of the program,
+control is transferred to the procedure, and the values of any parameters
+are also passed to the procedure. When the procedure finishes, execution
+of the program continues with the statement following the procedure call.
 
 
 
-Voorbeelden:
+Examples:
+
+Search (Name, Address);
+
+Sort (Address);
+
+Uppercase (Text);
+
+UpdateFile (CustomerCard);
+
+6.1.3 Goto statement
+
+A goto statement consists of the reserved word goto followed by a label name.
+The goto statement causes the sequential processing of the program
+to be interrupted and to continue at the position marked with the label name. The
+following rules must be observed when using goto.
+
+
+
+1) 	Labels must be declared before use. The declaration takes place in the label
+declaration part of the block in which they are used.
+
+2) 	The scope of the label is the block in which it was defined. Therefore it is not
+possible to jump into or out of procedures and functions.
+
+6.1.4 Empty statement
+
+An empty statement contains no symbols and has no effect. It may appear
+where Pascal expects a statement but where no actions should take place.
+
+
+
+Examples:
 
 begin end.
 
-while Antwoord<>'' do;
+while Answer<>'' do;
 
-repeat until KeyPressed;   {wacht tot er een toets wordt ingedrukt}
+repeat until KeyPressed;   {wait until a key is pressed}
 
-6.2 Gestructureerde opdracht
+6.2 Structured statement
 
-Gestructureerde opdrachten zijn constructies die uit andere opdrachten samengesteld zijn. 
-Deze worden sequentieel (samengestelde opdrachten), voorwaardelijk (voorwaardelijke 
-opdrachten) of herhaald (herhalende opdrachten) uitgevoerd. De discussie van de with 
-opdracht wordt verschoven naar hoofdstuk 10.2.
+Structured statements are constructs composed of other statements.
+They are executed sequentially (compound statements), conditionally (conditional
+statements) or repeatedly (repetitive statements). Discussion of the with
+statement is deferred to chapter 10.2.
 
-6.2.1 Samengestelde opdracht
+6.2.1 Compound statement
 
-Een samengestelde opdracht wordt gebruikt als de Pascal syntax maar één opdracht 
-toestaat maar er meerdere opdrachten gewenst. Het bestaat uit een willekeurig aantal 
-opdrachten, die met puntkomma's gescheiden zijn en door de gereserveerde woorden 
-begin en end ingesloten worden. De aparte opdrachten van de samengestelde opdracht 
-worden op de volgorde, waarin ze geschreven zijn, afgehandeld.
+A compound statement is used when the Pascal syntax allows only one statement
+but several statements are desired. It consists of an arbitrary number of
+statements separated by semicolons and enclosed in the reserved words
+begin and end. The individual statements of the compound statement
+are handled in the order in which they are written.
 
 
 
-Voorbeeld:
+Example:
 
-if Kleinste > Grootste then
+if Smallest > Largest then
 
-begin 
+begin
 
-  Tijdelijk := Kleinste;
+  Temp     := Smallest;
 
-  Kleinste  := Grootste;
+  Smallest := Largest;
 
-  Grootste  := Tijdelijk;
+  Largest  := Temp;
 
 end;
 
-6.2.2 Voorwaardelijke opdracht
+6.2.2 Conditional statement
 
-Een voorwaardelijke opdracht kiest één van zijn deel opdrachten voor de uitvoering uit.
+A conditional statement selects one of its component statements for execution.
 
-6.2.2.1 If opdracht
+6.2.2.1 If statement
 
-De if opdracht (beslissing) specificeert dat een opdracht alleen uitgevoerd moet worden 
-als aan een bepaalde voorwaarde (boolse expressie) voldaan (True) is. Als er niet aan 
-voldaan is (False), dan wordt of geen opdracht uitgevoerd, of wordt de opdracht die op 
-het gereserveerde woord else volgt uitgevoerd. Let erop, dat aan else geen puntkomma 
-vooraf mag gaan.
-
+The if statement (decision) specifies that a statement should only be executed
+if a certain condition (boolean expression) is met (True). If it is not
+met (False), then either no statement is executed, or the statement following
+the reserved word else is executed. Note that no semicolon may precede else.
 
 
-De syntactische tweeduidendheid die uit de volgende constructie ontstaat:
+
+The syntactic ambiguity arising from the following construct:
 
 
 
@@ -1416,13 +1413,13 @@ if expr1 then
 
 
 
-wordt vermeden, doordat het als volgt geïnterpreteerd wordt:
+is avoided by interpreting it as follows:
 
 
 
 if expr1 then
 
-begin 
+begin
 
   if expr2 then
 
@@ -1432,259 +1429,258 @@ begin
 
     Stmt2
 
-end 
+end
 
 
 
-Dat betekend dat het else deel altijd hoort bij de laatste if opdracht, die geen else deel 
-heeft.
+This means that the else part always belongs to the last if statement that has no else part.
 
 
 
-Voorbeelden:
+Examples:
 
-if Rente>25 then
+if Interest>25 then
 
-  OpMaken:=True
+  Spend:=True
 
-else 
+else
 
-  NeemLening:=OK;
+  TakeLoan:=OK;
 
-if (Invoer<0) or (Invoer>100) then
+if (Input<0) or (Input>100) then
 
-begin 
+begin
 
-  WriteLn ('Invoer bereik ligt tussen 1 en 100.');
+  WriteLn ('Input range is between 1 and 100.');
 
-  Write ('Opnieuw invoeren S.V.P. :');
+  Write ('Enter again please :');
 
-  Read (Invoer)
+  Read (Input)
 
 end;
 
-6.2.2.2 Case opdracht
+6.2.2.2 Case statement
 
-De case opdracht (keuze) bestaat uit een expressie (de sorteerder) en een lijst met 
-opdrachten, die steeds door een case label (eenvoudige expressie) van het type van de 
-sorteerder voorafgegaan wordt. Deze geeft aan dat de opdracht waarvan het label met de 
-actuele waarde van de sorteerder overeenkomt, uitgevoerd moet worden. Als geen enkele 
-case label de waarde van de sorteerder heeft, dan worden of geen of eventueel de 
-opdrachten die na het gereserveerde woord else volgen uitgevoerd. De else bij de case 
-opdracht is een uitbreiding van de standaard Pascal.
-
-
-
-Een case label bestaat uit een willekeurig aantal van constanten of deelbereiken, die door 
-komma's gescheiden zijn en die gevolgd worden door een dubbele punt. Een deelbereik 
-wordt als twee constanten geschreven die gescheiden worden door de 
-deelbereikbegrenzer '..'. Het type van de constanten moet gelijk zijn aan het type van de 
-sorteerder. De opdracht, die op het case label volgt, wordt uitgevoerd als de waarde van 
-de sorteerder gelijk is aan één van de constanten, of in een deelbereik ligt.
+The case statement (selection) consists of an expression (the selector) and a list of
+statements, each preceded by a case label (simple expression) of the type of the
+selector. It indicates that the statement whose label matches the
+current value of the selector must be executed. If no
+case label has the value of the selector, then either none or possibly the
+statements following the reserved word else are executed. The else in the case
+statement is an extension of standard Pascal.
 
 
 
-Geldige typen voor de sorteerder zijn alle enkelvoudige typen, dat zijn alle scalaire typen 
-met uitzondering van het type Real.
+A case label consists of an arbitrary number of constants or subranges separated by
+commas and followed by a colon. A subrange
+is written as two constants separated by the
+subrange delimiter '..'. The type of the constants must equal the type of the
+selector. The statement following the case label is executed when the value of
+the selector equals one of the constants or lies within a subrange.
 
 
 
-Voorbeelden:
+Valid types for the selector are all simple types, that is all scalar types
+with the exception of the type Real.
+
+
+
+Examples:
 
 case Operator of
 
-  '+': Resultaat:=Antwoord+Resultaat;
+  '+': Result:=Answer+Result;
 
-  '-': Resultaat:=Antwoord-Resultaat;
+  '-': Result:=Answer-Result;
 
-  '*': Resultaat:=Antwoord*Resultaat;
+  '*': Result:=Answer*Result;
 
-  '/': Resultaat:=Antwoord/Resultaat;
+  '/': Result:=Answer/Result;
 
 end;
 
 
 
-case jaar of
+case year of
 
   Min..1939: begin
 
-               Tijd:=VoorWO2;
+               Time:=PreWW2;
 
-               WriteLn ('De wereld in vrede..');
+               WriteLn ('The world at peace..');
 
              end;
 
   1946..Max: begin
 
-               Tijd:=NaWO2;
+               Time:=PostWW2;
 
-               WriteLn('De wereld wordt opgebouwd.');
+               WriteLn('The world is being rebuilt.');
 
              end;
 
         else begin
 
-               Tijd:=WO2;
+               Time:=WW2;
 
-               WriteLn ('Oorlogstijd..');
+               WriteLn ('Wartime..');
 
              end;
 
 end;
 
-6.2.3 Lus opdracht
+6.2.3 Loop statement
 
-Lus opdrachten geven aan, dat bepaalde opdrachten herhaald uitgevoerd moeten worden. 
-Als het aantal herhalingen vooraf bekend is, dat betekend voordat de herhaling 
-plaatsvindt, is de for opdracht de geëigende opdracht om deze situatie uit te drukken. 
-Anders zou de while of de repeat opdracht gebruikt moeten worden.
+Loop statements indicate that certain statements must be executed repeatedly.
+If the number of repetitions is known beforehand, that is before the repetition
+takes place, the for statement is the appropriate statement to express this situation.
+Otherwise the while or repeat statement should be used.
 
-6.2.3.1 For opdracht
+6.2.3.1 For statement
 
-De for opdracht geeft aan, dat de deelopdracht herhaald uitgevoerd moet worden. De 
-oplopende waarden worden aan een variabele toegewezen, die de controlevariabele 
-genoemd wordt. De waarden kunnen oplopen: to of aflopend: downto tot de eindwaarde 
-is bereikt.
-
-
-
-De controlevariabele, de begin- en de eindwaarde moeten van hetzelfde type zijn. 
-Geldige typen zijn alle enkelvoudige typen, dat betekend alle scalaire typen behalve Real. 
-Als bij de toepassing van de to de beginwaarde groter is dan de eindwaarde, of bij de 
-toepassing van downto de beginwaarde kleiner is als de eindwaarde, wordt de 
-deelopdracht niet uitgevoerd.
+The for statement indicates that the substatement must be executed repeatedly. The
+ascending values are assigned to a variable called the control variable.
+The values can ascend: to, or descend: downto, until the final value
+is reached.
 
 
 
-Voorbeelden:
+The control variable and the initial and final values must be of the same type.
+Valid types are all simple types, that is all scalar types except Real.
+When using to the initial value is greater than the final value, or when
+using downto the initial value is less than the final value, the
+substatement is not executed.
 
-for I:=2 to 100 do 
+
+
+Examples:
+
+for I:=2 to 100 do
 
   if A[I]>Max then Max:=A[I];
 
 
 
-for I:=1 to AantalRegels do
+for I:=1 to NumLines do
 
-begin 
+begin
 
-  ReadLn (Regel);
+  ReadLn (Line);
 
-  if Length (Regel)<Limiet then
+  if Length (Line)<Limit then
 
-    KorteRegels:=KorteRegels+1
+    ShortLines:=ShortLines+1
 
-  else 
+  else
 
-    LangeRegels:=LangeRegels+1
-
-end;
-
-
-
-Let erop dat de deelopdracht van een for opdracht geen toewijzing aan de 
-controlevariabele mag bevatten. Als de herhaling gestaakt moet worden voor de 
-eindwaarde bereikt is, moet een goto opdracht gebruikt worden, hoewel zulke 
-programmastructuren niet worden aangeraden. Het programma blijft duidelijker als in 
-zo'n geval een while of een repeat opdracht gebruikt wordt.
-
-Na de beëindiging van de for opdracht is de controlevariabele gelijk aan de eindwaarde, 
-behalve als de opdracht niet wordt uitgevoerd, dan wordt de controlevariabele niet 
-toegewezen.
-
-6.2.3.2 While opdracht
-
-De expressie, die de herhaling controleert, moet van het type Boolean zijn. De opdracht 
-wordt herhaald zolang de expressie True is. Is de waarde al bij het begin False dan wordt 
-de opdracht helemaal niet uitgevoerd.
-
-
-
-Voorbeelden:
-
-while Maat>1 do
-
-  Maat:=Sqrt (Maat);
-
-
-
-while DezeMaand do
-
-begin 
-
-  DezeMaand:= NuMaand=VoorbldMaand;
-
-
-
-  Verwerk;  {Bewerk dit voorbeeld met de Verwerk procedure}
+    LongLines:=LongLines+1
 
 end;
 
-6.2.3.3 Repeat opdracht
-
-De expressie, die de herhaling controleert, moet van het type Boolean zijn. De opdrachten 
-sequentie die tussen de gereserveerde woorden repeat en until staat wordt zo vaak 
-herhaald, tot de expressie waar (True) wordt. Het onderscheid met de while opdracht is 
-dat de repeat opdracht minstens één keer wordt uitgevoerd, omdat pas aan het einde de 
-afbreekvoorwaarde gecontroleerd wordt.
 
 
+Note that the substatement of a for statement may not contain an assignment to the
+control variable. If the repetition must be stopped before the
+final value is reached, a goto statement must be used, although such
+program structures are not recommended. The program remains clearer if in
+such a case a while or repeat statement is used.
 
-Voorbeeld:
+After termination of the for statement the control variable equals the final value,
+except when the statement is not executed, in which case the control variable is not
+assigned.
 
-repeat 
+6.2.3.2 While statement
 
-  Write (^M, 'Dit record verwijderen? (J/N)');
-
-  Read (Antwoord);
-
-until UpCase (Antwoord) in ['J', 'N'];
-
-7. 	SCALAIRE TYPEN EN HUN 
-DEELBEREIKEN
-
-Het scalaire data type is bij Pascal het basis data type. Het vormt een eindige, lineair 
-geordende rij van waarden. Hoewel het standaard type Real ook als scalair data type 
-gezien wordt, valt het type Real niet onder deze definitie. Daarom kunnen Real getallen 
-niet altijd in gelijke samenhang met andere scalaire data typen gebruikt worden.
-
-7.1 Scalaire typen
-
-Naast de scalaire standaard typen (Longint, Integer, Real, Boolean, Char en Byte) 
-ondersteund Pascal ook door de gebruiker gedefinieerde scalaire typen. De definitie van 
-een scalair data type geeft in lineaire volgorde al zijn mogelijke waarden aan. De waarden 
-van het nieuwe data type worden door namen gerepresenteerd, die hun constanten zijn.
+The expression controlling the repetition must be of the type Boolean. The statement
+is repeated as long as the expression is True. If the value is already False at the start,
+the statement is not executed at all.
 
 
 
-Voorbeelden:
+Examples:
+
+while Size>1 do
+
+  Size:=Sqrt (Size);
+
+
+
+while ThisMonth do
+
+begin
+
+  ThisMonth:= NowMonth=ExampleMonth;
+
+
+
+  Process;  {Process this example with the Process procedure}
+
+end;
+
+6.2.3.3 Repeat statement
+
+The expression controlling the repetition must be of the type Boolean. The statement
+sequence between the reserved words repeat and until is repeated
+until the expression becomes true (True). The difference from the while statement is
+that the repeat statement is executed at least once, because the termination
+condition is only checked at the end.
+
+
+
+Example:
+
+repeat
+
+  Write (^M, 'Delete this record? (Y/N)');
+
+  Read (Answer);
+
+until UpCase (Answer) in ['Y', 'N'];
+
+7. 	SCALAR TYPES AND THEIR
+SUBRANGES
+
+The scalar data type is the basic data type in Pascal. It forms a finite, linearly
+ordered series of values. Although the standard type Real is also regarded as a scalar data type,
+the type Real does not fall under this definition. Therefore Real numbers
+cannot always be used in the same context as other scalar data types.
+
+7.1 Scalar types
+
+Besides the standard scalar types (Longint, Integer, Real, Boolean, Char and Byte),
+Pascal also supports user-defined scalar types. The definition of
+a scalar data type lists all its possible values in linear order. The values
+of the new data type are represented by names, which are its constants.
+
+
+
+Examples:
 
 type 
 
-  Operator = (Plus, Min, Maal, Deel);
+  Operator = (Plus, Minus, Times, Divide);
 
-  Dag      = (Maan, Dins, Woens, Donder, Vrij, Zater, Zon);
+  Day      = (Mon, Tue, Wed, Thu, Fri, Sat, Sun);
 
-  Maand    = (Jan, Feb, Maart, Apr, Mei, Juni, Juli,
+  Month    = (Jan, Feb, Mar, Apr, May, June, July,
 
-              Aug, Sep, Okt, Nov, Dec);
+              Aug, Sep, Oct, Nov, Dec);
 
-  Kaart    = (Schoppen, Klaver, Harten, Ruiten);
-
-
-
-Variabelen van het type Kaart kunnen één van de vier waarden (schoppen, klaver, harten 
-of ruiten) aannemen. De ordinale waarden zijn:
+  Card     = (Spades, Clubs, Hearts, Diamonds);
 
 
 
-Schoppen=0, Klaver=1, Harten=2, Ruiten=3.
+Variables of the type Card can assume one of the four values (spades, clubs, hearts
+or diamonds). The ordinal values are:
 
 
 
-Met het scalaire standaard type Boolean bent u al vertrouwd. Het is als volgt 
-gedefinieerd:
+Spades=0, Clubs=1, Hearts=2, Diamonds=3.
+
+
+
+You are already familiar with the standard scalar type Boolean. It is defined
+as follows:
 
 
 
@@ -1694,77 +1690,77 @@ type
 
 
 
-De relationele operatoren =, <>, >, <, >= en <= kunnen worden gebruikt bij alle scalaire 
-typen als beide operanden maar van hetzelfde type zijn (Reals, Integers en Longints 
-mogen wel door elkaar gebruikt worden). De volgorde van het scalaire type wordt 
-gebruikt als basis bij vergelijkingen, met andere woorden, de volgorde van de namenlijst 
-is bepalend voor de ordinale waarde van een scalair type. In het bovenstaande voorbeeld 
-is de volgende expressie waar (True):
+The relational operators =, <>, >, <, >= and <= can be used with all scalar
+types provided both operands are of the same type (Reals, Integers and Longints
+may be mixed). The order of the scalar type is
+used as the basis for comparisons; in other words, the order of the name list
+determines the ordinal value of a scalar type. In the above example
+the following expression is true (True):
 
 
 
-Schoppen < Klaver < Harten < Ruiten
+Spades < Clubs < Hearts < Diamonds
 
 
 
 
 
-De volgende standaard functies kunnen worden gebruikt met als parameter een scalair 
-type:
+The following standard functions can be used with a scalar
+type as parameter:
 
 
 
-Succ (Klaver)   De opvolger van Klaver (Harten)
+Succ (Clubs)    The successor of Clubs (Hearts)
 
-Pred (Klaver)   De voorganger van Klaver (Schoppen)
+Pred (Clubs)    The predecessor of Clubs (Spades)
 
-Ord (Klaver)    De ordinale waarde van Klaver (1, omdat het eerste element 
+Ord (Clubs)     The ordinal value of Clubs (1, because the first element
 
-                uit de scalaire lijst de waarde 0 heeft.)
-
-
-
-De functies Succ en Pred hebben als resultaat hetzelfde type als hun parameter. De 
-functie Ord heeft als resultaat type een Integer.
-
-7.2 Deelgebied typen
-
-Een type kan worden gedefinieerd als een deelgebied van al eerder gedefinieerd scalair 
-type. We spreken dan van een deelgebied type. De definitie van een deelgebied bestaat 
-eenvoudig uit het specificeren van de laagste en de hoogste waarde van het deelgebied. 
-De eerste waarde moet kleiner zijn dan de tweede waarde. Een deelgebied van het type 
-Real is niet toegestaan.
+                in the scalar list has the value 0.)
 
 
 
-Voorbeelden:
+The functions Succ and Pred return the same type as their parameter. The
+function Ord returns type Integer.
+
+7.2 Subrange types
+
+A type can be defined as a subrange of a previously defined scalar
+type. This is called a subrange type. The definition of a subrange simply
+consists of specifying the lowest and highest values of the subrange.
+The first value must be less than the second value. A subrange of the type
+Real is not allowed.
+
+
+
+Examples:
 
 type 
 
-  Windstreken = (Noord, Zuid, Oost, West);
+  CompassPoints = (North, South, East, West);
 
-  Wereld      = (Oost..West);
+  World         = (East..West);
 
-  KompasRoos  = 0..360;
+  CompassRose   = 0..360;
 
-  Kapitalen   = 'A'..'Z';
+  Capitals      = 'A'..'Z';
 
-  Onderkast   = 'a'..'z';
+  Lowercase     = 'a'..'z';
 
-  Graden      = (Celsius, Fahrenheit, Kelvin);
+  Degrees       = (Celsius, Fahrenheit, Kelvin);
 
-  Wijn        = (Rood, Wit, Rosé, Mousserend);
-
-
-
-Het type Wereld is een deelgebied type van het type Windstreken (het ermee 
-geassocieerde type). Het geassocieerde scalaire type van KompasRoos is Integer, en het 
-geassocieerde scalair type van Kapitalen en Onderkast is het type Char.
+  Wine          = (Red, White, Rose, Sparkling);
 
 
 
-We hebben het al eerder gehad over het type Byte. Dit is een standaard deelgebied type 
-welke is gedefinieerd als:
+The type World is a subrange type of the type CompassPoints (its
+associated type). The associated scalar type of CompassRose is Integer, and the
+associated scalar type of Capitals and Lowercase is the type Char.
+
+
+
+We have already discussed the type Byte. This is a standard subrange type
+which is defined as:
 
 
 
@@ -1774,116 +1770,116 @@ type
 
 
 
-Een deelgebied type heeft alle eigenschappen van zijn geassocieerd scalair type, maar is 
-beperkt tot zijn eigen minimale en maximale bereik.
+A subrange type has all the properties of its associated scalar type, but is
+limited to its own minimum and maximum range.
 
 
 
-Het gebruik van gedefinieerde scalaire typen en deelgebied typen wordt sterk 
-aanbevolen, omdat het de leesbaarheid van een programma sterk verhoogd. Daarnaast is 
-het mogelijk om de bereikcontrole (zie hoofdstuk 7.4) aan te zetten en te controleren of 
-een berekening binnen de gestelde bereiken blijft. Een ander voordeel van gedefinieerde 
-typen en hun deelgebied typen is dat het vaak minder geheugen inneemt. Turbo Pascal zal 
-maar 1 byte geheugen reserveren als het totaal aantal elementen uit een deelgebied type 
-minder dan 256 elementen bevat. M.a.w. als een Integer deelgebied type een boven en 
-ondergrens hebben binnen het gebied 0 t/m 255, zal er dus maar 1 byte geheugen voor 
-worden gereserveerd.
+The use of defined scalar types and subrange types is strongly
+recommended, because it greatly improves the readability of a program. In addition,
+you can switch on range checking (see chapter 7.4) to check whether
+a calculation stays within the set ranges. Another advantage of defined
+types and their subrange types is that they often occupy less memory. Turbo Pascal will
+reserve only 1 byte of memory if the total number of elements of a subrange type
+contains fewer than 256 elements. In other words, if an Integer subrange type has upper and
+lower bounds within the range 0 to 255, only 1 byte of memory will
+be reserved for it.
 
-7.3 Type omzetten
+7.3 Type conversion
 
-De functie Ord kan worden gebruikt om een scalair type om te zetten naar een waarde 
-van het Integer type. Standaard Pascal voorziet niet in een mogelijkheid om dit proces om 
-te draaien, dus om een Integer waarde om te zetten in een scalair type.
-
-
-
-In Turbo Pascal kan een scalair type worden omgezet naar een ander scalair type met 
-dezelfde ordinale waarde met behulp van type conversie (Engl.: type casting). Type 
-conversie wordt bereikt door de type naam van het gewenste type te nemen en deze als 
-een functie te gebruiken met als parameter de te converteren waarde. De parameter mag 
-van elk type zijn behalve Real.
-
-Als we uitgaan van de type in hoofdstuk 7.1 en 7.2 dan geldt het volgende:
+The function Ord can be used to convert a scalar type to a value
+of the Integer type. Standard Pascal provides no way to reverse this process,
+that is, to convert an Integer value to a scalar type.
 
 
 
-Integer (Harten) = 2
+In Turbo Pascal a scalar type can be converted to another scalar type with
+the same ordinal value using type conversion (Engl.: type casting). Type
+conversion is achieved by taking the type name of the desired type and using it as
+a function with the value to be converted as parameter. The parameter may
+be of any type except Real.
 
-Maand (10)       = Nov
+Starting from the types in chapters 7.1 and 7.2, the following holds:
 
-Windstreken (2)  = Oost
 
-Kapitalen (14)   = 'O'
 
-Graden (2)       = Kelvin
+Integer (Hearts) = 2
+
+Month (10)       = Nov
+
+CompassPoints (2)  = East
+
+Capitals (14)    = 'O'
+
+Degrees (2)      = Kelvin
 
 Char (78)        = 'N'
 
 Integer ('7')    = 55
 
-7.4 Bereik controle
+7.4 Range checking
 
-De code generatie die er voor zorgt dat er tijdens het lopen van een programma op het 
-bereik wordt gecontroleerd, wordt bepaald door de R compiler aanwijzing. Standaard 
-staat deze controle uit {$R-}, er wordt dus niet op gecontroleerd. Als er een toewijzing 
-plaats vindt terwijl deze controle aan staat {$R+} zal worden gecontroleerd of de 
-toewijzing binnen het gestelde bereik valt. Het wordt aangeraden om deze controle bij het 
-ontwikkelen van een programma aan te zetten totdat het programma volledig foutloos is 
-(zie hoofdstuk 9.1 voor de invloed van deze compiler aanwijzing op arrays).
+The code generation that checks the range while a program is running
+is controlled by the R compiler directive. By default
+this checking is off {$R-}, so nothing is checked. When an assignment
+takes place while this checking is on {$R+}, it is checked whether the
+assignment falls within the set range. It is recommended to switch this checking on while
+developing a program until the program is completely free of errors
+(see chapter 9.1 for the effect of this compiler directive on arrays).
 
 
 
-Voorbeeld:
+Example:
 
-program bereikcontrole;
+program rangecheck;
 
-type 
+type
 
-  Cijfer = 0..9;
+  Digit = 0..9;
 
-var 
+var
 
-  Cijfer1, Cijfer2, Cijfer3 : Cijfer;
+  Digit1, Digit2, Digit3 : Digit;
 
-begin 
+begin
 
-  Cijfer1:=5;         {Geldig}
+  Digit1:=5;         {Valid}
 
-  Cijfer2:=Cijfer1+3; {Geldig omdat Cijfer1+3<=9}
+  Digit2:=Digit1+3; {Valid because Digit1+3<=9}
 
-  Cijfer3:=47;        {Ongeldig maar er treedt geen fout op}
+  Digit3:=47;        {Invalid but no error occurs}
 
   {$R+}
 
-  Cijfer3:=55;        {Ongeldig en veroorzaakt een melding}
+  Digit3:=55;        {Invalid and causes a report}
 
   {$R-}
 
-  Cijfer3:=167;       {Ongeldig maar er treedt geen fout op}
+  Digit3:=167;       {Invalid but no error occurs}
 
 end.
 
 8. 	STRING TYPE
 
-Turbo Pascal biedt u het data type String, om tekenreeksen te verwerken. Tekenreeksen 
-zijn aaneenschakelingen van tekens. Het type String is gestructureerd en lijkt veel op het 
-array (hoofdstuk 9). Er is echter een groot verschil: het aantal tekens in een String en zijn 
-lengte kan dynamisch variëren tussen 0 en een bovengrens, terwijl het aantal elementen 
-in een array vaststaat.
+Turbo Pascal offers you the data type String for processing character strings. Character strings
+are concatenations of characters. The type String is structured and closely resembles the
+array (chapter 9). There is however one major difference: the number of characters in a String and its
+length can vary dynamically between 0 and an upper limit, while the number of elements
+in an array is fixed.
 
-8.1 String type definitie
+8.1 String type definition
 
-De definitie van het data type String moet de bovengrens van het aantal te bevatten 
-tekens, dat is de maximale lengte, aangeven. De definitie bestaat uit het gereserveerde 
-woord string, waarop tussen blokhaken de maximale lengte volgt. Deze moet een Integer 
-constante zijn varieerend van 1 t/m 255. Strings hebben geen vooringestelde lengte en 
-daarom moet de lengte precies bepaald worden.
+The definition of the data type String must indicate the upper limit of the number of
+characters, that is the maximum length. The definition consists of the reserved
+word string followed by the maximum length in square brackets. This must be an Integer
+constant ranging from 1 to 255. Strings have no preset length and
+therefore the length must be determined exactly.
 
 
 
-Voorbeeld:
+Example:
 
-type 
+type
 
   FileName   = string[63];
 
@@ -1891,25 +1887,25 @@ type
 
 
 
-Een String variabele gebruikt in het geheugen zijn maximale lengte plus 1 byte. Dit ene 
-byte wordt gebruikt om de actuele lengte van de String variabele in op te slaan. Alle 
-tekens in de String variabele zijn genummerd, beginnend met 1 t/m de lengte van de 
-String. Index 0 bevat de lengte.
+A String variable uses its maximum length plus 1 byte in memory. This one
+byte is used to store the current length of the String variable. All
+characters in the String variable are numbered starting with 1 up to the length of the
+String. Index 0 contains the length.
 
-8.2 String expressies
+8.2 String expressions
 
-Strings worden door String expressies bewerkt. Deze bestaan uit String constanten, String 
-variabelen, functienamen en operaties.
-
-
-
-Het plusteken kan Strings verbinden. De functie Concat (zie hoofdstuk 8.5.2) doet 
-hetzelfde, maar de '+' operator is vaak eenvoudiger te verwerken. Zou de lengte van de 
-ontstaande String groter dan 255 zijn, wordt een looptijdfout gegeven.
+Strings are manipulated by String expressions. These consist of String constants, String
+variables, function names and operations.
 
 
 
-Voorbeelden:
+The plus sign can join Strings. The Concat function (see chapter 8.5.2) does
+the same, but the '+' operator is often simpler to use. If the length of the
+resulting String exceeds 255, a runtime error is given.
+
+
+
+Examples:
 
 'Turbo ' + 'Pascal'   = 'Turbo Pascal'
 
@@ -1917,263 +1913,260 @@ Voorbeelden:
 
 'A' + 'B' + 'C' + 'D' = 'ABCD'
 
-De relationele operatoren =, <, >, <= en >= hebben een lagere prioriteit dan de 
-verbindingsoperator. Als relationele operatoren op String operanden toegepast worden is 
-het resultaat van het type Boolean. Bij de vergelijking van twee Strings worden de aparte 
-letters van links naar rechts met elkaar vergeleken. Als de Strings verschillende lengten 
-hebben en de kortere tot de laatste letter gelijk is aan de aan het begin staande letters van 
-de langere String, dan wordt de kortere als kleiner erkend. Strings zijn alleen dan gelijk, 
-als ze zowel in lengte als inhoudelijk hetzelfde zijn.
+The relational operators =, <, >, <= and >= have a lower priority than the
+concatenation operator. When relational operators are applied to String operands, the
+result is of the type Boolean. When comparing two Strings, the individual
+letters are compared from left to right. If the Strings have different lengths
+and the shorter one up to its last letter equals the leading letters of
+the longer String, then the shorter is recognized as smaller. Strings are only equal
+if they are the same both in length and in content.
 
 
 
-Voorbeelden:
+Examples:
 
-'A' < 'B'                               waar
+'A' < 'B'                               true
 
-'A' > 'B'                               niet waar
+'A' > 'B'                               false
 
-'1' < '12'                              waar
+'1' < '12'                              true
 
-'2' < '12'                              niet waar
+'2' < '12'                              false
 
-'TURBO'  = 'TURBO'                      waar
+'TURBO'  = 'TURBO'                      true
 
-'TURBO ' = 'TURBO'                      niet waar
+'TURBO ' = 'TURBO'                      false
 
-'Pascal Compiler' < 'Pascal compiler'   waar
+'Pascal Compiler' < 'Pascal compiler'   true
 
-8.3 String toewijzing
+8.3 String assignment
 
-De toewijzingsoperator wijst de waarde van een String expressie aan een String variabele 
-toe.
-
-
-
-Voorbeelden:
-
-Leeftijd:=' vijftiende';
-
-Regel   :='Gefeliciteerd met je' + Leeftijd + 'verjaardag.';
+The assignment operator assigns the value of a String expression to a String variable.
 
 
 
-Als de aangegeven maximale lengte van een String overschreden wordt, worden de 
-overtollige letters weggegooid. Dat betekend dat als de bovenstaande variabele Leeftijd 
-gedeclareerd zou zijn als string[5], dan bevat de variabele na de toewijzing maar vijf 
-letters. De waarde zou dan dus worden : ' vijf'.
+Examples:
+
+Age :=' fifteenth';
+
+Line:='Congratulations on your' + Age + 'birthday.';
+
+
+
+If the stated maximum length of a String is exceeded, the
+excess letters are discarded. This means that if the above variable Age
+had been declared as string[5], the variable would contain only five
+letters after the assignment. The value would then be: ' fifth'.
 
 8.4 String procedures
 
-De volgende standaard procedures voor Strings zijn in Turbo Pascal beschikbaar:
+The following standard procedures for Strings are available in Turbo Pascal:
 
 8.4.1 Delete
 
 Syntax: Delete (St, Pos, Num)
 
-Delete wist uit een String variabele (St) een bepaald aantal (Num) letters, beginnend op de 
-positie Pos. St is een String variabele en zowel Pos als Num zijn Integer expressies. Als 
-Pos groter is dan de lengte van St, worden er geen letters verwijderd. Als geprobeerd 
-wordt letters te wissen die zich buiten het rechtereinde van de String bevinden, dus als 
-Pos+Num groter is dan de lengte van St, worden alleen tekens binnen St gewist. Als Pos 
-buiten het bereik 0 t/m 255 ligt, wordt een looptijdfout gegeven.
+Delete removes a certain number (Num) of letters from a String variable (St), starting at
+position Pos. St is a String variable and both Pos and Num are Integer expressions. If
+Pos is greater than the length of St, no letters are removed. If an attempt
+is made to erase letters beyond the right end of the String, i.e. if
+Pos+Num is greater than the length of St, only characters within St are erased. If Pos
+is outside the range 0 to 255, a runtime error is given.
 
-Als St de waarde 'ABCDEFG' heeft, dan neemt St onder de volgende voorwaarden de 
-nevenstaande waarden aan:
-
+If St has the value 'ABCDEFG', then St assumes the adjacent values under the following conditions:
 
 
-Delete (St, 2, 4)        geeft een waarde van 'AFG'
 
-Delete (St, 2, 10)       geeft een waarde van 'A'
+Delete (St, 2, 4)        yields a value of 'AFG'
 
-Delete (St, 10, 1)       doet niets!!
+Delete (St, 2, 10)       yields a value of 'A'
+
+Delete (St, 10, 1)       does nothing!!
 
 8.4.2 Insert
 
 Syntax: Insert (Obj, Target, Pos)
 
-Insert voegt de String Obj in de String Target op positie Pos in. Obj is een String 
-expressie, Target een String variabele en Pos een Integer getal. Als Pos groter is dan de 
-lengte van de String variabele Target, dan wordt Obj achter aan Target toegevoegd. Als 
-het resultaat langer is dan de maximale lengte van de variabele Target, verdwijnen de 
-overtollige letters en Target bevat slechts de meest links staande letters van Obj. Als Pos 
-buiten het bereik van 0 t/m 255 ligt, wordt een looptijdfout gegeven.
+Insert inserts the String Obj into the String Target at position Pos. Obj is a String
+expression, Target a String variable and Pos an Integer number. If Pos is greater than the
+length of the String variable Target, Obj is appended to Target. If
+the result is longer than the maximum length of the variable Target, the excess
+letters disappear and Target contains only the leftmost letters of Obj. If Pos
+is outside the range 0 to 255, a runtime error is given.
 
 
 
-Als St de waarde 'ABCDEFG' heeft dan neemt St onder de volgende voorwaarde de 
-nevenstaande waarde aan:
+If St has the value 'ABCDEFG', then St assumes the adjacent value under the following condition:
 
 
 
-Insert ('XX', St, 3)        geeft een waarde: 'ABXXCDEFG'.
+Insert ('XX', St, 3)        yields a value: 'ABXXCDEFG'.
 
 8.4.3 Str
 
-Syntax: Str (Value, Str)
+Syntax: Str (Value, St)
 
-De procedure Str converteert de numerieke waarde Value in een String en slaat die in St 
-op. Value is een schrijfparameter van het type Real, Longint of Integer, St is een String 
-variabele. Schrijfparameters zijn expressies met speciale formateer commando's (zie 
-hoofdstuk 13.11.1).
-
-
-
-Als I de waarde 1234 heeft, geldt:
+The Str procedure converts the numeric value Value to a String and stores it in St.
+Value is a write parameter of the type Real, Longint or Integer, St is a String
+variable. Write parameters are expressions with special formatting commands (see
+chapter 13.11.1).
 
 
 
-Str (I:5, St)               St krijgt de waarde ' 1234'
+If I has the value 1234, then:
 
 
 
-Als X de waarde 2.5E4 heeft, geldt:
+Str (I:5, St)               St gets the value ' 1234'
 
 
 
-Str (X:10:0, St)            St krijgt de waarde ' 25000'
+If X has the value 2.5E4, then:
 
 
 
-Waarschuwing: Een functie waarin de Str procedure voorkomt mag nooit gebruikt 
-worden in een expressie die binnen een Write of WriteLn staat.
+Str (X:10:0, St)            St gets the value ' 25000'
+
+
+
+Warning: A function containing the Str procedure may never be used
+in an expression inside a Write or WriteLn.
 
 8.4.4 Val
 
 Syntax: Val (St, Var, Code)
 
-Val converteert de String expressie St in een Longint, Integer of Real waarde (afhankelijk 
-van het type van de variabele Var) en slaat deze op in de variabele Var. St moet een String 
-zijn, die een numerieke waarde voorstelt, overeenkomend met de regels voor numerieke 
-constante (zie hoofdstuk 3.2). Noch ervoor, noch erna zijn lege tekens toegestaan. Var 
-moet een Integer of Real variabele zijn. Als geen fouten gevonden worden, wordt de 
-variabele Code op 0 gezet, anders bevat Code de positie van het eerste foutieve teken, en 
-blijft de waarde van Var ongedefinieerd.
+Val converts the String expression St to a Longint, Integer or Real value (depending
+on the type of the variable Var) and stores it in the variable Var. St must be a String
+representing a numeric value according to the rules for numeric
+constants (see chapter 3.2). No blank characters are allowed before or after. Var
+must be an Integer or Real variable. If no errors are found, the
+variable Code is set to 0, otherwise Code contains the position of the first erroneous character, and
+the value of Var remains undefined.
 
 
 
-Als St de waarde '234' heeft, geldt:
+If St has the value '234', then:
 
 
 
-Val (St, I, Result)          I krijgt de waarde 234 en Result wordt 0
+Val (St, I, Result)          I gets the value 234 and Result becomes 0
 
 
 
-Als St de waarde '12x' heeft, geldt:
+If St has the value '12x', then:
 
 
 
-Val (St, I, Result)          I blijft ongedefinieerd en Result wordt 3
+Val (St, I, Result)          I remains undefined and Result becomes 3
 
 
 
-Als St de waarde '2.5E4' heeft, en X een real variabele is, geldt:
+If St has the value '2.5E4' and X is a real variable, then:
 
 
 
-Val (St, X, Result)          X krijgt de waarde 25000 en Result wordt 0
+Val (St, X, Result)          X gets the value 25000 and Result becomes 0
 
 
 
-Waarschuwing: Een functie die de Val procedure gebruikt mag nooit in een expressie in 
-een Write of WriteLn aangeroepen worden.
+Warning: A function using the Val procedure may never be called in an expression in
+a Write or WriteLn.
 
-8.5 String functies
+8.5 String functions
 
-De volgende standaard functies voor Strings zijn in Turbo Pascal toepasbaar:
+The following standard functions for Strings are applicable in Turbo Pascal:
 
 8.5.1 Copy
 
 Syntax: Copy (St, Pos, Num)
 
-Copy geeft een deel van de String St terug, die een bepaald aantal (Num) letters bevat, 
-geteld van de positie Pos. St is een String expressie, Pos en Num zijn Integer expressies. 
-Als de waarde van Pos boven de lengte van de String ligt, wordt een lege String 
-teruggegeven. Als geprobeerd wordt tekens rechts buiten de String te verkrijgen, dus als 
-Pos+Num groter is als de lengte van de String, worden alleen de letters die binnen de 
-String liggen teruggegeven. Als Pos buiten het bereik van 0 t/m 255 ligt wordt een 
-looptijdfout gegeven.
+Copy returns part of the String St containing a certain number (Num) of letters,
+counted from position Pos. St is a String expression, Pos and Num are Integer expressions.
+If the value of Pos exceeds the length of the String, an empty String is
+returned. If an attempt is made to obtain characters to the right outside the String, i.e. if
+Pos+Num is greater than the length of the String, only the letters within the
+String are returned. If Pos is outside the range 0 to 255, a
+runtime error is given.
 
 
 
-Als St de waarde 'ABCDEFG' heeft, geldt:
+If St has the value 'ABCDEFG', then:
 
 
 
-Copy (St, 3, 2)            geeft de waarde 'CD' terug
+Copy (St, 3, 2)            returns the value 'CD'
 
-Copy (St, 4, 10)           geeft de waarde 'DEFG' terug
+Copy (St, 4, 10)           returns the value 'DEFG'
 
-Copy (St, 4, 2)            geeft de waarde 'DE' terug
+Copy (St, 4, 2)            returns the value 'DE'
 
 8.5.2 Concat
 
 Syntax: Concat (St1, St2[, StN])
 
-De functie Concat geeft een verzamel String terug, die uit een willekeurig aantal deel 
-Strings in de aangegeven volgorde (St1..StN) samengesteld wordt. Als het resultaat groter 
-is dan 255 tekens, wordt een looptijdfout gegeven. Zoals in hoofdstuk 8.2 reeds 
-aangegeven, kan de '+' operator hetzelfde en dat op een eenvoudigere manier. Concat 
-werd alleen in Turbo Pascal opgenomen om de compatibiliteit met andere Pascal 
-compilers te behouden.
+The Concat function returns a combined String composed of an arbitrary number of
+Strings in the stated order (St1..StN). If the result exceeds
+255 characters, a runtime error is given. As already
+stated in chapter 8.2, the '+' operator does the same thing in a simpler way. Concat
+was only included in Turbo Pascal to preserve compatibility with other Pascal
+compilers.
 
 
 
-Als St1 de waarde 'TURBO' en St2 de waarde ' is de snelste' heeft, geldt:
+If St1 has the value 'TURBO' and St2 the value ' is the fastest', then:
 
 
 
-Concat (St1, ' Pascal', St2)  geeft de waarde 'Turbo Pascal is de snelste'
+Concat (St1, ' Pascal', St2)  yields the value 'Turbo Pascal is the fastest'
 
 8.5.3 Length
 
 Syntax: Length (St)
 
-Geeft de lengte van de String expressie St terug, dit is het aantal tekens dat de String 
-bevat. Het resultaat is een Integer.
+Returns the length of the String expression St, that is the number of characters the String
+contains. The result is an Integer.
 
 
 
-Als St de waarde '123456789' heeft, dan geeft:
+If St has the value '123456789', then:
 
 
 
-Length (St)  de waarde 9.
+Length (St)  the value 9.
 
 8.5.4 Pos
 
 Syntax: Pos (Obj, Target)
 
-Deze functie doorzoekt de String Target naar het eerste voorkomen van de String 
-expressie Obj. Het resultaat is Integer en geeft de positie in de String expressie Target 
-aan die het eerste teken van Obj heeft. De eerste positie in een String is 1. Als de 
-tekencombinatie Obj niet gevonden wordt, levert Pos de waarde 0.
+This function searches the String Target for the first occurrence of the String
+expression Obj. The result is an Integer giving the position in the String expression Target
+of the first character of Obj. The first position in a String is 1. If the
+character combination Obj is not found, Pos returns the value 0.
 
 
 
-Als St de waarde 'ABCDEFG' heeft, dan geeft:
+If St has the value 'ABCDEFG', then:
 
 
 
-Pos ('DE', St)                de waarde 4
+Pos ('DE', St)                the value 4
 
-Pos ('H', St)                 de waarde 0
+Pos ('H', St)                 the value 0
 
-8.6 Strings en tekens
+8.6 Strings and characters
 
-Het data type String en het scalaire data type Char zijn uitwisselbaar. Zo kan, waar een 
-String waarde verwacht wordt, ook een tekenwaarde ingevoerd worden en omgekeerd. 
-Buiten dat, kunnen Strings en tekens ook in expressies gemengd worden. Als een teken 
-naar een String geconverteerd wordt moet de lengte als '1' gedefinieerd worden anders 
-wordt een looptijdfout gegeven. Op de tekens van een String kan men toegang krijgen 
-door String indexering. Daarvoor wordt aan de String variabele een Integer getal tussen 
-blokhaken toegevoegd.
+The data type String and the scalar data type Char are interchangeable. For example, where a
+String value is expected, a character value may also be entered and vice versa.
+In addition, Strings and characters can also be mixed in expressions. When a character
+is converted to a String, the length must be defined as '1', otherwise
+a runtime error is given. The characters of a String can be accessed
+through String indexing. For this, an Integer number in
+square brackets is appended to the String variable.
 
 
 
-Voorbeelden:
+Examples:
 
 Buffer[5]
 
@@ -2183,567 +2176,563 @@ Ord (Line [0])
 
 
 
-Omdat het eerste teken van een String (bij index '0') de lengte van de String bevat, is 
-Length(String) hetzelfde als Ord(String[0]) Als de lengte indicator gebruikt 
-wordt moet de programmeur erop letten dat deze korter is dan de maximale lengte van de 
-String variabele. Als de compiler aanwijzing R actief is ({$R+}), wordt de code zo 
-gegenereerd dat gegarandeerd wordt dat een String index expressie zijn maximale lengte 
-niet zal overschrijden. Het is desondanks altijd nog mogelijk een String index te vormen 
-die boven de actuele dynamische lengte ligt. De op die manier gelezen tekens zijn 
-ongedefinieerd en toewijzingen voorbij de actuele dynamische lengte veranderen de 
-String niet (het systeem kan hierop zelfs vastlopen).
+Because the first character of a String (at index '0') contains the length of the String,
+Length(String) is the same as Ord(String[0]). When the length indicator is used,
+the programmer must ensure that it is shorter than the maximum length of the
+String variable. If the compiler directive R is active ({$R+}), code is
+generated to guarantee that a String index expression will not exceed its maximum length.
+It is nevertheless still possible to form a String index
+that lies above the current dynamic length. Characters read in that way are
+undefined, and assignments beyond the current dynamic length do not change the
+String (the system may even hang on this).
 
 9. 	ARRAY TYPE
 
-Een array is een gestructureerd data type met een vastgesteld aantal elementen, die 
-allemaal van hetzelfde type zijn, het basis type. Op elk element kan toegang verkregen 
-worden door gebruik te maken van indices. Een index is een Integer expressie die tussen 
-blokhaken achter de array naam staat. Zijn data type wordt index type genoemd.
+An array is a structured data type with a fixed number of elements, all
+of the same type, the base type. Each element can be accessed
+by using indices. An index is an Integer expression placed in
+square brackets after the array name. Its data type is called the index type.
 
-9.1 Array definitie
+9.1 Array definition
 
-De definitie van een array bestaat uit het gereserveerde woord array waarop het index 
-type tussen blokhaken volgt. Daarna staat het gereserveerde woord of gevolgd door het 
-basis type.
-
-
-
-Voorbeelden:
-
-type 
-
-  Dag=(Maan, Dins, Woens, Donder, Vrij, Zater, Zon);
-
-var 
-
-  Werkuren : array[1..8] of Integer;
-
-  Week     : array[1..7] of Dag;
+The definition of an array consists of the reserved word array followed by the index
+type in square brackets. Then comes the reserved word of followed by the
+base type.
 
 
+
+Examples:
 
 type 
 
-  Spelers= (Speler, Speler2, Speler3, Speler4);
+  Day=(Mon, Tue, Wed, Thu, Fri, Sat, Sun);
+
+var
+
+  WorkHours : array[1..8] of Integer;
+
+  Week      : array[1..7] of Day;
+
+
+
+type
+
+  Players= (Player1, Player2, Player3, Player4);
 
   Hand   = (One, Two, Pair, TwoPair, Three, Straight,
 
             Flush, FullHouse, Four, StraightFlush, RSF);
 
-  GoedBod= 1..200;
+  GoodBid= 1..200;
 
-  Bod    = array[Spelers] of GoedBod;
+  Bid    = array[Players] of GoodBid;
 
-var 
+var
 
-  Speler : array[Spelers] of Hand;
+  Player : array[Players] of Hand;
 
-  Pot    : Bod;
+  Pot    : Bid;
 
 
 
-Op een array element wordt toegang verkregen door aan de variabele naam een index 
-tussen blokhaken te hangen:
+An array element is accessed by appending an index in square brackets to the variable name:
 
 
 
-Speler[Speler3]:=FullHouse;
+Player[Player3]:=FullHouse;
 
-Pot[Speler3]   :=100;
+Pot[Player3]   :=100;
 
-Speler[Speler4]:=Flush;
+Player[Player4]:=Flush;
 
-Pot[Speler4]   :=50;
+Pot[Player4]   :=50;
 
 
 
-Omdat toewijzingen tussen twee willekeurige variabelen toegestaan is, mits ze van 
-hetzelfde type zijn, kunnen hele arrays met behulp van één toewijzing gecopieerd 
-worden.
+Because assignments between any two variables are allowed, provided they are of
+the same type, whole arrays can be copied with a single assignment.
 
 
 
-De compiler aanwijzing R controleert bij de codegeneratie of de array indexeringen 
-binnen het bereik liggen. De default instelling is inactief. De instelling {$R+} 
-veroorzaakt een controle van alle array indexeringen op het feit of ze binnen de grenzen 
-vallen.
+The compiler directive R checks during code generation whether array indexings
+are within range. The default setting is inactive. The {$R+}
+setting causes all array indexings to be checked for whether they fall within the limits.
 
-9.2 Meerdimensionale arrays
+9.2 Multidimensional arrays
 
-De elementen van een array kunnen van een willekeurig data type zijn, dat betekend dat 
-de elementen ook arrays mogen zijn. Zo'n structuur noemt men meerdimensionale arrays.
+The elements of an array can be of any data type, which means that
+the elements may also be arrays. Such a structure is called multidimensional arrays.
 
 
 
-Voorbeeld:
+Example:
 
-type 
+type
 
-  Kaart =( Twee, Drie, Vier, Vijf, Zes, Zeven, Acht,
+  Card =( Two, Three, Four, Five, Six, Seven, Eight,
 
-           Negen, Tien, Boer, Vrouw, Koning, Aas );
+           Nine, Ten, Jack, Queen, King, Ace );
 
-  Troef =( Harten, Schoppen, Klaveren, Ruiten );
+  Trump =( Hearts, Spades, Clubs, Diamonds );
 
-  AlleKaarten = array[Troef] of array [1..13] of Kaart;
+  AllCards = array[Trump] of array [1..13] of Card;
 
-var 
+var
 
-  Dek : AlleKaarten;
+  Deck : AllCards;
 
 
 
-Het meerdimensionale array kan ook eenvoudiger gedefinieerd worden:
+The multidimensional array can also be defined more simply:
 
 
 
-type 
+type
 
- AlleKaarten = array[Troef, 1..13] of Kaart;
+ AllCards = array[Trump, 1..13] of Card;
 
 
 
-Een dergelijk kortschrift is ook van toepassing op verwijzingen naar array elementen:
+Such a shorthand also applies to references to array elements:
 
 
 
-Dek[Harten,10] is hetzelfde als Dek[Harten][10]
+Deck[Hearts,10] is the same as Deck[Hearts][10]
 
 
 
-Het is natuurlijk ook mogelijk om meerdimensionale arrays van eerder gedefinieerde 
-array typen te maken.
+It is of course also possible to make multidimensional arrays of previously defined
+array types.
 
 
 
-Voorbeeld:
+Example:
 
-type 
+type
 
-  Leerlingen = string[20];
+  Pupils = string[20];
 
-  Klas       = array[1..30] of Leerlingen;
+  Class  = array[1..30] of Pupils;
 
-  School     = array[1..50] of klas;
+  School = array[1..50] of Class;
 
-var 
+var
 
-  J, P, Vrij  : Integer;
+  J, P, Free  : Integer;
 
-  KlasA,KlasB : Klas;
+  ClassA,ClassB : Class;
 
-  MariaSchool : School;
+  MarySchool : School;
 
 
 
-Na deze definitie zijn de volgende toewijzingen mogelijk:
+After this definition the following assignments are possible:
 
 
 
-KlasA[J]          :='Peter';
+ClassA[J]          :='Peter';
 
-MariaSchool[5][21]:='Peter Brown';
+MarySchool[5][21]:='Peter Brown';
 
-MariaSchool[8,J]  := MariaSchool[7,J]; {leerling J wisselt van klas}
+MarySchool[8,J]  := MarySchool[7,J]; {pupil J changes class}
 
-KlasA[Vrij]       := KlasB[P];  {leerling P wisselt van klas en nummer}
+ClassA[Free]     := ClassB[P];  {pupil P changes class and number}
 
-9.3 Teken arrays
+9.3 Character arrays
 
-Teken arrays zijn arrays met elementen van het scalaire data type Char. Teken arrays 
-kunnen als Strings met een constante lengte gezien worden.
+Character arrays are arrays with elements of the scalar data type Char. Character arrays
+can be seen as Strings with a constant length.
 
 
 
-Bij Turbo Pascal kunnen teken arrays in String expressies voorkomen. In dat geval wordt 
-de array in een String van de desbetreffende lengte geconverteerd. Zo kunnen arrays en 
-Strings op dezelfde manier vergeleken en behandeld worden en String constanten kunnen 
-teken arrays toegewezen krijgen, zolang ze dezelfde lengte hebben. String variabelen en 
-waarden uit String expressies kunnen niet aan teken arrays toegewezen worden.
+In Turbo Pascal, character arrays can appear in String expressions. In that case the
+array is converted to a String of the corresponding length. Arrays and
+Strings can thus be compared and handled in the same way, and String constants can be
+assigned to character arrays as long as they have the same length. String variables and
+values from String expressions cannot be assigned to character arrays.
 
-9.4 Voorgedefinieerde arrays
+9.4 Predefined arrays
 
-Turbo Pascal kent twee voor gedefinieerde arrays van het type Byte namelijk: Mem en 
-Port. Deze dienen als directe toegang tot het CPU-geheugen en tot de data poorten.
+Turbo Pascal knows two predefined arrays of the type Byte, namely: Mem and
+Port. These serve as direct access to the CPU memory and the data ports.
 
 9.4.1 Mem array
 
-Het voor gedefinieerde array Mem wordt gebruikt om direct toegang te krijgen tot het 
-geheugen. Als er een waarde wordt toegekend aan een element van Mem dan wordt deze 
-waarde direct in de overeenkomstige geheugenplaats ingevuld. Een gelezen waarde komt 
-direct uit de bijbehorende geheugenplaats.
+The predefined array Mem is used to gain direct access to
+memory. When a value is assigned to an element of Mem, that
+value is placed directly into the corresponding memory location. A value read comes
+directly from the associated memory location.
 
 9.4.2 Port array
 
-Het voorgedefinieerde array Port wordt gebruikt om direct toegang te krijgen tot de data 
-poorten van de computer. Als er een waarde wordt toegekend aan een element van Port 
-dan wordt deze waarde direct naar de overeenkomstige poort gestuurd. Een gelezen 
-waarde wordt eerst van de bijbehorende poort opgehaald.
+The predefined array Port is used to gain direct access to the data
+ports of the computer. When a value is assigned to an element of Port,
+that value is sent directly to the corresponding port. A value read
+is first fetched from the associated port.
 
 
 
-Bij het Port array geldt de beperking dat deze niet zonder een index mag worden 
-gebruikt. Het is dus niet mogelijk alle poort waarden in één toekenning aan een ander 
-array toe te wijzen.
+For the Port array the restriction applies that it may not be used without an index.
+It is therefore not possible to assign all port values to another
+array in a single assignment.
 
 10. 	RECORD TYPE
 
-Een record is een data type, welke uit een vaststaand aantal elementen bestaat, die velden 
-worden genoemd. De velden kunnen uit verschillende data typen bestaan en elk veld 
-wordt met een veldnaam (field identifier) benoemd. Deze dient voor de veldselectie in 
-een record.
+A record is a data type consisting of a fixed number of elements called fields.
+The fields may consist of different data types and each field
+is named with a field name (field identifier). This is used for field selection in
+a record.
 
-10.1 Record definitie
+10.1 Record definition
 
-De definitie van het data type record bestaat uit het gereserveerde woord record, waarop 
-een lijst van de aparte velden volgt (de field list). Daarna komt het gereserveerde woord 
-end. De veldenlijst is een opeenvolging van regels (record sections), die door 
-puntkomma's gescheiden zijn. Elke regel bestaat uit één of meer veldnamen, gevolgd 
-door een dubbele punt en een datatypenaam of een datatypeomschrijving. Zo bepaald 
-elke regel het type en de naam van één of meer velden.
+The definition of the data type record consists of the reserved word record followed by
+a list of the individual fields (the field list). Then comes the reserved word
+end. The field list is a sequence of lines (record sections) separated by
+semicolons. Each line consists of one or more field names followed
+by a colon and a data type name or data type description. Thus each
+line determines the type and name of one or more fields.
 
 
 
-Voorbeelden:
+Examples:
 
 type 
 
-  Datum=record
+  Date=record
 
-          Dag   : 1..31;
+          Day   : 1..31;
 
-          Maand :( Jan, Feb, Maart, April, Mei, Juni,
+          Month :( Jan, Feb, Mar, April, May, June,
 
-                   Juli, Aug, Sep, Okt, Nov, Dec );
+                   July, Aug, Sep, Oct, Nov, Dec );
 
-          Jaar  : 1900..1999;
+          Year  : 1900..1999;
 
         end;
 
-var 
+var
 
-  Geboorte : Datum;
+  Birth : Date;
 
-  WerkDag : array[1..5] of Datum;
-
-
-
-Dag, Maand en Jaar zijn veldnamen. Een veldnaam is alleen geldig binnen het record 
-waarin het gedefinieerd wordt. Een veld wordt door middel van een punt van de variabele 
-naam gescheiden.
+  WorkDay : array[1..5] of Date;
 
 
 
-Voorbeelden:
-
-Geboorte.Maand  := Juni;
-
-Geboorte.Jaar   := 1950;
-
-WerkDag[Huidige]:= WerkDag[Huidige-1];
+Day, Month and Year are field names. A field name is only valid within the record
+in which it is defined. A field is separated from the variable name by a dot.
 
 
 
-Let erop dat, net als bij arrays, een toewijzing tussen gehele records van hetzelfde type 
-mogelijk is. Omdat de aparte elementen willekeurige data typen mogen bezitten, zijn de 
-volgende constructies van in elkaar schakeling mogelijk:
+Examples:
+
+Birth.Month  := June;
+
+Birth.Year   := 1950;
+
+WorkDay[Current]:= WorkDay[Current-1];
+
+
+
+Note that, as with arrays, an assignment between whole records of the same type
+is possible. Because the individual elements may have arbitrary data types, the
+following nested constructions are possible:
 
 
 
 type 
 
-  Naam = record
+  Name = record
 
-           FamilieNaam : string[32];
+           FamilyName : string[32];
 
-           DoopNaam    : array[1..3] of string[16];
-
-         end;
-
-  Uren = record
-
-           NormaalWerk, OverWerk,
-
-           NachtWerk, Weekend : Integer;
+           FirstName  : array[1..3] of string[16];
 
          end;
 
-  Datum = record
+  Hours = record
 
-            Dag   : 1..31;
+           NormalWork, Overtime,
 
-            Maand : (Jan, Feb, Maart, April, Mei, Juni,
+           NightWork, Weekend : Integer;
 
-                     Juli, Aug, Sep, Okt, Nov, Dec);
+         end;
 
-            Jaar  : 1900..1999;
+  Date = record
+
+            Day   : 1..31;
+
+            Month : (Jan, Feb, Mar, April, May, June,
+
+                     July, Aug, Sep, Oct, Nov, Dec);
+
+            Year  : 1900..1999;
 
           end;
 
-  Persoon = record
+  Person = record
 
-              ID   : Naam;
+              ID   : Name;
 
-              Tijd : Datum;
+              Time : Date;
 
             end;
 
-  Loon = record
+  Wage = record
 
-           Werknemer : Persoon;
+           Employee : Person;
 
-           Kost      : Uren;
+           Cost     : Hours;
 
          end;
 
 
 
-var Salaris, Beloning : Loon;
+var Salary, Reward : Wage;
 
 
 
-Na dit voorbeeld zouden de volgende toewijzingen mogelijk zijn:
+After this example the following assignments would be possible:
 
 
 
-Salaris := Beloning;
+Salary := Reward;
 
-Salaris.Kost.OverWerk := 950;
+Salary.Cost.Overtime := 950;
 
-Salaris.Werknemer.Tijd := Beloning.Werknemer.Tijd
+Salary.Employee.Time := Reward.Employee.Time
 
-Salaris.Werknemer.ID.FamilieNaam := 'Jansen';
+Salary.Employee.ID.FamilyName := 'Jansen';
 
-10.2 With opdracht
+10.2 With statement
 
-Het gebruik van records zoals dat hiervoor is beschreven kan leiden tot erg lange 
-opdrachten. Het zou vaak handiger zijn als elk veld benaderd kan worden met alleen zijn 
-veldnaam. Dit is mogelijk met de with opdracht. Het 'opent' een record op zo'n manier dat 
-alle veldnamen kunnen worden gebruikt als een variabele naam
-
-
-
-De with opdracht bestaat uit het gereserveerde woord with, gevolgd door een lijst met 
-record variabelen gescheiden door komma's en gevolgd door het gereserveerde woord do 
-en tot slot een opdracht.
+Using records as described above can lead to very long
+statements. It would often be more convenient if each field could be approached with only its
+field name. This is possible with the with statement. It 'opens' a record in such a way that
+all field names can be used as variable names
 
 
 
-Binnen de with opdracht kan het veld benaderd worden door alleen de veldnaam te 
-gebruiken. De recordnaam is dan dus niet meer nodig.
+The with statement consists of the reserved word with, followed by a list of
+record variables separated by commas and followed by the reserved word do
+and finally a statement.
 
 
 
-with Salaris do
-
-begin 
-
-  Werknemer := Nieuwkomer;
-
-  Kost      := StandaardUren;
-
-end; 
+Within the with statement the field can be approached by using only the field name.
+The record name is then no longer needed.
 
 
 
-Records kunnen worden genest binnen with opdrachten, dus records van records kunnen 
-worden 'geopend' zoals hieronder:
+with Salary do
 
+begin
 
+  Employee := Newcomer;
 
-{$W3}
-
-with Salaris, Werknemer, ID do
-
-begin 
-
-  FamilieNaam := 'Jansen';
-
-  DoopNaam[1] := 'Jozef';
+  Cost     := StandardHours;
 
 end;
 
 
 
-Dit is gelijk aan:
+Records can be nested within with statements, so records of records can
+be 'opened' as below:
 
 
 
-  with Salaris do with Werknemer do with ID do
+{$W3}
+
+with Salary, Employee, ID do
+
+begin
+
+  FamilyName := 'Jansen';
+
+  FirstName[1] := 'Joseph';
+
+end;
+
+
+
+This is the same as:
+
+
+
+  with Salary do with Employee do with ID do
 
   ...
 
 
 
-De maximale diepte van de nesting van de with opdracht is in te stellen met de W 
-compiler opdracht. Standaard is de diepte 2 {$W2}. Dit kan echter per versie van Turbo 
-Pascal verschillend zijn.
+The maximum nesting depth of the with statement can be set with the W
+compiler directive. The default depth is 2 {$W2}. However, this may differ per version of Turbo
+Pascal.
 
-10.3 Variërende records
+10.3 Variant records
 
-De schrijfwijze van het record type voorziet ook in variërende records, met andere 
-woorden een record structuur waar binnen een record de velden kunnen veranderen, 
-meestal afhankelijk van de waarde van een keuzeveld.
+The notation of the record type also provides for variant records, in other
+words a record structure in which the fields within a record can change,
+usually depending on the value of a tag field.
 
-Laten we aannemen dat het volgende type bestaat:
-
-
-
-Afkomst = (Plaatselijk, VanElders);
+Let us assume that the following type exists:
 
 
 
-en het type Naam en Datum zoals in hoofdstuk 10.1. Het volgende record heeft andere 
-velden afhankelijk of de waarde van AfkomstPlaats, Plaatselijk of VanElders is.
+Origin = (Local, FromElsewhere);
 
 
 
-type 
+and the types Name and Date as in chapter 10.1. The following record has different
+fields depending on whether the value of OriginPlace is Local or FromElsewhere.
 
-  Persoon=record
 
-            Voornaam:Naam;
 
-            GeboorteDatum:Datum
+type
 
-            case AfkomstPlaats : Afkomst of
+  Person=record
 
-              Plaatselijk : (GeboortePlaats  :Naam);
+            FirstName:Name;
 
-              VanElders:(GeboorteLand        :Naam;
+            BirthDate:Date
 
-                         DatumInschrijving   :Datum;
+            case OriginPlace : Origin of
 
-                         VerguningTot        :Datum;
+              Local : (BirthPlace  :Name);
 
-                         PlaatsVanBinnenkomst:Datum);
+              FromElsewhere:(BirthCountry      :Name;
+
+                         RegistrationDate  :Date;
+
+                         PermitUntil       :Date;
+
+                         PlaceOfEntry:Date);
 
             end;
 
 
 
-In deze variërende record definitie kan een keuze veld op dezelfde manier bewerkt 
-worden als normale velden. Dus als Passagier van het type Persoon is zijn de volgende 
-opdrachten toegestaan:
+In this variant record definition a tag field can be handled
+in the same way as normal fields. So if Passenger is of the type Person, the following
+statements are allowed:
 
 
 
-Passagier.AfkomstPlaats:=Plaatselijk;
+Passenger.OriginPlace:=Local;
 
-with Passagier, Voornaam do
+with Passenger, FirstName do
 
-  if AfkomstPlaats=VanElders then Write(Familienaam);
-
-
-
-Het vaststaande deel van een record, het deel dat de normale velden bevat, moet altijd 
-voorafgaan aan het variërende deel. In het bovenstaande voorbeeld zijn de velden 
-Voornaam en GeboorteDatum de vaststaande velden. In het variërende deel moeten de 
-veldnamen tussen ronde haken staan, ook al staat er niets binnen deze haken.
+  if OriginPlace=FromElsewhere then Write(FamilyName);
 
 
 
-Het bijhouden en bewerken van het keuze veld is een verantwoordelijkheid van de 
-programmeur en niet van Turbo Pascal. In het type Persoon kan het veld 
-DatumInschrijving worden benaderd, ook als in het keuzeveld AfkomstPlaats de waarde 
-Plaatselijk staat in plaats van VanElders.
+The fixed part of a record, the part containing the normal fields, must always
+precede the variant part. In the above example the fields
+FirstName and BirthDate are the fixed fields. In the variant part the
+field names must be in round brackets, even if there is nothing inside these brackets.
 
 
 
-De waarde van het keuze veld AfkomstPlaats kan volledig worden genegeerd zodat alleen 
-de type naam overblijft. Dit wordt het werken met vrije secties (free unions) genoemd. 
-Het gebruik maken van het keuze veld heet werken met beperkte secties (discriminated 
-unions). Het gebruik van vrije secties is erg ongebruikelijk en zou alleen gebruikt moeten 
-worden door zeer ervaren programmeurs.
+Keeping track of and handling the tag field is a responsibility of the
+programmer, not of Turbo Pascal. In the type Person the field
+RegistrationDate can be accessed even if the tag field OriginPlace holds the value
+Local instead of FromElsewhere.
+
+
+
+The value of the tag field OriginPlace can be ignored completely so that only
+the type name remains. This is called working with free unions.
+Using the tag field is called working with discriminated
+unions. The use of free unions is very unusual and should only be used
+by very experienced programmers.
 
 11. 	SETS
 
-Een verzameling (set) is een samenvatting van meerdere objecten van hetzelfde type, die 
-als geheel gezien worden. Elk apart object van zo'n verzameling wordt een element 
-genoemd. Enkele voorbeelden:
+A set is a collection of several objects of the same type, regarded
+as a whole. Each individual object of such a set is called an element.
+Some examples:
 
 
 
-1) 	Alle integer getallen tussen 1 en 100
+1) 	All integer numbers between 1 and 100
 
-2) 	Alle letters van het alfabet
+2) 	All letters of the alphabet
 
-3) 	Alle klinkers van het alfabet
-
-
-
-Twee verzamelingen zijn alleen dan gelijk aan elkaar, als hun elementen hetzelfde zijn. 
-Er is geen rangorde, zodat de verzamelingen [1, 3, 5], [1, 5, 3] en [5, 3, 1] gelijk zijn. Als 
-de elementen van een verzameling ook de elementen van een andere verzameling zijn, 
-geldt dat de eerste verzameling een deelverzameling is van de tweede. (De tweede bevat 
-de eerste). In het bovenstaande voorbeeld is 3 een deelverzameling van 2.
+3) 	All vowels of the alphabet
 
 
 
-Met verzamelingen kan men op drie verschillende manieren rekenen (net als optellen, 
-aftrekken en vermenigvuldigen met getallen):
+Two sets are only equal to each other if their elements are the same.
+There is no ordering, so the sets [1, 3, 5], [1, 5, 3] and [5, 3, 1] are equal. If
+the elements of one set are also the elements of another set,
+then the first set is a subset of the second. (The second contains
+the first). In the above example 3 is a subset of 2.
 
 
 
-De vereniging van twee verzamelingen A en B (geschreven als A+B) is de verzameling 
-waarvan de elementen in A of B voorkomen. De vereniging van [1, 3, 4, 5, 7] en [2, 3, 
+Sets can be calculated with in three different ways (just like addition,
+subtraction and multiplication with numbers):
+
+
+
+The union of two sets A and B (written as A+B) is the set
+whose elements occur in A or B. The union of [1, 3, 4, 5, 7] and [2, 3,
 4] is [1, 2, 3, 4, 5, 7].
 
 
 
-De doorsnede van twee verzamelingen (geschreven A*B) is de verzameling waarvan de 
-elementen in A en B voorkomen. De doorsnede van [1, 3, 4, 5, 7] en [2, 3, 4] is [3, 4].
+The intersection of two sets (written A*B) is the set whose elements
+occur in A and B. The intersection of [1, 3, 4, 5, 7] and [2, 3, 4] is [3, 4].
 
 
 
-Het verschil of het complement van twee verzamelingen, het relatieve complement, 
-(geschreven A-B) is de verzameling van elementen uit de eerste verzameling die niet in 
-de tweede voorkomen. Het verschil van [1, 3, 5, 7] en [2, 3, 4] is [1, 5, 7].
+The difference or complement of two sets, the relative complement,
+(written A-B) is the set of elements from the first set that do not occur in
+the second. The difference of [1, 3, 5, 7] and [2, 3, 4] is [1, 5, 7].
 
-11.1 Set definitie
+11.1 Set definition
 
-Hoewel er in de wiskunde geen beperkingen zijn welke elementen in een verzameling 
-kunnen voorkomen heeft Pascal zijn restricties. De elementen van een verzameling 
-moeten van hetzelfde type (het basis type) zijn en het moet een eenvoudig type zijn, dat 
-betekend een scalair data type, uitgezonderd de Real en de Longint. Een verzameling 
-wordt vooraf gegaan door het gereserveerde woord set of, gevolgd door een eenvoudig 
+Although in mathematics there are no restrictions on which elements may occur in a set,
+Pascal has its restrictions. The elements of a set
+must be of the same type (the base type) and it must be a simple type, that
+is a scalar data type except Real and Longint. A set
+is preceded by the reserved word set of, followed by a simple
 data type.
 
 
 
-Voorbeelden:
+Examples:
 
 type 
 
-  DagenPerMaand = set of 0..31;
+  DaysPerMonth = set of 0..31;
 
-  WerkWeek      = set of Maan..Vrij;
+  WorkWeek     = set of Mon..Fri;
 
-  Letter        = set of 'A'..'Z';
+  Letter       = set of 'A'..'Z';
 
-  MengKleuren   = set of (Rood, Groen, Blauw);
+  MixedColors  = set of (Red, Green, Blue);
 
-  Karakters     = set of Char;
+  Characters   = set of Char;
 
-Bij Turbo Pascal kan een verzameling maar 256 elementen bevatten en de ordinale 
-getallen van het basis type moeten tussen de 0 en 255 liggen.
+With Turbo Pascal a set can contain at most 256 elements and the ordinal
+numbers of the base type must lie between 0 and 255.
 
-11.2 Set expressies
+11.2 Set expressions
 
-De waarden van een set kunnen met de waarden van een andere set door set expressies en 
-set operaties verkregen worden. Set expressies bestaan uit set constanten, set variabelen, 
-weergaven van sets en set operatoren.
+The values of a set can be obtained with the values of another set through set expressions and
+set operations. Set expressions consist of set constants, set variables,
+set notations and set operators.
 
-11.2.1 Weergave van de set
+11.2.1 Notation of the set
 
-De weergave van een verzameling bestaat uit één of meer, door komma's gescheiden en 
-door blokhaken omgeven element bepalingen. Een element bepaling is een expressie, van 
-hetzelfde data type als het basis type van de verzameling, of het is een bereik, die door 
-twee van zulke expressies gescheiden door twee opeenvolgende punten wordt bepaald.
+The notation of a set consists of one or more element determinations separated by commas and
+enclosed in square brackets. An element determination is an expression of
+the same data type as the base type of the set, or it is a range determined by
+two such expressions separated by two consecutive dots.
 
 
 
-Voorbeelden:
+Examples:
 
 ['T','U','R','B','O']
 
@@ -2761,43 +2750,43 @@ Voorbeelden:
 
 
 
-Het laatste voorbeeld laat de lege verzameling zien. Omdat de lege verzameling geen 
-expressie bevat die haar basis type aangeeft is de lege verzameling compatibel is met alle 
-set typen. De verzameling [1..5] is hetzelfde als de verzameling [1,2,3,4,5]. Als X>Y, dan 
-staat [X..Z] voor een lege verzameling.
+The last example shows the empty set. Because the empty set contains no
+expression indicating its base type, the empty set is compatible with all
+set types. The set [1..5] is the same as the set [1,2,3,4,5]. If X>Y, then
+[X..Z] denotes an empty set.
 
-11.2.2 Set operatoren
+11.2.2 Set operators
 
-De regels van verzamelingen geven de voorrang van de set operaties in drie verschillende 
-klassen aan:
-
-
-
-1) 	* Doorsnede van de verzamelingen.
+The rules of sets state the precedence of the set operations in three different
+classes:
 
 
 
-2) 	+ Vereniging van de verzamelingen.
-
- - Verschil van de verzamelingen.
+1) 	* Intersection of the sets.
 
 
 
-3) 		=    Test op de gelijkheid van de verzamelingen.
+2) 	+ Union of the sets.
 
-<>  Test op de ongelijkheid van de verzamelingen.
-
->=  'Bevat' is waar, als de eerste verzameling de tweede bevat.
-
-<=  'Is bevat' is waar, als de tweede verzameling de eerste bevat.
-
-IN  Test of een element in een verzameling voorkomt. De eerste operand is een element 
-met als type het basis type van de verzameling die de tweede operand vormt. Het  
-resultaat is True als de eerste operand een element is van de tweede.
+  - Difference of the sets.
 
 
 
-Er is geen operator voor de exclusie, maar men kan hem als volgt programmeren:
+3) 		=    Test for equality of the sets.
+
+<>  Test for inequality of the sets.
+
+>=  'Contains' is true if the first set contains the second.
+
+<=  'Is contained' is true if the second set contains the first.
+
+IN  Test whether an element occurs in a set. The first operand is an element
+with the base type of the set forming the second operand as its type. The
+result is True if the first operand is an element of the second.
+
+
+
+There is no operator for exclusion, but it can be programmed as follows:
 
 
 
@@ -2805,8 +2794,7 @@ A * B = []
 
 
 
-Set expressies kunnen voor de vereenvoudiging van gecompliceerde tests zeer 
-behulpzaam zijn:
+Set expressions can be very helpful for simplifying complicated tests:
 
 
 
@@ -2814,7 +2802,7 @@ behulpzaam zijn:
 
 
 
-kan ook duidelijker uitgedrukt worden:
+can also be expressed more clearly:
 
 
 
@@ -2822,7 +2810,7 @@ kan ook duidelijker uitgedrukt worden:
 
 
 
-En de test:
+And the test:
 
 
 
@@ -2830,20 +2818,20 @@ En de test:
 
 
 
-zou er als volgt beter uitzien:
+would look better as follows:
 
 
 
   if Ch in ['0'..'9'] then ...
 
-11.3 Set toewijzingen
+11.3 Set assignments
 
-Waarden die uit set expressies ontstaan worden aan set variabelen middels de toewijzing 
-operator := worden toegewezen.
+Values resulting from set expressions are assigned to set variables using the assignment
+operator :=.
 
 
 
-Voorbeelden:
+Examples:
 
 type 
 
@@ -5235,7 +5223,7 @@ hoofdstuk 15.1 beschreven is.
 
 
 
-Voorbeelden:
+Examples:
 
   procedure LogIn;
 
@@ -5524,7 +5512,7 @@ beschreven is en wordt afgesloten met een type declaratie van de naam van de fun
 
 
 
-Voorbeelden:
+Examples:
 
   function ToetsAanslag: Boolean;
 
@@ -6825,7 +6813,7 @@ dat door de index wordt gespecificeerd gelezen.
 
 
 
-Voorbeelden:
+Examples:
 
   Mem[WsCursor]    := 2;
 
@@ -11554,7 +11542,7 @@ gescheiden door een punt. Tot slot volgt de afsluitende haak }.
 
 
 
-Voorbeelden:
+Examples:
 
    {$I-}
 
