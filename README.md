@@ -65,7 +65,22 @@ encoding to UTF-8. The `.com`/`.sys`/`.tsr` binaries are untouched.
 
 ### Compiler and toolchain
 
-- `turbo.com` — the Z80 Turbo Pascal 3.3 compiler itself.
+- `turbo.com` — the Z80 Turbo Pascal 3.3 compiler itself. When run without
+  arguments, it displays:
+
+  ```text
+  Z80 TURBO Pascal compiler,             Version 3.3f (DOS 1/2)
+  Copyright (C) MSX computer club Enschede, '93-'99
+  Syntax: TURBO <filename> [/C|/H] [/Sxxxx] [/Exxxx] [/Fxxxx]
+  /C            compiles <filename> to COM-file
+  /H            compiles <filename> to CHAIN-file
+  /Sxxxx        code start address (hexadecimal), min. 2E9B
+  /Exxxx        data end address (hexadecimal), max. CD42
+  /Fxxxx        find runtime error at address xxxx (hexadecimal)
+  /R<file>      generates this error file with a compiler error
+  /R-           generates no error file
+  ```
+
 - `tp3.exe` — PC (MS-DOS) cross-compiler executable.
 - `turbopc.bat` — PC build script: runs `tp3` on the given sources and joins
   `runtime.com` with the resulting `.chn` file into a `.com`.
