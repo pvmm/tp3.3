@@ -67,7 +67,22 @@ de sua codificação original ISO-8859-1 (Latin-1) para UTF-8. Os binários
 
 ### Compilador e toolchain
 
-- `turbo.com` — o compilador Z80 Turbo Pascal 3.3 em si.
+- `turbo.com` — o compilador Z80 Turbo Pascal 3.3 em si. Ao ser executado sem
+  argumentos, exibe:
+
+  ```text
+  Z80 TURBO Pascal compiler,             Version 3.3f (DOS 1/2)
+  Copyright (C) MSX computer club Enschede, '93-'99
+  Syntax: TURBO <filename> [/C|/H] [/Sxxxx] [/Exxxx] [/Fxxxx]
+  /C            compiles <filename> to COM-file
+  /H            compiles <filename> to CHAIN-file
+  /Sxxxx        code start address (hexadecimal), min. 2E9B
+  /Exxxx        data end address (hexadecimal), max. CD42
+  /Fxxxx        find runtime error at address xxxx (hexadecimal)
+  /R<file>      generates this error file with a compiler error
+  /R-           generates no error file
+  ```
+
 - `tp3.exe` — executável do compilador cruzado para PC (MS-DOS).
 - `turbopc.bat` — script de build para PC: executa `tp3` nas fontes fornecidas
   e junta `runtime.com` com o arquivo `.chn` resultante em um `.com`.
