@@ -1,0 +1,2 @@
+# Detect all .asc files as Pascal
+*.asc linguist-language=Pascal
