@@ -85,6 +85,31 @@ encoding to UTF-8. The `.com`/`.sys`/`.tsr` binaries are untouched.
 - `gios.com` — GIOS library, disk version.
 - `gios.tsr` — GIOS library, memory-resident (TSR) version.
 
+### Running the PC cross-compiler (`tp3.exe`) in DOSBox
+
+`tp3.exe` is the PC-hosted cross-compiler: an MS-DOS program that runs on a
+PC (including under DOSBox) and generates Z80 code for MSX. Its own banner
+says `Z80 TURBO Pascal cross-compiler, Version 3.3f` (its binary even
+carries a `Copyright (C) MSX computer club Enschede, '93-'99` string).
+By contrast, `turbo.com` / `runtime.com` and everything `tp3.exe` produces
+(`*.CHN`, linked `*.COM`) are Z80 machine code — those only run on MSX
+hardware or an MSX emulator such as openMSX, never in DOSBox.
+
+This directory ships repo-local DOSBox settings, so no global DOSBox
+configuration is needed:
+
+- `dosbox-tp3.conf` — mounts this directory as `C:` (relative path, works
+  because the launcher sets the working directory here).
+- `run-tp3.sh` — launcher:
+  `./run-tp3.sh` shows the compiler banner;
+  `./run-tp3.sh hello` compiles `HELLO.PAS` and links `HELLO.COM` exactly
+  like `turbopc.bat` does (`tp3` → `.CHN`, then `runtime.com` + `.CHN`);
+  `./run-tp3.sh --shell` opens an interactive DOS prompt.
+  Outputs land in UPPERCASE 8.3 names (`HELLO.CHN`, `HELLO.COM`).
+  Verified with DOSBox Staging 0.82.2: banner, successful compilation
+  (`Code: 56 bytes`, `Data: 263 bytes` for the hello-world test) and
+  correct link sizes (`HELLO.COM` = 11675-byte runtime + `.CHN`).
+
 ### Example programs (`*.pas`, one per GIOS routine, translated to English)
 
 Graphics:
