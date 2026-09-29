@@ -75,8 +75,10 @@ untouched.
 - `overlay.pas` — overlay demo program (prints `Frits Hilderink`).
 - `command.com`, `command2.com` — command shells bundled with the pack.
 - `msxdos.sys`, `msxdos2.sys` — MSX-DOS 1 / DOS 2 system files.
-- `compress.com`, `crunch.com`, `dos2cash.com`, `tk.com`, `tl.com` —
+- `compress.com`, `crunch.com`, `dos2cash.com` —
   small bundled utilities (exact purpose undocumented in this archive).
+- `tr.com` — TsrLoad: loads a TSR (terminate-and-stay-resident) program.
+- `tk.com` — TsrKill: unloads a previously loaded TSR program.
 - `memman.com` — memory-manager helper.
 - `msxdebug.com` — debugger helper.
 - `getrom.bas` — MSX-BASIC program dumping the machine ROMs
