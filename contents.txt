@@ -1,126 +1,126 @@
-Table of Contents
+Índice
 
-1. BASIC LANGUAGE ELEMENTS	1
+1. ELEMENTOS BÁSICOS DA LINGUAGEM	1
 
-1.1 	Basic symbols	1
+1.1 	Símbolos básicos	1
 
-1.2 	Reserved words	1
+1.2 	Palavras reservadas	1
 
-1.3 	Standard names	2
+1.3 	Nomes padrão	2
 
-1.4 	Delimiters	2
+1.4 	Delimitadores	2
 
-1.5 	Program lines	3
+1.5 	Linhas de programa	3
 
-2. STANDARD SCALAR TYPES	5
+2. TIPOS ESCALARES PADRÃO	5
 
-2.1 	Integer (whole numbers)	5
+2.1 	Integer (números inteiros)	5
 
 2.2 	Byte	5
 
-2.3 	Real (real numbers)	5
+2.3 	Real (números reais)	5
 
-2.4 	Boolean (boolean truth values)	6
+2.4 	Boolean (valores lógicos)	6
 
-2.5 	Char (alphanumeric characters)	6
+2.5 	Char (caracteres alfanuméricos)	6
 
-3. USER-DEFINED LANGUAGE ELEMENTS	7
+3. ELEMENTOS DA LINGUAGEM DEFINIDOS PELO USUÁRIO	7
 
-3.1 	Names	7
+3.1 	Nomes	7
 
-3.2 	Numbers	7
+3.2 	Números	7
 
 3.3 	Strings	8
 
-3.4 	Control characters	9
+3.4 	Caracteres de controle	9
 
-3.5 	Comments	9
+3.5 	Comentários	9
 
-3.6 	Compiler directives	10
+3.6 	Diretivas do compilador	10
 
-4. PROGRAM HEADER AND BLOCK	11
+4. CABEÇALHO E BLOCO DO PROGRAMA	11
 
-4.1 	Program header	11
+4.1 	Cabeçalho do programa	11
 
-4.2 	Declaration part	11
+4.2 	Parte de declarações	11
 
-4.2.1 	Label declaration part	12
+4.2.1 	Parte de declaração de rótulos	12
 
-4.2.2 	Constant definition part	12
+4.2.2 	Parte de definição de constantes	12
 
-4.2.3 	Type definition part	13
+4.2.3 	Parte de definição de tipos	13
 
-4.2.4 	Variable declaration part	13
+4.2.4 	Parte de declaração de variáveis	13
 
-4.2.5 	Procedure and function declaration part	14
+4.2.5 	Parte de declaração de procedimentos e funções	14
 
-4.2.6 	Statement part	14
+4.2.6 	Parte de comandos	14
 
-5. EXPRESSIONS	15
+5. EXPRESSÕES	15
 
-5.1 	Operators	15
+5.1 	Operadores	15
 
-5.1.1 	Unary minus	15
+5.1.1 	Menos unário	15
 
-5.1.2 	Not operator	15
+5.1.2 	Operador not	15
 
-5.1.3 	Multiplicative operators	17
+5.1.3 	Operadores multiplicativos	17
 
-5.1.4 	Additive operators	18
+5.1.4 	Operadores aditivos	18
 
-5.1.5 	Relational operators	18
+5.1.5 	Operadores relacionais	18
 
-5.2 	Function call	19
+5.2 	Chamada de função	19
 
-6. STATEMENTS	21
+6. COMANDOS	21
 
-6.1 	Simple statements	21
+6.1 	Comandos simples	21
 
-6.1.1 	Assignment statement	21
+6.1.1 	Comando de atribuição	21
 
-6.1.2 	Procedure statement	21
+6.1.2 	Comando de procedimento	21
 
-6.1.3 	Goto statement	22
+6.1.3 	Comando goto	22
 
-6.1.4 	Empty statement	22
+6.1.4 	Comando vazio	22
 
-6.2 	Structured statement	22
+6.2 	Comando estruturado	22
 
-6.2.1 	Compound statement	22
+6.2.1 	Comando composto	22
 
-6.2.2 	Conditional statement	23
+6.2.2 	Comando condicional	23
 
-6.2.2.1 	If statement	23
+6.2.2.1 	Comando if	23
 
-6.2.2.2 	Case statement	24
+6.2.2.2 	Comando case	24
 
-6.2.3 	Loop statement	25
+6.2.3 	Comando de repetição	25
 
-6.2.3.1 	For statement	25
+6.2.3.1 	Comando for	25
 
-6.2.3.2 	While statement	25
+6.2.3.2 	Comando while	25
 
-6.2.3.3 	Repeat statement	26
+6.2.3.3 	Comando repeat	26
 
-7. SCALAR TYPES AND THEIR SUBRANGES	27
+7. TIPOS ESCALARES E SUAS SUBFAIXAS	27
 
-7.1 	Scalar types	27
+7.1 	Tipos escalares	27
 
-7.2 	Subrange types	28
+7.2 	Tipos subfaixa	28
 
-7.3 	Type conversion	29
+7.3 	Conversão de tipos	29
 
-7.4 	Range checking	29
+7.4 	Verificação de limites	29
 
-8. STRING TYPE	31
+8. TIPO STRING	31
 
-8.1 	String type definition	31
+8.1 	Definição do tipo string	31
 
-8.2 	String expressions	31
+8.2 	Expressões de string	31
 
-8.3 	String assignment	32
+8.3 	Atribuição de string	32
 
-8.4 	String procedures	32
+8.4 	Procedimentos de string	32
 
 8.4.1 	Delete	32
 
@@ -130,7 +130,7 @@ Table of Contents
 
 8.4.4 	Val	34
 
-8.5 	String functions	34
+8.5 	Funções de string	34
 
 8.5.1 	Copy	34
 
@@ -140,61 +140,61 @@ Table of Contents
 
 8.5.4 	Pos	35
 
-8.6 	Strings and characters	35
+8.6 	Strings e caracteres	35
 
-9. ARRAY TYPE	37
+9. TIPO ARRAY	37
 
-9.1 	Array definition	37
+9.1 	Definição de array	37
 
-9.2 	Multidimensional arrays	38
+9.2 	Arrays multidimensionais	38
 
-9.3 	Character arrays	38
+9.3 	Arrays de caracteres	38
 
-9.4 	Predefined arrays	39
+9.4 	Arrays predefinidos	39
 
-9.4.1 	Mem array	39
+9.4.1 	array Mem	39
 
-9.4.2 	Port array	39
+9.4.2 	array Port	39
 
-10. RECORD TYPE	41
+10. TIPO RECORD	41
 
-10.1 	Record definition	41
+10.1 	Definição de records	41
 
-10.2 	With statement	42
+10.2 	Comando with	42
 
-10.3 	Variant records	43
+10.3 	Records variantes	43
 
-11. SETS	45
+11. CONJUNTOS	45
 
-11.1 	Set definition	45
+11.1 	Definição de conjuntos	45
 
-11.2 	Set expressions	46
+11.2 	Expressões de conjuntos	46
 
-11.2.1 	Representation of the set	46
+11.2.1 	Representação do conjunto	46
 
-11.2.2 	Set operators	46
+11.2.2 	Operadores de conjuntos	46
 
-11.3 	Set assignments	47
+11.3 	Atribuições de conjuntos	47
 
-12. TYPED CONSTANTS	49
+12. CONSTANTES TIPADAS	49
 
-12.1 	Unstructured typed constants	49
+12.1 	Constantes tipadas não estruturadas	49
 
-12.2 	Structured typed constants	50
+12.2 	Constantes tipadas estruturadas	50
 
-12.2.1 	Array constants	50
+12.2.1 	Constantes array	50
 
-12.2.2 	Multidimensional array constants	50
+12.2.2 	Constantes array multidimensionais	50
 
-12.2.3 	Record constants	51
+12.2.3 	Constantes record	51
 
-12.2.4 	Set constants	52
+12.2.4 	Constantes de conjuntos	52
 
-13. FILE TYPES	53
+13. TIPOS DE ARQUIVO	53
 
-13.1 	File type definition	53
+13.1 	Definição de tipos de arquivo	53
 
-13.2 	Operations with files	53
+13.2 	Operações com arquivos	53
 
 13.2.1 	Assign	54
 
@@ -216,7 +216,7 @@ Table of Contents
 
 13.2.10 	Rename	56
 
-13.3 	Standard file functions	57
+13.3 	Funções de arquivo padrão	57
 
 13.3.1 	Eof	57
 
@@ -224,11 +224,11 @@ Table of Contents
 
 13.3.3 	FileSize	57
 
-13.4 	The use of files	57
+13.4 	O uso de arquivos	57
 
-13.5 	Text files	59
+13.5 	Arquivos-texto	59
 
-13.5.1 	Operations with text files	59
+13.5.1 	Operações com arquivos-texto	59
 
 13.5.2 	ReadLn	60
 
@@ -240,7 +240,7 @@ Table of Contents
 
 13.5.6 	SeekEof	60
 
-13.6 	Logical devices	62
+13.6 	Dispositivos lógicos	62
 
 13.6.1 	Con:	62
 
@@ -254,35 +254,35 @@ Table of Contents
 
 13.6.6 	Usr:	62
 
-13.7 	Standard files	63
+13.7 	Arquivos padrão	63
 
-13.8 	Text input and output	65
+13.8 	Entrada e saída de texto	65
 
-13.9 	Read procedure	66
+13.9 	Procedimento Read	66
 
-13.10 	ReadLn procedure	68
+13.10 	Procedimento ReadLn	68
 
-13.11 	Write procedure	68
+13.11 	Procedimento Write	68
 
-13.11.1 	Write parameters	69
+13.11.1 	Parâmetros de escrita	69
 
-13.12 	WriteLn procedure	69
+13.12 	Procedimento WriteLn	69
 
-13.13 	Untyped files	70
+13.13 	Arquivos sem tipo	70
 
 13.13.1 	BlockRead / BlockWrite	70
 
-13.14 	I/O checking	72
+13.14 	Verificação de E/S	72
 
-14. POINTER TYPE	75
+14. TIPO PONTEIRO	75
 
-14.1 	Definition of pointer variables	75
+14.1 	Definição de variáveis ponteiro	75
 
-14.2 	Allocating variables (New)	76
+14.2 	Alocação de variáveis (New)	76
 
 14.3 	Mark and Release	76
 
-14.4 	The use of pointers	77
+14.4 	O uso de ponteiros	77
 
 14.4.1 	Dispose	78
 
@@ -292,21 +292,21 @@ Table of Contents
 
 14.4.4 	MaxAvail	80
 
-14.5 	Hints	80
+14.5 	Dicas	80
 
-15. PROCEDURES AND FUNCTIONS	81
+15. PROCEDIMENTOS E FUNÇÕES	81
 
-15.1 	Parameters	81
+15.1 	Parâmetros	81
 
-15.1.1 	Relaxing the parameter-type checking	82
+15.1.1 	Flexibilização da verificação de tipos de parâmetros	82
 
-15.1.2 	Untyped variable parameters	83
+15.1.2 	Parâmetros variáveis sem tipo	83
 
-15.2 	Procedures	84
+15.2 	Procedimentos	84
 
-15.2.1 	Procedure declaration	84
+15.2.1 	Declaração de procedimentos	84
 
-15.2.2 	Standard procedures	86
+15.2.2 	Procedimentos padrão	86
 
 15.2.2.1 	ClrEol	86
 
@@ -338,13 +338,13 @@ Table of Contents
 
 15.2.2.15 	FillChar	88
 
-15.3 	Functions	88
+15.3 	Funções	88
 
-15.3.1 	Function declaration	89
+15.3.1 	Declaração de funções	89
 
-15.3.2 	Standard functions	90
+15.3.2 	Funções padrão	90
 
-15.3.3 	Arithmetic functions	90
+15.3.3 	Funções aritméticas	90
 
 15.3.3.1 	Abs	90
 
@@ -366,7 +366,7 @@ Table of Contents
 
 15.3.3.10 	Sqrt	92
 
-15.3.4 	Scalar functions	92
+15.3.4 	Funções escalares	92
 
 15.3.4.1 	Pred	92
 
@@ -374,7 +374,7 @@ Table of Contents
 
 15.3.4.3 	Odd	92
 
-15.3.5 	Conversion functions	92
+15.3.5 	Funções de conversão	92
 
 15.3.5.1 	Chr	92
 
@@ -384,7 +384,7 @@ Table of Contents
 
 15.3.5.4 	Trunc	93
 
-15.3.6 	Extended standard functions	93
+15.3.6 	Funções padrão estendidas	93
 
 15.3.6.1 	Hi	93
 
@@ -406,145 +406,145 @@ Table of Contents
 
 15.3.6.10 	UpCase	95
 
-15.4 	Forward references	95
+15.4 	Referências forward	95
 
-16. Overlay system	97
+16. Sistema de overlays	97
 
-16.1 	Creating overlays	99
+16.1 	Criação de overlays	99
 
-16.2 	Overlay files within an overlay file (nested overlays)	101
+16.2 	Arquivos de overlay dentro de um arquivo de overlay (overlays aninhados)	101
 
-16.3 	Automatic overlay management	102
+16.3 	Gerenciamento automático de overlays	102
 
-16.4 	Location of overlay files	102
+16.4 	Localização dos arquivos de overlay	102
 
-16.5 	Efficient use of overlays	102
+16.5 	Uso eficiente de overlays	102
 
-16.6 	Limitations of overlay files	102
+16.6 	Limitações dos arquivos de overlay	102
 
-16.6.1 	Data area	102
+16.6.1 	Área de dados	102
 
-16.6.2 	Forward declaration	103
+16.6.2 	Declaração forward	103
 
-16.6.3 	Recursion	103
+16.6.3 	Recursão	103
 
-16.6.4 	Runtime errors	103
+16.6.4 	Erros de runtime	103
 
-16.7 	Loading overlays	104
+16.7 	Carregamento de overlays	104
 
-17. System	105
+17. Sistema	105
 
-17.1 	Compiler options	105
+17.1 	Opções do compilador	105
 
-17.1.1 	Compiling to COM-file	105
+17.1.1 	Compilação para arquivo COM	105
 
-17.1.2 	Compiling to CHAIN-file	105
+17.1.2 	Compilação para arquivo CHAIN	105
 
-17.1.3 	Start address	105
+17.1.3 	Endereço inicial	105
 
-17.1.4 	End address	106
+17.1.4 	Endereço final	106
 
-17.1.5 	Finding runtime errors	106
+17.1.5 	Localização de erros de runtime	106
 
-17.1.6 	The error file	106
+17.1.6 	O arquivo de erros	106
 
-17.2 	Standard Identifiers	107
+17.2 	Identificadores padrão	107
 
 17.2.1 	Chain and Execute	107
 
-17.3 	Files	109
+17.3 	Arquivos	109
 
-17.3.1 	File names:	109
+17.3.1 	Nomes de arquivos:	109
 
-17.3.2 	Text files	109
+17.3.2 	Arquivos-texto	109
 
-17.3.3 	Absolute variables	109
+17.3.3 	Variáveis absolutas	109
 
-17.4 	Addr function	110
+17.4 	Função Addr	110
 
-17.5 	Predefined Arrays	110
+17.5 	Arrays predefinidos	110
 
-17.5.1 	Mem Array	110
+17.5.1 	Array Mem	110
 
-17.5.2 	Port Array	110
+17.5.2 	Array Port	110
 
-17.6 	Array index optimization	111
+17.6 	Otimização de índices de arrays	111
 
-17.7 	With statements	111
+17.7 	Comandos with	111
 
-17.8 	Pointer-related elements	111
+17.8 	Elementos relacionados a ponteiros	111
 
 17.8.1 	MemAvail	111
 
-17.8.2 	Pointers and Integers	111
+17.8.2 	Ponteiros e Integers	111
 
-17.9 	CP/M Function calls	112
+17.9 	Chamadas de função CP/M	112
 
-17.9.1 	BDos procedure and function	112
+17.9.1 	Procedimento e função BDos	112
 
-17.9.2 	BDosHL Function	112
+17.9.2 	Função BDosHL	112
 
-17.9.3 	Bios procedure and function	112
+17.9.3 	Procedimento e função Bios	112
 
-17.9.4 	BiosHL function	112
+17.9.4 	Função BiosHL	112
 
-17.10 	Definable I/O drivers	113
+17.10 	Drivers de E/S definíveis	113
 
-17.11 	External sub-programs	114
+17.11 	Subprogramas externos	114
 
-17.12 	Inline machine code	114
+17.12 	Código de máquina inline	114
 
-17.13 	Interrupt handling	116
+17.13 	Tratamento de interrupções	116
 
-17.14 	Internal Data Formats	117
+17.14 	Formatos internos de dados	117
 
-17.14.1 	Basic Data Types	117
+17.14.1 	Tipos básicos de dados	117
 
-17.14.1.1 	Scalars	117
+17.14.1.1 	Escalares	117
 
-17.14.1.2 	Reals	117
+17.14.1.2 	Reais	117
 
 17.14.1.3 	LongInt	118
 
 17.14.1.4 	Strings	118
 
-17.14.1.5 	Sets	118
+17.14.1.5 	Conjuntos	118
 
-17.14.1.6 	File variables	119
+17.14.1.6 	Variáveis de arquivo	119
 
-17.14.1.7 	Pointers	120
+17.14.1.7 	Ponteiros	120
 
-17.14.2 	Data structures	120
+17.14.2 	Estruturas de dados	120
 
 17.14.2.1 	Arrays	120
 
 17.14.2.2 	Records	121
 
-17.14.2.3 	Disk files	121
+17.14.2.3 	Arquivos em disco	121
 
-17.14.3 	Parameters	121
+17.14.3 	Parâmetros	121
 
-17.14.3.1 	Variable parameters	122
+17.14.3.1 	Parâmetros variáveis	122
 
-17.14.3.2 	Value parameters	122
+17.14.3.2 	Parâmetros por valor	122
 
-17.14.4 	Function results	124
+17.14.4 	Resultados de funções	124
 
-17.14.5 	The heap and the stack	124
+17.14.5 	O heap e a pilha	124
 
-17.14.6 	Output of a program file	126
+17.14.6 	Saída de um arquivo de programa	126
 
 18. GIOS	127
 
-18.1 	Structure of the GIOS	127
+18.1 	Estrutura do GIOS	127
 
-18.2 	Installation error messages	128
+18.2 	Mensagens de erro de instalação	128
 
-18.3 	Variables and types	129
+18.3 	Variáveis e tipos	129
 
-18.4 	GIOS functions and procedures	129
+18.4 	Funções e procedimentos do GIOS	129
 
-18.4.1 	GIOS functions	129
+18.4.1 	Funções do GIOS	129
 
 18.4.1.1 	FindFirst	129
 
@@ -594,7 +594,7 @@ Table of Contents
 
 18.4.1.24 	VPeek	141
 
-18.4.2 	GIOS procedures	142
+18.4.2 	Procedimentos do GIOS	142
 
 18.4.2.1 	BLoad	142
 
@@ -714,50 +714,50 @@ Table of Contents
 
 18.4.2.59 	WriteVDP	167
 
-APPENDIX A	169
+APÊNDICE A	169
 
-Overview of the standard procedures and functions
+Visão geral dos procedimentos e funções padrão
 
-APPENDIX B	173
+APÊNDICE B	173
 
-Overview of operations
+Visão geral das operações
 
-APPENDIX C	175
+APÊNDICE C	175
 
-Overview of compiler directives
+Visão geral das diretivas do compilador
 
-APPENDIX D	179
+APÊNDICE D	179
 
-RUN-TIME Errors
+Erros de RUNTIME
 
-APPENDIX E	181
+APÊNDICE E	181
 
-I/O Errors
+Erros de E/S
 
-APPENDIX F	183
+APÊNDICE F	183
 
-Translation of Error Messages
+Tradução das mensagens de erro
 
-APPENDIX G	187
+APÊNDICE G	187
 
-Turbo Pascal SYNTAX
+SINTAXE Turbo Pascal
 
-APPENDIX H	191
+APÊNDICE H	191
 
-Overview of VRAM addressing
+Visão geral do endereçamento de VRAM
 
-APPENDIX I	193
+APÊNDICE I	193
 
-Overview of logical operations
+Visão geral das operações lógicas
 
-APPENDIX J	195
+APÊNDICE J	195
 
-GIOS groupings
+Agrupamentos do GIOS
 
-APPENDIX K	199
+APÊNDICE K	199
 
-DOS 1 and DOS 2 Extensions
+Extensões do DOS 1 e DOS 2
 
-APPENDIX L	205
+APÊNDICE L	205
 
-DOS 2 error codes
+Códigos de erro do DOS 2

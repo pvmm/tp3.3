@@ -1,40 +1,40 @@
-1. 	BASIC LANGUAGE ELEMENTS
+1. 	ELEMENTOS BÁSICOS DA LINGUAGEM
 
-1.1 Basic symbols
+1.1 Símbolos básicos
 
-The essential vocabulary of Turbo Pascal consists of symbols, which can be divided into letters, digits and
-special symbols:
-
-
-
-Letters: A to Z, a to z and _ (underscore)
-
-Digits: 0 1 2 3 4 5 6 7 8 9
-
-Special symbols: + - * / = ^ < > [ ] ( ) { } . , : ; ' # $
+O vocabulário essencial do Turbo Pascal consiste em símbolos, que podem ser divididos em letras, dígitos e
+símbolos especiais:
 
 
 
-No distinction is made between upper- and lower-case letters. Certain operators and
-delimiters are built from two special symbols:
+Letras: A a Z, a a z e _ (sublinhado)
+
+Dígitos: 0 1 2 3 4 5 6 7 8 9
+
+Símbolos especiais: + - * / = ^ < > [ ] ( ) { } . , : ; ' # $
 
 
 
-Assignment operator: :=
+Não se faz distinção entre letras maiúsculas e minúsculas. Certos operadores e
+delimitadores são formados por dois símbolos especiais:
 
-Relational operators: <> <= >=
 
-Subrange delimiters: ..
 
-Parentheses: ( ) can be used instead of [ ].
+Operador de atribuição: :=
 
-Comments: (* *) can be used instead of { }.
+Operadores relacionais: <> <= >=
 
-1.2 Reserved words
+Delimitadores de subfaixa: ..
 
-Reserved words are a fixed part of Turbo Pascal and cannot be
-redefined. They cannot be used by the user as defined names.
-The reserved words are:
+Parênteses: ( ) podem ser usados em vez de [ ].
+
+Comentários: (* *) podem ser usados em vez de { }.
+
+1.2 Palavras reservadas
+
+As palavras reservadas são parte fixa do Turbo Pascal e não podem ser
+redefinidas. Elas não podem ser usadas pelo usuário como nomes definidos.
+As palavras reservadas são:
 
 
 
@@ -60,17 +60,17 @@ The reserved words are:
 
  end        mod        set        *xor
 
-Table 1 - 1
-Throughout the manual the reserved words are printed in bold. The asterisks indicate
-reserved words that are not defined in the standard Pascal.
+Tabela 1 - 1
+Em todo o manual, as palavras reservadas são impressas em negrito. Os asteriscos indicam
+palavras reservadas que não são definidas no Pascal padrão.
 
-1.3 Standard names
+1.3 Nomes padrão
 
-Turbo Pascal has the following standard names for predefined types,
-constants, variables, procedures and functions. All these names can be
-redefined, but that means that their capabilities will be limited. Such
-changes can easily lead to confusion. The following standard names
-are therefore best left in their original definition:
+O Turbo Pascal possui os seguintes nomes padrão para tipos predefinidos,
+constantes, variáveis, procedimentos e funções. Todos esses nomes podem ser
+redefinidos, mas isso significa que suas capacidades ficarão limitadas. Tais
+mudanças podem facilmente levar a confusão. Os seguintes nomes padrão
+devem, portanto, ser mantidos em sua definição original:
 
 
 
@@ -128,153 +128,153 @@ are therefore best left in their original definition:
 
  DelLine    KeyPressed
 
-Table 1 - 2
-Throughout the manual the standard names, like all other names (see
-chapter 3.1 "Names") are written with upper- and lower-case letters. In the text they are
-printed in italics.
+Tabela 1 - 2
+Em todo o manual, os nomes padrão, como todos os outros nomes (ver
+capítulo 3.1 "Nomes"), são escritos com letras maiúsculas e minúsculas. No texto, eles são
+impressos em itálico.
 
-1.4 Delimiters
+1.4 Delimitadores
 
-Language elements must be separated by at least one of the following delimiters 
-be: space, tab, new line or comment.
+Os elementos da linguagem devem ser separados por pelo menos um dos seguintes delimitadores
+a saber: espaço, tabulação, nova linha ou comentário.
 
-1.5 Program lines
+1.5 Linhas de programa
 
-Program lines may be at most 127 characters long, more characters are
-ignored by the compiler. In earlier TURBO versions the editor also allowed only 127 characters on one 
-line. Now that an external editor must be used the source
-may contain longer lines. In that case the characters after column 127 are ignored,
-so make sure that the lines remain shorter.
+As linhas de programa podem ter no máximo 127 caracteres; caracteres excedentes são
+ignorados pelo compilador. Nas versões anteriores do TURBO, o editor também permitia apenas 127 caracteres em uma
+linha. Agora que um editor externo deve ser usado, o fonte
+pode conter linhas mais longas. Nesse caso, os caracteres após a coluna 127 são ignorados,
+portanto certifique-se de que as linhas permaneçam mais curtas.
 
-2. 	STANDARD SCALAR TYPES
+2. 	TIPOS ESCALARES PADRÃO
 
-A data type defines the nature of the values that a variable can assume. Every
-variable in a program must have one data type. Although data types in Turbo
-Pascal can be very complex, they are all built from simple (unstructured)
-types.
-
-
-
-A simple type can either be defined by the programmer (the type is then
-called a declared scalar type), or it is one of the standard scalar types:
-Longint, Integer, Real, Boolean, Char or Byte. What follows is a description of these six
-scalar data types.
-
-2.1 Integer (whole numbers)
-
-Integers are whole numbers. In Turbo Pascal these have the range from -32768 to 32767.
-Whole numbers occupy two bytes of memory.
+Um tipo de dado define a natureza dos valores que uma variável pode assumir. Toda
+variável em um programa deve ter um tipo de dado. Embora os tipos de dados no Turbo
+Pascal possam ser muito complexos, todos são construídos a partir de tipos
+simples (não estruturados).
 
 
 
-Overflow of arithmetic operations with whole numbers is not detected. Please note
-in particular that intermediate results in Integer expressions must remain within the range limits for whole
-numbers. For example, the expression 1000*100/50 does not yield 2000, because
-the multiplication causes an overflow.
+Um tipo simples pode ser definido pelo programador (o tipo é então
+chamado de tipo escalar declarado), ou é um dos tipos escalares padrão:
+Longint, Integer, Real, Boolean, Char ou Byte. O que segue é uma descrição desses seis
+tipos de dados escalares.
+
+2.1 Integer (números inteiros)
+
+Números inteiros são números inteiros. No Turbo Pascal, estes têm a faixa de -32768 a 32767.
+Números inteiros ocupam dois bytes de memória.
+
+
+
+O estouro de operações aritméticas com números inteiros não é detectado. Observação,
+em particular, que resultados intermediários em expressões Integer devem permanecer dentro dos limites da faixa para números
+inteiros. Por exemplo, a expressão 1000*100/50 não produz 2000, porque
+a multiplicação causa um estouro.
 
 2.2 Byte
 
-The type Byte is a subrange of the type Integer with limits 0 and 255. Bytes are
-therefore compatible with the type Integer, which means that when a value of the
-type Byte is expected an Integer may also be used and vice versa. One
-exception to this applies when passing parameters. Furthermore, Bytes and
-Integers can be mixed in expressions and Byte variables can be assigned integer values.
-A variable of the type Byte occupies one byte of memory.
+O tipo Byte é uma subfaixa do tipo Integer com limites 0 e 255. Bytes são,
+portanto, compatíveis com o tipo Integer, o que significa que quando um valor do
+tipo Byte é esperado um Integer também pode ser usado e vice-versa. Uma
+exceção a isso se aplica na passagem de parâmetros. Além disso, Bytes e
+Integers podem ser misturados em expressões e variáveis Byte podem receber valores inteiros por atribuição.
+Uma variável do tipo Byte ocupa um byte de memória.
 
-2.3 Real (real numbers)
+2.3 Real (números reais)
 
-The range of real numbers (data type real) is 1E-38 to 1E+38. The mantissa has up to 11
-significant digits. Storing a real number occupies 6 bytes of memory.
-
-
-
-In an arithmetic operation with real numbers, an overflow causes a
-program halt and the report of a runtime error (runtime error). Underflow
-of the range limit leads to a result of zero.
+A faixa de números reais (tipo de dado real) é de 1E-38 a 1E+38. A mantissa tem até 11
+dígitos significativos. Armazenar um número real ocupa 6 bytes de memória.
 
 
 
-Although the type Real belongs to the scalar data types, the following distinction
-between the type Real and the other scalar types should be noted:
+Em uma operação aritmética com números reais, um estouro causa uma
+parada do programa e o relato de um erro de execução (runtime error). O underflow
+do limite da faixa resulta em zero.
 
 
 
-1) 	The functions Pred and Succ may not receive real numbers as arguments.
-
-2) 	The type Real may not be used when indexing arrays.
-
-3) 	The type Real cannot be used to define the base type of a set.
-
-4) 	The type Real cannot be used in the loop statements for and case.
-
-5) 	Subranges of the type Real are not allowed.
-
-2.4 Boolean (boolean truth values)
-
-A boolean truth value can only assume the logical values true or false, whose
-standard names are True and False respectively. These are defined such
-that True > False. A boolean variable occupies one byte of memory. The ordinal
-value of True is 1, and of False is 0.
-
-2.5 Char (alphanumeric characters)
-
-The (alphanumeric) value of the type Char corresponds to a character from the ASCII
-character set. The characters are ordered by their ASCII value, for example 'A' < 'B'.
-The ordinal values (ASCII values) of the characters range from 0 to 255. A Char
-occupies one byte of memory.
-
-3. 	USER-DEFINED
-LANGUAGE ELEMENTS
-
-3.1 Names
-
-Names (Engl.: identifier) are used to identify labels, constants, types, variables,
-procedures and functions. A name consists of a letter or an
-underscore, followed by an arbitrary combination of letters, digits and
-underscores. The length of a name is only limited by the number of characters
-(127) allowed on one line and all letters of the name are significant to the
-compiler.
+Embora o tipo Real pertença aos tipos de dados escalares, deve-se observar a seguinte distinção
+entre o tipo Real e os outros tipos escalares:
 
 
 
-Examples:
+1) 	As funções Pred e Succ não podem receber números reais como argumentos.
+
+2) 	O tipo Real não pode ser usado na indexação de arrays.
+
+3) 	O tipo Real não pode ser usado para definir o tipo base de um conjunto.
+
+4) 	O tipo Real não pode ser usado nos comandos for e case.
+
+5) 	Subfaixas do tipo Real não são permitidas.
+
+2.4 Boolean (valores lógicos booleanos)
+
+Um valor lógico booleano só pode assumir os valores lógicos verdadeiro ou falso, cujos
+nomes padrão são True e False, respectivamente. Estes são definidos de modo
+que True > False. Uma variável booleana ocupa um byte de memória. O valor
+ordinal de True é 1, e o de False é 0.
+
+2.5 Char (caracteres alfanuméricos)
+
+O valor (alfanumérico) do tipo Char corresponde a um caractere do conjunto de
+caracteres ASCII. Os caracteres são ordenados pelo seu valor ASCII, por exemplo 'A' < 'B'.
+Os valores ordinais (valores ASCII) dos caracteres vão de 0 a 255. Um Char
+ocupa um byte de memória.
+
+3. 	ELEMENTOS DA LINGUAGEM DEFINIDOS
+PELO USUÁRIO
+
+3.1 Nomes
+
+Nomes (em inglês: identifier) são usados para identificar rótulos, constantes, tipos, variáveis,
+procedimentos e funções. Um nome consiste em uma letra ou um
+sublinhado, seguido de uma combinação arbitrária de letras, dígitos e
+sublinhados. O comprimento de um nome só é limitado pelo número de caracteres
+(127) permitidos em uma linha, e todas as letras do nome são significativas para o
+compilador.
+
+
+
+Exemplos:
 
 TURBO
 
-square
+Quadrado
 
-counted_persons
+pessoas_contadas
 
-BirthDate
+DataNascimento
 
-3rdPower      not allowed because it starts with a digit.
+3rdPower      não permitido porque começa com um dígito.
 
-two Words     not allowed because it may not contain a space.
-
-
-
-Because Turbo Pascal makes no distinction between upper- and lower-case letters, the use
-of upper- and lower-case letters in e.g. BirthDate has no effect. The use
-of upper- and lower-case letters is nevertheless recommended, because it improves readability.
-To the human eye VeryLongName is simply easier to read
-than VERYLONGNAME. The mixed use of upper- and lower-case letters is
-used throughout the manual for names.
-
-3.2 Numbers
-
-Whole numbers
-
-Numbers are constants of the type Longint, Integer or Real. Integer constants are
-whole numbers expressed in decimal or hexadecimal notation. Hexadecimal
-numbers are characterized by being preceded by a dollar sign:
-$ABC is a hexadecimal constant. The range of the decimal Longint is from
--2147483648 to +2147483647 and the hexadecimal Longint range runs from
-$00000000 to $FFFFFFFF. The range of the decimal Integer is from -32768 to
-+32767 and the hexadecimal Integer range runs from $0000 to $FFFF.
+two Words     não permitido porque não pode conter espaço.
 
 
 
-Examples:
+Como o Turbo Pascal não faz distinção entre letras maiúsculas e minúsculas, o uso
+de maiúsculas e minúsculas em, por exemplo, DataNascimento não tem efeito. O uso
+de maiúsculas e minúsculas é, no entanto, recomendado, porque melhora a legibilidade.
+Para o olho humano, NomeMuitoLongo é simplesmente mais fácil de ler
+do que NOMEMUITOLONGO. O uso misto de maiúsculas e minúsculas é
+usado em todo o manual para nomes.
+
+3.2 Números
+
+Números inteiros
+
+Números são constantes do tipo Longint, Integer ou Real. Constantes Integer são
+números inteiros expressos em notação decimal ou hexadecimal. Números
+hexadecimais caracterizam-se por serem precedidos por um cifrão:
+$ABC é uma constante hexadecimal. A faixa do Longint decimal vai de
+-2147483648 a +2147483647 e a faixa do Longint hexadecimal vai de
+$00000000 a $FFFFFFFF. A faixa do Integer decimal vai de -32768 a
++32767 e a faixa do Integer hexadecimal vai de $0000 a $FFFF.
+
+
+
+Exemplos:
 
 1
 
@@ -286,21 +286,21 @@ $123
 
 $ABC
 
-$123G    not allowed because G is not an existing hexadecimal digit.
+$123G    não permitido porque G não é um dígito hexadecimal existente.
 
-1.2345   not allowed because a whole number may not contain a point.
+1.2345   não permitido porque um número inteiro não pode conter ponto.
 
-Real numbers
+Números reais
 
-The type Real has a range from 1E-38 to 1E+38. This means a mantissa
-of 11 significant digits. You can use the exponent notation, where the letter E
-precedes the exponent factor and means '10 to the power'. An Integer constant is
-allowed everywhere a Real constant may appear. No separators may appear
-within the number.
+O tipo Real tem faixa de 1E-38 a 1E+38. Isso significa uma mantissa
+de 11 dígitos significativos. Pode-se usar a notação de expoente, em que a letra E
+precede o fator do expoente e significa '10 elevado à potência'. Uma constante Integer é
+permitida em todo lugar onde uma constante Real pode aparecer. Nenhum separador pode aparecer
+dentro do número.
 
 
 
-Examples:
+Exemplos:
 
 1234.5678
 
@@ -312,31 +312,31 @@ Examples:
 
 -1.2345678901E+12
 
-1                     allowed, but this is not a Real, it is an Integer.
+1                     permitido, mas isto não é um Real, é um Integer.
 
 3.3 Strings
 
-A String constant is a sequence of characters enclosed in single quotes:
+Uma constante String é uma sequência de caracteres entre aspas simples:
  
 
 
 
-'This is a string constant'
+'Isto é uma constante string'
 
 
 
-A single quote can appear in the String by writing it twice.
-Strings containing only a single character count as the standard type Char. A
-String is compatible with an array of char of the same length. All string constants
-are compatible with all String types.
+Uma aspa simples pode aparecer na String escrevendo-a duas vezes.
+Strings contendo apenas um único caractere contam como o tipo padrão Char. Uma
+String é compatível com um array de char do mesmo comprimento. Todas as constantes string
+são compatíveis com todos os tipos String.
 
 
 
-Examples:
+Exemplos:
 
 'TURBO'
 
-'You''ll see'
+'Você vai ver'
 
 ''''
 
@@ -346,28 +346,28 @@ Examples:
 
 
 
-As can be seen in the second and third examples, a single quote
-in a String is written as two consecutive quotes. The four consecutive
-quotes in the third example represent a String with a single
-quote.
+Como pode ser visto no segundo e terceiro exemplos, uma aspa simples
+em uma String é escrita como duas aspas consecutivas. As quatro aspas
+consecutivas no terceiro exemplo representam uma String com uma única
+aspa.
 
-The last example - quotes enclosing no characters meaning an empty
-String - is only compatible with the String type.
+O último exemplo - aspas sem nenhum caractere entre elas, significando uma
+String vazia - só é compatível com o tipo String.
 
-3.4 Control characters
+3.4 Caracteres de controle
 
-Turbo Pascal also offers the possibility to include control characters in a String.
-There are two ways to include them in a String:
+O Turbo Pascal também oferece a possibilidade de incluir caracteres de controle em uma String.
+Há duas maneiras de incluí-los em uma String:
 
-1. The character # followed by an integer constant within the range 0 to 255
-corresponds to the ASCII character of the same value.
+1. O caractere # seguido de uma constante inteira na faixa de 0 a 255
+corresponde ao caractere ASCII do mesmo valor.
 
-2. The character ^ followed by a letter corresponds to the matching control
-character, ASCII value is the ordinal value of the letter (capitals) minus 64.
+2. O caractere ^ seguido de uma letra corresponde ao caractere de controle
+correspondente; o valor ASCII é o valor ordinal da letra (maiúscula) menos 64.
 
 
 
-Examples:
+Exemplos:
 
 
 
@@ -383,8 +383,8 @@ Examples:
 
 
 
-Consecutive control characters can be joined as a String by writing them
-without delimiters between the different control characters.
+Caracteres de controle consecutivos podem ser unidos como uma String escrevendo-os
+sem delimitadores entre os diferentes caracteres de controle.
 
 
 
@@ -396,60 +396,60 @@ without delimiters between the different control characters.
 
 
 
-The above Strings contain 2, 3 and 4 characters respectively. Control characters
-can also be combined with text Strings:
+As Strings acima contêm 2, 3 e 4 caracteres, respectivamente. Caracteres de controle
+também podem ser combinados com Strings de texto:
 
 
 
-'I'm waiting for input! '^G^G^G' Wake up'
+'Estou esperando entrada! '^G^G^G' Acorde'
 
 #27'U'
 
-'This is the next line of text '^M^J
+'Esta é a próxima linha de texto '^M^J
 
 
 
-These three lines contain 37, 3 and 37 characters respectively.
+Estas três linhas contêm 37, 3 e 37 caracteres, respectivamente.
 
-3.5 Comments
+3.5 Comentários
 
-Comments may be included anywhere in the text where delimiters are allowed.
-Comments must be enclosed by the characters { } or by (* *).
-
-
-
-Examples:
-
-{this is a comment }
-
-(* and so is this *)
+Comentários podem ser incluídos em qualquer lugar do texto onde delimitadores são permitidos.
+Comentários devem ser delimitados pelos caracteres { } ou por (* *).
 
 
 
-Comments written between { } may not be enclosed by other comments
-enclosed with { }, and the same applies to comments enclosed with (* *).
-Comments inside { } may however be enclosed by (* *) and vice versa.
-This makes it possible to include whole sections of source code as comments,
-even if that section already contains comments.
+Exemplos:
 
-3.6 Compiler directives
+{isto é um comentário }
 
- A number of capabilities of the Turbo Pascal compiler are controlled by compiler
-directives. A compiler directive is included in the source code
-as a comment written in a special way. A compiler
-directive may therefore appear anywhere comments are allowed.
+(* e este também *)
 
 
 
-A compiler directive consists of an opening parenthesis directly followed by a
-dollar sign and directly followed by a compiler directive letter or a list of letters
-separated by commas. The notation of the letter or list of letters depends on
-the type of directive. A full description of each compiler directive can be found
-in appendix C.
+Comentários escritos entre { } não podem ser delimitados por outros comentários
+delimitados com { }, e o mesmo se aplica a comentários delimitados com (* *).
+Comentários dentro de { } podem, no entanto, ser delimitados por (* *) e vice-versa.
+Isso torna possível incluir trechos inteiros de código-fonte como comentários,
+mesmo que esse trecho já contenha comentários.
+
+3.6 Diretivas do compilador
+
+ Várias capacidades do compilador Turbo Pascal são controladas por diretivas do
+compilador. Uma diretiva do compilador é incluída no código-fonte
+como um comentário escrito de maneira especial. Uma diretiva do
+compilador pode, portanto, aparecer em qualquer lugar onde comentários são permitidos.
 
 
 
-Examples:
+Uma diretiva do compilador consiste em um parêntese de abertura diretamente seguido por um
+cifrão e diretamente seguido por uma letra de diretiva do compilador ou uma lista de letras
+separadas por vírgulas. A notação da letra ou lista de letras depende do
+tipo de diretiva. Uma descrição completa de cada diretiva do compilador pode ser encontrada
+no apêndice C.
+
+
+
+Exemplos:
 
 {$I-}
 
@@ -461,113 +461,113 @@ Examples:
 
 
 
-Note that no spaces may appear before or after the dollar sign, otherwise it is
-interpreted as a comment.
+Observação: nenhum espaço pode aparecer antes ou depois do cifrão, caso contrário ele é
+interpretado como um comentário.
 
-4. 	PROGRAM HEADER AND BLOCK
+4. 	CABEÇALHO E BLOCO DO PROGRAMA
 
-A Pascal program consists of a program header, followed by a
-program block. The program block is further subdivided into a declaration part,
-in which all objects occurring in the program are defined, and an
-execution part, in which all actions to be performed with these objects
-are specified. Both parts are described in detail below.
+Um programa Pascal consiste em um cabeçalho do programa, seguido por um
+bloco do programa. O bloco do programa é subdividido em uma parte de declarações,
+na qual todos os objetos que ocorrem no programa são definidos, e uma
+parte de execução, na qual todas as ações a serem executadas com esses objetos
+são especificadas. Ambas as partes são descritas em detalhe abaixo.
 
-4.1 Program header
+4.1 Cabeçalho do programa
 
-In Turbo Pascal the program header is optional and has no meaning. If
-present, it gives the program a name and may list parameters
-through which the program communicates with its environment. This list consists of a series
-of names enclosed in parentheses and separated by commas.
-
-
-
-Examples:
-
-program Circles;
-
-program Bookkeeping (Input, Output);
-
-program Writer (Input, Printer);
-
-4.2 Declaration part
-
-The declaration part of a block declares all names used in the statement part of the
-block (and possibly other blocks within this block). The declaration
-part is divided into five different parts:
+No Turbo Pascal, o cabeçalho do programa é opcional e não tem significado. Se
+presente, ele dá ao programa um nome e pode listar parâmetros
+através dos quais o programa se comunica com seu ambiente. Esta lista consiste em uma série
+de nomes entre parênteses e separados por vírgulas.
 
 
 
-1) 	Label declaration part
+Exemplos:
 
-2) 	Constant definition part
+program Circulos;
 
-3) 	Type definition part
+program Contabilidade (Input, Output);
 
-4) 	Variable declaration part
+program Redator (Input, Printer);
 
-5) 	Procedure and/or function declaration part
+4.2 Parte de declarações
 
-
-
-While standard Pascal prescribes that each block may occur not at all or only once
-in the above order, Turbo Pascal allows each of the parts
-to occur any number of times and in any order in the declaration part.
-
-4.2.1 Label declaration part
-
-Every statement in the program may be given a label, which makes it possible
-to jump directly to that statement with a goto statement. A label consists
-of a label name followed by a colon. Before use, the
-label declaration part must be declared. The reserved word label appears at the
-start of this part, followed by a list of label names separated by commas
-after which the whole is terminated by a semicolon.
+A parte de declarações de um bloco declara todos os nomes usados na parte de comandos do
+bloco (e possivelmente outros blocos dentro deste bloco). A
+parte de declarações é dividida em cinco partes diferentes:
 
 
 
-Example:
+1) 	Parte de declaração de rótulos
+
+2) 	Parte de definição de constantes
+
+3) 	Parte de definição de tipos
+
+4) 	Parte de declaração de variáveis
+
+5) 	Parte de declaração de procedimentos e/ou funções
 
 
 
-label 10, Error, 999, Abort;
+Enquanto o Pascal padrão prescreve que cada bloco pode ocorrer nenhuma vez ou apenas uma vez
+na ordem acima, o Turbo Pascal permite que cada uma das partes
+ocorra qualquer número de vezes e em qualquer ordem na parte de declarações.
+
+4.2.1 Parte de declaração de rótulos
+
+Todo comando no programa pode receber um rótulo, o que torna possível
+saltar diretamente para esse comando com um comando goto. Um rótulo consiste
+em um nome de rótulo seguido de dois-pontos. Antes do uso, o
+rótulo deve ser declarado na parte de declaração de rótulos. A palavra reservada label aparece no
+início desta parte, seguida por uma lista de nomes de rótulos separados por vírgulas,
+após o que o todo é terminado por ponto e vírgula.
 
 
 
-While standard Pascal limits labels to four-digit numbers, with
-Turbo Pascal you may use both numbers and names as labels.
-
-4.2.2 Constant definition part
-
-The constant definition part introduces names as synonyms for constant values.
-The reserved word const appears at the start of this part, followed by a list of
-constant assignments separated by semicolons. Each constant
-assignment consists of a name followed by an equals sign and the constant value.
-Constants are either Strings or numbers as described in chapter 3.2 "Numbers"
-and 3.3 "Strings".
+Exemplo:
 
 
 
-Example:
+label 10, Erro, 999, Abortar;
+
+
+
+Enquanto o Pascal padrão limita rótulos a números de quatro dígitos, com
+o Turbo Pascal podem-se usar tanto números quanto nomes como rótulos.
+
+4.2.2 Parte de definição de constantes
+
+A parte de definição de constantes introduz nomes como sinônimos de valores constantes.
+A palavra reservada const aparece no início desta parte, seguida por uma lista de
+atribuições de constantes separadas por ponto e vírgula. Cada
+atribuição de constante consiste em um nome seguido por um sinal de igual e o valor constante.
+Constantes são Strings ou números, como descrito no capítulo 3.2 "Números"
+e 3.3 "Strings".
+
+
+
+Exemplo:
 
 const
 
-  Limit = 255;
+  Limite = 255;
 
-  CodeWord = 'SESAM';
+  PalavraCodigo = 'ABRETE';
 
-  CursHome = ^['V';
-
-
-
-The following constants are predefined in Turbo Pascal and can be used
-without prior declaration:
+  InicioCursor = ^['V';
 
 
 
-Name
+As seguintes constantes são predefinidas no Turbo Pascal e podem ser usadas
+sem declaração prévia:
 
-Type
 
-Value
+
+Nome
+
+Tipo
+
+Valor
 
 Pi
 
@@ -579,15 +579,15 @@ False
 
 Boolean
 
-Logical value False,
-ordinal value 0
+Valor lógico False,
+valor ordinal 0
 
 True
 
 Boolean
 
-Logical value True,
-ordinal value 1
+Valor lógico True,
+valor ordinal 1
 
 Maxint
 
@@ -601,145 +601,137 @@ Longint
 
 2147483647
 
-Table 4 - 1
+Tabela 4 - 1
 
 
-As described in chapter 13. "FILE TYPES", typed constants may also be included in a constant definition.
+Como descrito no capítulo 13. "FILE TYPES", constantes tipadas também podem ser incluídas em uma definição de constante.
 
-4.2.3 Type definition part
+4.2.3 Parte de definição de tipos
 
-A data type in Pascal may be described either directly in the variable declaration
-part or via a name reference in the type definition part. Various
-standard types are available, and the programmer can define his own type through the
-type declaration part. The reserved word type precedes the type definition part
-and is followed by one or more type assignments separated by
-semicolons. Each type assignment consists of a name followed by the equals sign
-(=) and a type.
+Um tipo de dado em Pascal pode ser descrito diretamente na parte de declaração de
+variáveis ou através de uma referência de nome na parte de definição de tipos. Vários
+tipos padrão estão disponíveis, e o programador pode definir seu próprio tipo através da
+parte de declaração de tipos. A palavra reservada type precede a parte de definição de tipos
+e é seguida por uma ou mais atribuições de tipos separadas por
+ponto e vírgula. Cada atribuição de tipo consiste em um nome seguido pelo sinal de igual
+(=) e um tipo.
 
 
 
-Examples:
+Exemplos:
 
 type
 
-  Number = Integer;
+  Numero = Integer;
 
-  Day   = (Mon, Tue, Wed, Thu, Fri, Sat, Sun);
+  Dia   = (Seg, Ter, Qua, Qui, Sex, Sab, Dom);
 
-  List = array[1..10] of Real;
-
-
-
-More examples of type definitions can be found in the following chapters.
-
-4.2.4 Variable declaration part
-
-Every variable occurring in the program must be declared. The declaration
-must appear in the text before the variable is used, so that the compiler
-'knows' the variable.
+  Lista = array[1..10] of Real;
 
 
 
-A variable declaration consists of the reserved word var followed by one or
-more names separated by commas and followed by a colon and a type.
-This creates a new variable of the specified type denoted by
-its own name.
+Mais exemplos de definições de tipos podem ser encontrados nos capítulos seguintes.
+
+4.2.4 Parte de declaração de variáveis
+
+Toda variável que ocorre no programa deve ser declarada. A declaração
+deve aparecer no texto antes que a variável seja usada, para que o compilador
+'conheça' a variável.
 
 
 
-The variable with a name is accessible within the block in which the name is
-declared, and every subblock within this block. Note however that within each subblock
-in this block the name can be reused to declare another
-variable. The variable is said to be local to the subblock (and every
-subblock within this subblock), and the variable declared at a higher level (the
-global variable) becomes inaccessible.
+Uma declaração de variável consiste na palavra reservada var seguida por um ou
+mais nomes separados por vírgulas e seguidos por dois-pontos e um tipo.
+Isso cria uma nova variável do tipo especificado, denotada pelo
+seu próprio nome.
 
 
 
-Example:
+A variável com um nome é acessível dentro do bloco no qual o nome é
+declarado, e em todo subbloco dentro deste bloco. Observação, no entanto, que dentro de cada subbloco
+neste bloco o nome pode ser reutilizado para declarar outra
+variável. Diz-se que a variável é local ao subbloco (e a todo
+subbloco dentro deste subbloco), e a variável declarada em um nível mais alto (a
+variável global) torna-se inacessível.
+
+
+
+Exemplo:
 
 var
 
-  result, Balance, SubTotal : Real;
+  resultado, Saldo, SubTotal : Real;
 
   I, J, X, Y                : Integer;
 
-  Accepted, Allowed         : Boolean;
+  Aceito, Permitido         : Boolean;
 
-  Buffer                    : array[0..127] of Byte;
+  Memoria                   : array[0..127] of Byte;
 
-4.2.5 Procedure and function declaration part
+4.2.5 Parte de declaração de procedimentos e funções
 
-The procedure declaration part is used to define a procedure within a block or
-program (see chapter 15.2.1). A procedure is invoked with
-a procedure statement (see chapter 6.1.2) and on completion the program resumes
-with the statement directly following the procedure statement.
-
-
-
-A function declaration is used to define a program section that calculates
-and returns a value (see chapter 15.3). A function is executed when its
-name is used as part of an expression (see chapter 5.2).
-
-4.2.6 Statement part
-
-The statement part is the last part of a block. It contains the statements in
-order of execution. The complete statement part has the same form
-as a compound statement followed by a period.
-
-A compound statement starts with the reserved word begin, followed by
-a list of statements separated by semicolons and terminated
-with the reserved word end.
-
-5. 	EXPRESSIONS
-
-Expressions are algorithmic constructs that specify rules for the calculation of values.
-They consist of operands, which are variables, constants and function names, combined
-by operators.
-
-This chapter describes how expressions with the standard types Integer, Longint, Real,
-Boolean and Char are made. Expressions containing the declared scalar types and
-String and Set types are treated in chapters 7.1, 8.2 and 11.2
-respectively.
-
-5.1 Operators
-
-Operators fall into five categories, ordered here by priority:
+A parte de declaração de procedimentos é usada para definir um procedimento dentro de um bloco ou
+programa (ver capítulo 15.2.1). Um procedimento é invocado com
+um comando de procedimento (ver capítulo 6.1.2) e, ao concluir, o programa continua
+com o comando diretamente seguinte ao comando de procedimento.
 
 
 
-1) 	Monadic minus (minus with only one operand).
+Uma declaração de função é usada para definir uma seção do programa que calcula
+e retorna um valor (ver capítulo 15.3). Uma função é executada quando seu
+nome é usado como parte de uma expressão (ver capítulo 5.2).
 
-2) 	Not operator.
+4.2.6 Parte de comandos
 
-3) 	Multiplicative operators: *, /, div, mod, and, shl and shr.
+A parte de comandos é a última parte de um bloco. Ela contém os comandos em
+ordem de execução. A parte de comandos completa tem a mesma forma
+de um comando composto seguido por um ponto.
 
-4) 	Additive operators: +, -, or and xor.
+Um comando composto começa com a palavra reservada begin, seguida por
+uma lista de comandos separados por ponto e vírgula e terminada
+com a palavra reservada end.
 
-5) 	Relational operators: =, <>, <, >, <=, >= and in.
+5. 	EXPRESSÕES
+
+Expressões são construções algorítmicas que especificam regras para o cálculo de valores.
+Elas consistem em operandos, que são variáveis, constantes e nomes de funções, combinados
+por operadores.
+
+Este capítulo descreve como expressões com os tipos padrão Integer, Longint, Real,
+Boolean e Char são feitas. Expressões contendo os tipos escalares declarados e
+os tipos String e Set são tratadas nos capítulos 7.1, 8.2 e 11.2
+respectivamente.
+
+5.1 Operadores
+
+Os operadores se dividem em cinco categorias, ordenadas aqui por prioridade:
 
 
 
-Operators of the same priority are handled from left to right. Expressions
-in parentheses are calculated first, regardless of the operators before or
-after them.
+1) 	Menos unário (menos com apenas um operando).
+
+2) 	Operador not.
+
+3) 	Operadores multiplicativos: *, /, div, mod, and, shl e shr.
+
+4) 	Operadores aditivos: +, -, or e xor.
+
+5) 	Operadores relacionais: =, <>, <, >, <=, >= e in.
 
 
 
-The resulting type of a multiplicative or additive operator is always equal
-to the type with the highest significance.
+Operadores de mesma prioridade são tratados da esquerda para a direita. Expressões
+entre parênteses são calculadas primeiro, independentemente dos operadores antes ou
+depois delas.
 
 
 
-Type
+O tipo resultante de um operador multiplicativo ou aditivo é sempre igual
+ao tipo de maior significância.
 
-Integer
 
-Longint
 
-Real
-
-Integer
+Tipo
 
 Integer
 
@@ -747,6 +739,14 @@ Longint
 
 Real
 
+Integer
+
+Integer
+
+Longint
+
+Real
+
 Longint
 
 Longint
@@ -763,15 +763,15 @@ Real
 
 Real
 
-Table 5 - 1
-5.1.1 Monadic minus
+Tabela 5 - 1
+5.1.1 Menos unário
 
-The monadic minus means a sign reversal of its operand, which can be of the
-type Integer, Longint or Real (positive becomes negative and vice versa).
+O menos unário significa uma inversão de sinal de seu operando, que pode ser do
+tipo Integer, Longint ou Real (positivo torna-se negativo e vice-versa).
 
-5.1.2 Not operator
+5.1.2 Operador not
 
-The not operator reverses the logical value of its boolean operand:
+O operador not inverte o valor lógico de seu operando boolean:
 
 
 
@@ -781,12 +781,12 @@ not False = True
 
 
 
-Turbo Pascal also allows application of the not operator to operands of the type
-Integer and Longint, in which case a bitwise inversion is performed.
+O Turbo Pascal também permite a aplicação do operador not a operandos do tipo
+Integer e Longint, caso em que é realizada uma inversão bit a bit.
 
 
 
-Examples:
+Exemplos:
 
 not 0     = -1      (Longint = $FFFFFFFF , Integer = $FFFF)
 
@@ -796,19 +796,19 @@ not $2345 = $DCBA
 
 
 
-5.1.3 Multiplicative operators
+5.1.3 Operadores multiplicativos
 
-Operator
+Operador
 
-Operation
+Operação
 
-Operand type
+Tipo do operando
 
-Resulting type
+Tipo resultante
 
 *
 
-Multiplication
+Multiplicação
 
 Real
 
@@ -816,7 +816,7 @@ Real
 
 *
 
-Multiplication
+Multiplicação
 
 Longint
 
@@ -824,7 +824,7 @@ Longint
 
 *
 
-Multiplication
+Multiplicação
 
 Integer
 
@@ -832,7 +832,7 @@ Integer
 
 *
 
-Multiplication
+Multiplicação
 
 Real, Longint
 
@@ -840,7 +840,7 @@ Real
 
 *
 
-Multiplication
+Multiplicação
 
 Real, Integer
 
@@ -848,7 +848,7 @@ Real
 
 *
 
-Multiplication
+Multiplicação
 
 Longint, Integer
 
@@ -856,7 +856,7 @@ Longint
 
 /
 
-Division
+Divisão
 
 Real
 
@@ -864,7 +864,7 @@ Real
 
 /
 
-Division
+Divisão
 
 Longint
 
@@ -872,7 +872,7 @@ Real
 
 /
 
-Division
+Divisão
 
 Integer
 
@@ -880,7 +880,7 @@ Real
 
 /
 
-Division
+Divisão
 
 Real, Longint
 
@@ -888,7 +888,7 @@ Real
 
 /
 
-Division
+Divisão
 
 Real, Integer
 
@@ -896,7 +896,7 @@ Real
 
 /
 
-Division
+Divisão
 
 Longint, Integer
 
@@ -904,7 +904,7 @@ Real
 
 div
 
-Integer division
+Divisão inteira
 
 Integer
 
@@ -912,7 +912,7 @@ Integer
 
 div
 
-Integer division
+Divisão inteira
 
 Longint
 
@@ -920,7 +920,7 @@ Longint
 
 div
 
-Integer division
+Divisão inteira
 
 Integer, Longint
 
@@ -928,7 +928,7 @@ Longint
 
 mod
 
-Modulo
+Módulo
 
 Integer
 
@@ -936,7 +936,7 @@ Integer
 
 mod
 
-Modulo
+Módulo
 
 Longint
 
@@ -944,7 +944,7 @@ Longint
 
 mod
 
-Modulo
+Módulo
 
 Integer, Longint
 
@@ -952,7 +952,7 @@ Longint
 
 and
 
-Arithmetic and
+And aritmético
 
 Integer
 
@@ -960,7 +960,7 @@ Integer
 
 and
 
-Arithmetic and
+And aritmético
 
 Longint
 
@@ -968,7 +968,7 @@ Longint
 
 and
 
-Arithmetic and
+And aritmético
 
 Integer, Longint
 
@@ -976,7 +976,7 @@ Longint
 
 and
 
-Logical and
+And lógico
 
 Boolean
 
@@ -984,7 +984,7 @@ Boolean
 
 shl
 
-Shift left
+Deslocamento à esquerda
 
 Integer
 
@@ -992,7 +992,7 @@ Integer
 
 shl
 
-Shift left
+Deslocamento à esquerda
 
 Longint
 
@@ -1000,7 +1000,7 @@ Longint
 
 shr
 
-Shift right
+Deslocamento à direita
 
 Integer
 
@@ -1008,14 +1008,14 @@ Integer
 
 shr
 
-Shift right
+Deslocamento à direita
 
 Longint
 
 Longint
 
-Table 5 - 2
-Examples:
+Tabela 5 - 2
+Exemplos:
 
 12 * 34        = 408
 
@@ -1033,19 +1033,19 @@ True and False = False
 
 256 shr 7      = 2
 
-5.1.4 Additive operators
+5.1.4 Operadores aditivos
 
-Operator
+Operador
 
-Operation
+Operação
 
-Operand type
+Tipo do operando
 
-Resulting type
+Tipo resultante
 
 +
 
-Addition
+Adição
 
 Real
 
@@ -1053,7 +1053,7 @@ Real
 
 +
 
-Addition
+Adição
 
 Integer
 
@@ -1061,7 +1061,7 @@ Integer
 
 +
 
-Addition
+Adição
 
 Longint
 
@@ -1069,7 +1069,7 @@ Longint
 
 +
 
-Addition
+Adição
 
 Real, Integer
 
@@ -1077,7 +1077,7 @@ Real
 
 +
 
-Addition
+Adição
 
 Real, Longint
 
@@ -1085,7 +1085,7 @@ Real
 
 +
 
-Addition
+Adição
 
 Longint, Integer
 
@@ -1093,7 +1093,7 @@ Longint
 
 -
 
-Subtraction
+Subtração
 
 Real
 
@@ -1101,7 +1101,7 @@ Real
 
 -
 
-Subtraction
+Subtração
 
 Integer
 
@@ -1109,7 +1109,7 @@ Integer
 
 -
 
-Subtraction
+Subtração
 
 Longint
 
@@ -1117,7 +1117,7 @@ Longint
 
 -
 
-Subtraction
+Subtração
 
 Real, Integer
 
@@ -1125,7 +1125,7 @@ Real
 
 -
 
-Subtraction
+Subtração
 
 Real, Longint
 
@@ -1133,7 +1133,7 @@ Real
 
 -
 
-Subtraction
+Subtração
 
 Longint, Integer
 
@@ -1141,7 +1141,7 @@ Longint
 
 or
 
-Arithmetic or
+Or aritmético
 
 Longint
 
@@ -1149,7 +1149,7 @@ Longint
 
 or
 
-Arithmetic or
+Or aritmético
 
 Integer
 
@@ -1157,7 +1157,7 @@ Integer
 
 or
 
-Logical or
+Or lógico
 
 Boolean
 
@@ -1165,7 +1165,7 @@ Boolean
 
 xor
 
-Arithmetic xor
+Xor aritmético
 
 Longint
 
@@ -1173,7 +1173,7 @@ Longint
 
 xor
 
-Arithmetic xor
+Xor aritmético
 
 Integer
 
@@ -1181,16 +1181,16 @@ Integer
 
 xor
 
-Logical xor
+Xor lógico
 
 Boolean
 
 Boolean
 
-Table 5 - 3
+Tabela 5 - 3
 
 
-Examples:
+Exemplos:
 
 123 + 456      = 579
 
@@ -1204,200 +1204,200 @@ True xor False = True
 
 12 xor 22      = 26
 
-5.1.5 Relational operators
+5.1.5 Operadores relacionais
 
-Relational operators apply to all standard scalar types: Integer, Real, Boolean,
-Char and Byte. Operands of the type Integer, Real and Byte can be mixed.
-The type of the result is always Boolean, which means True or False (true or false).
-
-
-
-=    equals
-
-<>   not equal
-
->    greater than
-
-<    less than
-
->=   greater than or equal
-
-<=   less than or equal
+Os operadores relacionais aplicam-se a todos os tipos escalares padrão: Integer, Real, Boolean,
+Char e Byte. Operandos dos tipos Integer, Real e Byte podem ser misturados.
+O tipo do resultado é sempre Boolean, o que significa True ou False (verdadeiro ou falso).
 
 
 
-Examples:
+=    igual
 
-a =  b  is true if a equals b
+<>   diferente
 
-a <> b  is true if a is not equal to b
+>    maior que
 
-a >  b  is true if a is greater than b
+<    menor que
 
-a <  b  is true if a is less than b
+>=   maior que ou igual
 
-a >= b  is true if a is greater than or equal to b
-
-a <= b  is true if a is less than or equal to b
-
-5.2 Function call
-
-The function call is a function name that may be followed by a parameter list.
-The parameter list can consist of constants, variables and/or expressions separated
-by commas and enclosed in parentheses. A function is
-activated when the name of the function appears within an expression. If that function
-is not a standard function it must be declared before activation.
+<=   menor que ou igual
 
 
 
-Examples:
+Exemplos:
 
-Round (PlotPos)
+a =  b  é verdadeiro se a for igual a b
+
+a <> b  é verdadeiro se a for diferente de b
+
+a >  b  é verdadeiro se a for maior que b
+
+a <  b  é verdadeiro se a for menor que b
+
+a >= b  é verdadeiro se a for maior que ou igual a b
+
+a <= b  é verdadeiro se a for menor que ou igual a b
+
+5.2 Chamada de função
+
+A chamada de função é um nome de função que pode ser seguido por uma lista de parâmetros.
+A lista de parâmetros pode consistir em constantes, variáveis e/ou expressões separadas
+por vírgulas e colocadas entre parênteses. Uma função é
+ativada quando o nome da função aparece dentro de uma expressão. Se essa função
+não for uma função padrão, ela deve ser declarada antes da ativação.
+
+
+
+Exemplos:
+
+Round (PosGrafico)
 
 WriteLn (Pi*(Sqr(R)))
 
 (Max (X, Y) < 25) and (Z > Sqrt (X*Y))
 
-Volume (Radius, Height)
+Volume (Raio, Altura)
 
-6. 	STATEMENTS
+6. 	COMANDOS
 
-The statement part defines the action to be performed by the program (or subprogram).
-Each statement specifies part of the action. In this sense
-Pascal is a sequential language: statements are handled sequentially, never
-simultaneously. The statement part is enclosed in the reserved words begin and end,
-within which statements are separated by semicolons. Statements can be
-simple or structured.
+A parte de comandos define a ação a ser executada pelo programa (ou subprograma).
+Cada comando especifica parte da ação. Nesse sentido
+Pascal é uma linguagem sequencial: os comandos são tratados sequencialmente, nunca
+simultaneamente. A parte de comandos é delimitada pelas palavras reservadas begin e end,
+dentro da qual os comandos são separados por ponto e vírgula. Os comandos podem ser
+simples ou estruturados.
 
-6.1 Simple statements
+6.1 Comandos simples
 
-Simple statements contain no other statements. Simple statements
-are the assignment, procedure, goto and empty statements.
+Comandos simples não contêm outros comandos. Comandos simples
+são os comandos de atribuição, de procedimento, goto e vazio.
 
-6.1.1 Assignment statement
+6.1.1 Comando de atribuição
 
-The most elementary of all statements is the assignment statement. It is
-used to indicate that a particular value must be assigned to a particular variable.
-An assignment consists of a variable name, the
-assignment operator := followed by an expression.
-
-
-
-Assignments are possible for variables of any type (except files), as long as the
-variable and the expression are of the same type. As an exception, with a
-Real variable the expression may be of the type Integer or Longint, and with a Longint
-the expression may be of the type Integer.
+O mais elementar de todos os comandos é o comando de atribuição. Ele é
+usado para indicar que um determinado valor deve ser atribuído a uma determinada variável.
+Uma atribuição consiste em um nome de variável, o
+operador de atribuição := seguido por uma expressão.
 
 
 
-Examples:
-
-Angle     := Angle * Pi;
-
-AccessOk  := False;
-
-Access    := Answer=Password;
-
-SphereVol := 4*Pi*R*R;
-
-6.1.2 Procedure statement
-
-The procedure statement serves to activate a previously user-defined or
-predefined standard procedure. The statement consists of a
-procedure name, optionally followed by a parameter list. This parameter list is a list
-of variables or expressions separated by commas and enclosed in parentheses.
-When the procedure statement is reached during execution of the program,
-control is transferred to the procedure, and the values of any parameters
-are also passed to the procedure. When the procedure finishes, execution
-of the program continues with the statement following the procedure call.
+Atribuições são possíveis para variáveis de qualquer tipo (exceto arquivos), desde que a
+variável e a expressão sejam do mesmo tipo. Como exceção, com uma
+variável Real a expressão pode ser do tipo Integer ou Longint, e com um Longint
+a expressão pode ser do tipo Integer.
 
 
 
-Examples:
+Exemplos:
 
-Search (Name, Address);
+Angulo    := Angulo * Pi;
 
-Sort (Address);
+AcessoOk  := False;
 
-Uppercase (Text);
+Acesso    := Resposta=Senha;
 
-UpdateFile (CustomerCard);
+VolumeEsfera := 4*Pi*R*R;
 
-6.1.3 Goto statement
+6.1.2 Comando de procedimento
 
-A goto statement consists of the reserved word goto followed by a label name.
-The goto statement causes the sequential processing of the program
-to be interrupted and to continue at the position marked with the label name. The
-following rules must be observed when using goto.
-
-
-
-1) 	Labels must be declared before use. The declaration takes place in the label
-declaration part of the block in which they are used.
-
-2) 	The scope of the label is the block in which it was defined. Therefore it is not
-possible to jump into or out of procedures and functions.
-
-6.1.4 Empty statement
-
-An empty statement contains no symbols and has no effect. It may appear
-where Pascal expects a statement but where no actions should take place.
+O comando de procedimento serve para ativar um procedimento previamente definido pelo usuário ou
+procedimento padrão predefinido. O comando consiste em um
+nome de procedimento, opcionalmente seguido por uma lista de parâmetros. Essa lista de parâmetros é uma lista
+de variáveis ou expressões separadas por vírgulas e colocadas entre parênteses.
+Quando o comando de procedimento é alcançado durante a execução do programa,
+o controle é transferido para o procedimento, e os valores de quaisquer parâmetros
+também são passados para o procedimento. Quando o procedimento termina, a execução
+do programa continua com o comando seguinte à chamada de procedimento.
 
 
 
-Examples:
+Exemplos:
+
+Buscar (Nome, Endereco);
+
+Ordenar (Endereco);
+
+Maiusculas (Texto);
+
+AtualizarArquivo (FichaCliente);
+
+6.1.3 Comando goto
+
+Um comando goto consiste na palavra reservada goto seguida por um nome de rótulo.
+O comando goto faz com que o processamento sequencial do programa
+seja interrompido e continue na posição marcada com o nome do rótulo. As
+seguintes regras devem ser observadas ao usar goto.
+
+
+
+1) 	Os rótulos devem ser declarados antes do uso. A declaração ocorre na parte de declaração de rótulos
+do bloco no qual são usados.
+
+2) 	O escopo do rótulo é o bloco no qual foi definido. Portanto não é
+possível saltar para dentro ou para fora de procedimentos e funções.
+
+6.1.4 Comando vazio
+
+Um comando vazio não contém símbolos e não tem efeito. Ele pode aparecer
+onde Pascal espera um comando, mas onde nenhuma ação deve ocorrer.
+
+
+
+Exemplos:
 
 begin end.
 
-while Answer<>'' do;
+while Resposta<>'' do;
 
-repeat until KeyPressed;   {wait until a key is pressed}
+repeat until KeyPressed;   {espera até que uma tecla seja pressionada}
 
-6.2 Structured statement
+6.2 Comando estruturado
 
-Structured statements are constructs composed of other statements.
-They are executed sequentially (compound statements), conditionally (conditional
-statements) or repeatedly (repetitive statements). Discussion of the with
-statement is deferred to chapter 10.2.
+Comandos estruturados são construções compostas por outros comandos.
+Eles são executados sequencialmente (comandos compostos), condicionalmente (comandos
+condicionais) ou repetidamente (comandos repetitivos). A discussão do comando with
+é adiada para o capítulo 10.2.
 
-6.2.1 Compound statement
+6.2.1 Comando composto
 
-A compound statement is used when the Pascal syntax allows only one statement
-but several statements are desired. It consists of an arbitrary number of
-statements separated by semicolons and enclosed in the reserved words
-begin and end. The individual statements of the compound statement
-are handled in the order in which they are written.
+Um comando composto é usado quando a sintaxe Pascal permite apenas um comando
+mas vários comandos são desejados. Ele consiste em um número arbitrário de
+comandos separados por ponto e vírgula e delimitados pelas palavras reservadas
+begin e end. Os comandos individuais do comando composto
+são tratados na ordem em que são escritos.
 
 
 
-Example:
+Exemplo:
 
-if Smallest > Largest then
+if Menor > Maior then
 
 begin
 
-  Temp     := Smallest;
+  Temp     := Menor;
 
-  Smallest := Largest;
+  Menor := Maior;
 
-  Largest  := Temp;
+  Maior  := Temp;
 
 end;
 
-6.2.2 Conditional statement
+6.2.2 Comando condicional
 
-A conditional statement selects one of its component statements for execution.
+Um comando condicional seleciona um de seus comandos componentes para execução.
 
-6.2.2.1 If statement
+6.2.2.1 Comando if
 
-The if statement (decision) specifies that a statement should only be executed
-if a certain condition (boolean expression) is met (True). If it is not
-met (False), then either no statement is executed, or the statement following
-the reserved word else is executed. Note that no semicolon may precede else.
+O comando if (decisão) especifica que um comando só deve ser executado
+se uma determinada condição (expressão boolean) for atendida (True). Se não for
+atendida (False), então ou nenhum comando é executado, ou o comando seguinte
+à palavra reservada else é executado. Observe que nenhum ponto e vírgula pode preceder else.
 
 
 
-The syntactic ambiguity arising from the following construct:
+A ambiguidade sintática resultante da seguinte construção:
 
 
 
@@ -1413,7 +1413,7 @@ if expr1 then
 
 
 
-is avoided by interpreting it as follows:
+é evitada interpretando-a da seguinte forma:
 
 
 
@@ -1433,451 +1433,451 @@ end
 
 
 
-This means that the else part always belongs to the last if statement that has no else part.
+Isso significa que a parte else sempre pertence ao último comando if que não possui parte else.
 
 
 
-Examples:
+Exemplos:
 
-if Interest>25 then
+if Juros>25 then
 
-  Spend:=True
+  Gastar:=True
 
 else
 
-  TakeLoan:=OK;
+  PegarEmprestimo:=OK;
 
-if (Input<0) or (Input>100) then
+if (Entrada<0) or (Entrada>100) then
 
 begin
 
-  WriteLn ('Input range is between 1 and 100.');
+  WriteLn ('Faixa de entrada está entre 1 e 100.');
 
-  Write ('Enter again please :');
+  Write ('Digite novamente por favor :');
 
-  Read (Input)
-
-end;
-
-6.2.2.2 Case statement
-
-The case statement (selection) consists of an expression (the selector) and a list of
-statements, each preceded by a case label (simple expression) of the type of the
-selector. It indicates that the statement whose label matches the
-current value of the selector must be executed. If no
-case label has the value of the selector, then either none or possibly the
-statements following the reserved word else are executed. The else in the case
-statement is an extension of standard Pascal.
-
-
-
-A case label consists of an arbitrary number of constants or subranges separated by
-commas and followed by a colon. A subrange
-is written as two constants separated by the
-subrange delimiter '..'. The type of the constants must equal the type of the
-selector. The statement following the case label is executed when the value of
-the selector equals one of the constants or lies within a subrange.
-
-
-
-Valid types for the selector are all simple types, that is all scalar types
-with the exception of the type Real.
-
-
-
-Examples:
-
-case Operator of
-
-  '+': Result:=Answer+Result;
-
-  '-': Result:=Answer-Result;
-
-  '*': Result:=Answer*Result;
-
-  '/': Result:=Answer/Result;
+  Read (Entrada)
 
 end;
 
+6.2.2.2 Comando case
+
+O comando case (seleção) consiste em uma expressão (o seletor) e uma lista de
+comandos, cada um precedido por um rótulo case (expressão simples) do tipo do
+seletor. Ele indica que o comando cujo rótulo corresponde ao
+valor atual do seletor deve ser executado. Se nenhum
+rótulo case tiver o valor do seletor, então ou nenhum ou possivelmente os
+comandos seguintes à palavra reservada else são executados. O else no comando case
+é uma extensão do Pascal padrão.
 
 
-case year of
+
+Um rótulo case consiste em um número arbitrário de constantes ou subfaixas separadas por
+vírgulas e seguidas por dois-pontos. Uma subfaixa
+é escrita como duas constantes separadas pelo
+delimitador de subfaixa '..'. O tipo das constantes deve ser igual ao tipo do
+seletor. O comando seguinte ao rótulo case é executado quando o valor do
+seletor é igual a uma das constantes ou está dentro de uma subfaixa.
+
+
+
+Tipos válidos para o seletor são todos os tipos simples, isto é, todos os tipos escalares
+com exceção do tipo Real.
+
+
+
+Exemplos:
+
+case Operador of
+
+  '+': Resultado:=Resposta+Resultado;
+
+  '-': Resultado:=Resposta-Resultado;
+
+  '*': Resultado:=Resposta*Resultado;
+
+  '/': Resultado:=Resposta/Resultado;
+
+end;
+
+
+
+case ano of
 
   Min..1939: begin
 
-               Time:=PreWW2;
+               Tempo:=PreSegundaGuerra;
 
-               WriteLn ('The world at peace..');
+               WriteLn ('O mundo em paz..');
 
              end;
 
   1946..Max: begin
 
-               Time:=PostWW2;
+               Tempo:=PosSegundaGuerra;
 
-               WriteLn('The world is being rebuilt.');
+               WriteLn('O mundo está sendo reconstruído.');
 
              end;
 
         else begin
 
-               Time:=WW2;
+               Tempo:=SegundaGuerra;
 
-               WriteLn ('Wartime..');
+               WriteLn ('Tempo de guerra..');
 
              end;
 
 end;
 
-6.2.3 Loop statement
+6.2.3 Comando de repetição
 
-Loop statements indicate that certain statements must be executed repeatedly.
-If the number of repetitions is known beforehand, that is before the repetition
-takes place, the for statement is the appropriate statement to express this situation.
-Otherwise the while or repeat statement should be used.
+Comandos de repetição indicam que certos comandos devem ser executados repetidamente.
+Se o número de repetições for conhecido de antemão, isto é, antes que a repetição
+ocorra, o comando for é o comando apropriado para expressar essa situação.
+Caso contrário, o comando while ou repeat deve ser usado.
 
-6.2.3.1 For statement
+6.2.3.1 Comando for
 
-The for statement indicates that the substatement must be executed repeatedly. The
-ascending values are assigned to a variable called the control variable.
-The values can ascend: to, or descend: downto, until the final value
-is reached.
-
-
-
-The control variable and the initial and final values must be of the same type.
-Valid types are all simple types, that is all scalar types except Real.
-When using to the initial value is greater than the final value, or when
-using downto the initial value is less than the final value, the
-substatement is not executed.
+O comando for indica que o subcomando deve ser executado repetidamente. Os
+valores ascendentes são atribuídos a uma variável chamada variável de controle.
+Os valores podem ascender: to, ou descender: downto, até que o valor final
+seja alcançado.
 
 
 
-Examples:
+A variável de controle e os valores inicial e final devem ser do mesmo tipo.
+Tipos válidos são todos os tipos simples, isto é, todos os tipos escalares exceto Real.
+Ao usar to o valor inicial é maior que o valor final, ou ao
+usar downto o valor inicial é menor que o valor final, o
+subcomando não é executado.
+
+
+
+Exemplos:
 
 for I:=2 to 100 do
 
-  if A[I]>Max then Max:=A[I];
+  if A[I]>Maior then Maior:=A[I];
 
 
 
-for I:=1 to NumLines do
+for I:=1 to NumLinhas do
 
 begin
 
-  ReadLn (Line);
+  ReadLn (Linha);
 
-  if Length (Line)<Limit then
+  if Length (Linha)<Limite then
 
-    ShortLines:=ShortLines+1
+    LinhasCurtas:=LinhasCurtas+1
 
   else
 
-    LongLines:=LongLines+1
+    LinhasLongas:=LinhasLongas+1
 
 end;
 
 
 
-Note that the substatement of a for statement may not contain an assignment to the
-control variable. If the repetition must be stopped before the
-final value is reached, a goto statement must be used, although such
-program structures are not recommended. The program remains clearer if in
-such a case a while or repeat statement is used.
+Observe que o subcomando de um comando for não pode conter uma atribuição à
+variável de controle. Se a repetição precisar ser interrompida antes que o
+valor final seja alcançado, um comando goto deve ser usado, embora tais
+estruturas de programa não sejam recomendadas. O programa permanece mais claro se, em
+tal caso, um comando while ou repeat for usado.
 
-After termination of the for statement the control variable equals the final value,
-except when the statement is not executed, in which case the control variable is not
-assigned.
+Após o término do comando for, a variável de controle é igual ao valor final,
+exceto quando o comando não é executado, caso em que a variável de controle não é
+atribuída.
 
-6.2.3.2 While statement
+6.2.3.2 Comando while
 
-The expression controlling the repetition must be of the type Boolean. The statement
-is repeated as long as the expression is True. If the value is already False at the start,
-the statement is not executed at all.
-
-
-
-Examples:
-
-while Size>1 do
-
-  Size:=Sqrt (Size);
+A expressão que controla a repetição deve ser do tipo Boolean. O comando
+é repetido enquanto a expressão for True. Se o valor já for False no início,
+o comando não é executado.
 
 
 
-while ThisMonth do
+Exemplos:
+
+while Tamanho>1 do
+
+  Tamanho:=Sqrt (Tamanho);
+
+
+
+while EsteMes do
 
 begin
 
-  ThisMonth:= NowMonth=ExampleMonth;
+  EsteMes:= MesAtual=MesExemplo;
 
 
 
-  Process;  {Process this example with the Process procedure}
+  Processar;  {Processa este exemplo com o procedimento Processar}
 
 end;
 
-6.2.3.3 Repeat statement
+6.2.3.3 Comando repeat
 
-The expression controlling the repetition must be of the type Boolean. The statement
-sequence between the reserved words repeat and until is repeated
-until the expression becomes true (True). The difference from the while statement is
-that the repeat statement is executed at least once, because the termination
-condition is only checked at the end.
+A expressão que controla a repetição deve ser do tipo Boolean. A sequência de comandos
+entre as palavras reservadas repeat e until é repetida
+até que a expressão se torne verdadeira (True). A diferença em relação ao comando while é
+que o comando repeat é executado pelo menos uma vez, porque a condição de término
+só é verificada no final.
 
 
 
-Example:
+Exemplo:
 
 repeat
 
-  Write (^M, 'Delete this record? (Y/N)');
+  Write (^M, 'Apagar este registro? (S/N)');
 
-  Read (Answer);
+  Read (Resposta);
 
-until UpCase (Answer) in ['Y', 'N'];
+until UpCase (Resposta) in ['S', 'N'];
 
-7. 	SCALAR TYPES AND THEIR
-SUBRANGES
-
-The scalar data type is the basic data type in Pascal. It forms a finite, linearly
-ordered series of values. Although the standard type Real is also regarded as a scalar data type,
-the type Real does not fall under this definition. Therefore Real numbers
-cannot always be used in the same context as other scalar data types.
-
-7.1 Scalar types
-
-Besides the standard scalar types (Longint, Integer, Real, Boolean, Char and Byte),
-Pascal also supports user-defined scalar types. The definition of
-a scalar data type lists all its possible values in linear order. The values
-of the new data type are represented by names, which are its constants.
+7. 	TIPOS ESCALARES E SUAS SUBFAIXAS
 
 
+O tipo de dado escalar é o tipo de dado básico em Pascal. Ele forma uma série finita, linearmente
+ordenada de valores. Embora o tipo padrão Real também seja considerado um tipo de dado escalar,
+o tipo Real não se enquadra nesta definição. Portanto números Reais
+nem sempre podem ser usados no mesmo contexto que outros tipos de dados escalares.
 
-Examples:
+7.1 Tipos escalares
 
-type 
+Além dos tipos escalares padrão (Longint, Integer, Real, Boolean, Char e Byte),
+Pascal também suporta tipos escalares definidos pelo usuário. A definição de
+um tipo de dado escalar lista todos os seus valores possíveis em ordem linear. Os valores
+do novo tipo de dado são representados por nomes, que são suas constantes.
+
+
+
+Exemplos:
+
+type
 
   Operator = (Plus, Minus, Times, Divide);
 
-  Day      = (Mon, Tue, Wed, Thu, Fri, Sat, Sun);
+  Dia      = (Seg, Ter, Qua, Qui, Sex, Sab, Dom);
 
-  Month    = (Jan, Feb, Mar, Apr, May, June, July,
+  Mes    = (Jan, Fev, Mar, Abr, Mai, Jun, Jul,
 
-              Aug, Sep, Oct, Nov, Dec);
+               Ago, Set, Out, Nov, Dez);
 
-  Card     = (Spades, Clubs, Hearts, Diamonds);
-
-
-
-Variables of the type Card can assume one of the four values (spades, clubs, hearts
-or diamonds). The ordinal values are:
+  Card     = (Espadas, Paus, Copas, Ouros);
 
 
 
-Spades=0, Clubs=1, Hearts=2, Diamonds=3.
+Variáveis do tipo Card podem assumir um dos quatro valores (espadas, paus, copas
+ou ouros). Os valores ordinais são:
 
 
 
-You are already familiar with the standard scalar type Boolean. It is defined
-as follows:
+Espadas=0, Paus=1, Copas=2, Ouros=3.
 
 
 
-type 
+Você já conhece o tipo escalar padrão Boolean. Ele é definido
+da seguinte forma:
+
+
+
+type
 
   Boolean = (False, True);
 
 
 
-The relational operators =, <>, >, <, >= and <= can be used with all scalar
-types provided both operands are of the same type (Reals, Integers and Longints
-may be mixed). The order of the scalar type is
-used as the basis for comparisons; in other words, the order of the name list
-determines the ordinal value of a scalar type. In the above example
-the following expression is true (True):
+Os operadores relacionais =, <>, >, <, >= e <= podem ser usados com todos os tipos
+escalares desde que ambos os operandos sejam do mesmo tipo (Reals, Integers e Longints
+podem ser misturados). A ordem do tipo escalar é
+usada como base para comparações; em outras palavras, a ordem da lista de nomes
+determina o valor ordinal de um tipo escalar. No exemplo acima
+a seguinte expressão é verdadeira (True):
 
 
 
-Spades < Clubs < Hearts < Diamonds
+Espadas < Paus < Copas < Ouros
 
 
 
 
 
-The following standard functions can be used with a scalar
-type as parameter:
+As seguintes funções padrão podem ser usadas com um tipo
+escalar como parâmetro:
 
 
 
-Succ (Clubs)    The successor of Clubs (Hearts)
+Succ (Paus)    O sucessor de Paus (Copas)
 
-Pred (Clubs)    The predecessor of Clubs (Spades)
+Pred (Paus)    O antecessor de Paus (Espadas)
 
-Ord (Clubs)     The ordinal value of Clubs (1, because the first element
+Ord (Paus)     O valor ordinal de Paus (1, porque o primeiro elemento
 
-                in the scalar list has the value 0.)
-
-
-
-The functions Succ and Pred return the same type as their parameter. The
-function Ord returns type Integer.
-
-7.2 Subrange types
-
-A type can be defined as a subrange of a previously defined scalar
-type. This is called a subrange type. The definition of a subrange simply
-consists of specifying the lowest and highest values of the subrange.
-The first value must be less than the second value. A subrange of the type
-Real is not allowed.
+                 na lista escalar tem o valor 0.)
 
 
 
-Examples:
+As funções Succ e Pred retornam o mesmo tipo que seu parâmetro. A
+função Ord retorna o tipo Integer.
 
-type 
+7.2 Tipos subfaixa
 
-  CompassPoints = (North, South, East, West);
+Um tipo pode ser definido como uma subfaixa de um tipo escalar
+previamente definido. Isso é chamado de tipo subfaixa. A definição de uma subfaixa simplesmente
+consiste em especificar os valores mais baixo e mais alto da subfaixa.
+O primeiro valor deve ser menor que o segundo valor. Uma subfaixa do tipo
+Real não é permitida.
 
-  World         = (East..West);
 
-  CompassRose   = 0..360;
 
-  Capitals      = 'A'..'Z';
+Exemplos:
 
-  Lowercase     = 'a'..'z';
+type
 
-  Degrees       = (Celsius, Fahrenheit, Kelvin);
+  CompassPoints = (Norte, Sul, Leste, Oeste);
+
+  World         = (Leste..Oeste);
+
+  RosaDosVentos   = 0..360;
+
+  Maiusculas      = 'A'..'Z';
+
+  Minusculas     = 'a'..'z';
+
+  Graus       = (Celsius, Fahrenheit, Kelvin);
 
   Wine          = (Red, White, Rose, Sparkling);
 
 
 
-The type World is a subrange type of the type CompassPoints (its
-associated type). The associated scalar type of CompassRose is Integer, and the
-associated scalar type of Capitals and Lowercase is the type Char.
+O tipo World é um tipo subfaixa do tipo CompassPoints (seu
+tipo associado). O tipo escalar associado de RosaDosVentos é Integer, e o
+tipo escalar associado de Maiusculas e Minusculas é o tipo Char.
 
 
 
-We have already discussed the type Byte. This is a standard subrange type
-which is defined as:
+Nós já discutimos o tipo Byte. Este é um tipo subfaixa padrão
+que é definido como:
 
 
 
-type 
+type
 
   Byte = 0..255;
 
 
 
-A subrange type has all the properties of its associated scalar type, but is
-limited to its own minimum and maximum range.
+Um tipo subfaixa tem todas as propriedades de seu tipo escalar associado, mas está
+limitado à sua própria faixa mínima e máxima.
 
 
 
-The use of defined scalar types and subrange types is strongly
-recommended, because it greatly improves the readability of a program. In addition,
-you can switch on range checking (see chapter 7.4) to check whether
-a calculation stays within the set ranges. Another advantage of defined
-types and their subrange types is that they often occupy less memory. Turbo Pascal will
-reserve only 1 byte of memory if the total number of elements of a subrange type
-contains fewer than 256 elements. In other words, if an Integer subrange type has upper and
-lower bounds within the range 0 to 255, only 1 byte of memory will
-be reserved for it.
+O uso de tipos escalares definidos e tipos subfaixa é fortemente
+recomendado, porque melhora muito a legibilidade de um programa. Além disso,
+você pode ativar a verificação de limites (veja capítulo 7.4) para verificar se
+um cálculo permanece dentro das faixas definidas. Outra vantagem dos tipos
+definidos e seus tipos subfaixa é que frequentemente ocupam menos memória. Turbo Pascal irá
+reservar apenas 1 byte de memória se o número total de elementos de um tipo subfaixa
+contiver menos de 256 elementos. Em outras palavras, se um tipo subfaixa Integer tiver limites
+superior e inferior dentro da faixa de 0 a 255, apenas 1 byte de memória será
+reservado para ele.
 
-7.3 Type conversion
+7.3 Conversão de tipos
 
-The function Ord can be used to convert a scalar type to a value
-of the Integer type. Standard Pascal provides no way to reverse this process,
-that is, to convert an Integer value to a scalar type.
-
-
-
-In Turbo Pascal a scalar type can be converted to another scalar type with
-the same ordinal value using type conversion (Engl.: type casting). Type
-conversion is achieved by taking the type name of the desired type and using it as
-a function with the value to be converted as parameter. The parameter may
-be of any type except Real.
-
-Starting from the types in chapters 7.1 and 7.2, the following holds:
+A função Ord pode ser usada para converter um tipo escalar em um valor
+do tipo Integer. Standard Pascal não fornece maneira de reverter este processo,
+ou seja, converter um valor Integer em um tipo escalar.
 
 
 
-Integer (Hearts) = 2
+Em Turbo Pascal um tipo escalar pode ser convertido em outro tipo escalar com
+o mesmo valor ordinal usando conversão de tipos (Engl.: type casting). A conversão
+de tipos é feita tomando o nome do tipo desejado e usando-o como
+uma função com o valor a ser convertido como parâmetro. O parâmetro pode
+ser de qualquer tipo exceto Real.
 
-Month (10)       = Nov
+Partindo dos tipos nos capítulos 7.1 e 7.2, vale o seguinte:
 
-CompassPoints (2)  = East
 
-Capitals (14)    = 'O'
 
-Degrees (2)      = Kelvin
+Integer (Copas) = 2
+
+Mes (10)       = Nov
+
+CompassPoints (2)  = Leste
+
+Maiusculas (14)    = 'O'
+
+Graus (2)      = Kelvin
 
 Char (78)        = 'N'
 
 Integer ('7')    = 55
 
-7.4 Range checking
+7.4 Verificação de limites
 
-The code generation that checks the range while a program is running
-is controlled by the R compiler directive. By default
-this checking is off {$R-}, so nothing is checked. When an assignment
-takes place while this checking is on {$R+}, it is checked whether the
-assignment falls within the set range. It is recommended to switch this checking on while
-developing a program until the program is completely free of errors
-(see chapter 9.1 for the effect of this compiler directive on arrays).
+A geração de código que verifica a faixa enquanto um programa está em execução
+é controlada pela diretiva de compilador R. Por padrão
+esta verificação está desligada {$R-}, então nada é verificado. Quando uma atribuição
+ocorre enquanto esta verificação está ligada {$R+}, verifica-se se a
+atribuição cai dentro da faixa definida. Recomenda-se ativar esta verificação durante o
+desenvolvimento de um programa até que o programa esteja completamente livre de erros
+(veja capítulo 9.1 para o efeito desta diretiva de compilador em arrays).
 
 
 
-Example:
+Exemplo:
 
 program rangecheck;
 
 type
 
-  Digit = 0..9;
+  Digito = 0..9;
 
 var
 
-  Digit1, Digit2, Digit3 : Digit;
+  Digito1, Digito2, Digito3 : Digito;
 
 begin
 
-  Digit1:=5;         {Valid}
+  Digito1:=5;         {Valido}
 
-  Digit2:=Digit1+3; {Valid because Digit1+3<=9}
+  Digito2:=Digito1+3; {Valido porque Digito1+3<=9}
 
-  Digit3:=47;        {Invalid but no error occurs}
+  Digito3:=47;        {Invalido mas nenhum erro ocorre}
 
   {$R+}
 
-  Digit3:=55;        {Invalid and causes a report}
+  Digito3:=55;        {Invalido e causa um erro}
 
   {$R-}
 
-  Digit3:=167;       {Invalid but no error occurs}
+  Digito3:=167;       {Invalido mas nenhum erro ocorre}
 
 end.
 
-8. 	STRING TYPE
+8. 	TIPO STRING
 
-Turbo Pascal offers you the data type String for processing character strings. Character strings
-are concatenations of characters. The type String is structured and closely resembles the
-array (chapter 9). There is however one major difference: the number of characters in a String and its
-length can vary dynamically between 0 and an upper limit, while the number of elements
-in an array is fixed.
+Turbo Pascal oferece a você o tipo de dado String para processamento de cadeias de caracteres. Cadeias de caracteres
+são concatenações de caracteres. O tipo String é estruturado e se assemelha muito ao
+array (capítulo 9). Há porém uma grande diferença: o número de caracteres em uma String e seu
+comprimento podem variar dinamicamente entre 0 e um limite superior, enquanto o número de elementos
+em um array é fixo.
 
-8.1 String type definition
+8.1 Definição do tipo string
 
-The definition of the data type String must indicate the upper limit of the number of
-characters, that is the maximum length. The definition consists of the reserved
-word string followed by the maximum length in square brackets. This must be an Integer
-constant ranging from 1 to 255. Strings have no preset length and
-therefore the length must be determined exactly.
+A definição do tipo de dado String deve indicar o limite superior do número de
+caracteres, ou seja o comprimento máximo. A definição consiste na palavra
+reservada string seguida do comprimento máximo entre colchetes. Este deve ser uma constante
+Integer variando de 1 a 255. Strings não têm comprimento predefinido e
+portanto o comprimento deve ser determinado exatamente.
 
 
 
-Example:
+Exemplo:
 
 type
 
@@ -1887,25 +1887,25 @@ type
 
 
 
-A String variable uses its maximum length plus 1 byte in memory. This one
-byte is used to store the current length of the String variable. All
-characters in the String variable are numbered starting with 1 up to the length of the
-String. Index 0 contains the length.
+Uma variável String usa seu comprimento máximo mais 1 byte em memória. Este um
+byte é usado para armazenar o comprimento atual da variável String. Todos
+os caracteres na variável String são numerados começando com 1 até o comprimento da
+String. O índice 0 contém o comprimento.
 
-8.2 String expressions
+8.2 Expressões string
 
-Strings are manipulated by String expressions. These consist of String constants, String
-variables, function names and operations.
-
-
-
-The plus sign can join Strings. The Concat function (see chapter 8.5.2) does
-the same, but the '+' operator is often simpler to use. If the length of the
-resulting String exceeds 255, a runtime error is given.
+Strings são manipuladas por expressões String. Estas consistem em constantes String,
+variáveis String, nomes de funções e operações.
 
 
 
-Examples:
+O sinal de mais pode unir Strings. A função Concat (veja capítulo 8.5.2) faz
+o mesmo, mas o operador '+' é frequentemente mais simples de usar. Se o comprimento da
+String resultante exceder 255, um erro de runtime é gerado.
+
+
+
+Exemplos:
 
 'Turbo ' + 'Pascal'   = 'Turbo Pascal'
 
@@ -1913,17 +1913,17 @@ Examples:
 
 'A' + 'B' + 'C' + 'D' = 'ABCD'
 
-The relational operators =, <, >, <= and >= have a lower priority than the
-concatenation operator. When relational operators are applied to String operands, the
-result is of the type Boolean. When comparing two Strings, the individual
-letters are compared from left to right. If the Strings have different lengths
-and the shorter one up to its last letter equals the leading letters of
-the longer String, then the shorter is recognized as smaller. Strings are only equal
-if they are the same both in length and in content.
+Os operadores relacionais =, <, >, <= e >= têm prioridade mais baixa que o
+operador de concatenação. Quando operadores relacionais são aplicados a operandos String, o
+resultado é do tipo Boolean. Ao comparar duas Strings, as letras
+individuais são comparadas da esquerda para a direita. Se as Strings tiverem comprimentos diferentes
+e a mais curta até sua última letra for igual às letras iniciais da
+String mais longa, então a mais curta é reconhecida como menor. Strings só são iguais
+se forem iguais tanto em comprimento quanto em conteúdo.
 
 
 
-Examples:
+Exemplos:
 
 'A' < 'B'                               true
 
@@ -1939,285 +1939,285 @@ Examples:
 
 'Pascal Compiler' < 'Pascal compiler'   true
 
-8.3 String assignment
+8.3 Atribuição de string
 
-The assignment operator assigns the value of a String expression to a String variable.
-
-
-
-Examples:
-
-Age :=' fifteenth';
-
-Line:='Congratulations on your' + Age + 'birthday.';
+O operador de atribuição atribui o valor de uma expressão String a uma variável String.
 
 
 
-If the stated maximum length of a String is exceeded, the
-excess letters are discarded. This means that if the above variable Age
-had been declared as string[5], the variable would contain only five
-letters after the assignment. The value would then be: ' fifth'.
+Exemplos:
 
-8.4 String procedures
+Idade :=' decimo quinto';
 
-The following standard procedures for Strings are available in Turbo Pascal:
+Linha:='Parabens pelo seu' + Idade + 'aniversario.';
+
+
+
+Se o comprimento máximo declarado de uma String for excedido, as
+letras excedentes são descartadas. Isto significa que se a variável Idade
+acima tivesse sido declarada como string[5], a variável conteria apenas cinco
+letras após a atribuição. O valor seria então: ' fifth'.
+
+8.4 Procedimentos de string
+
+Os seguintes procedimentos padrão para Strings estão disponíveis em Turbo Pascal:
 
 8.4.1 Delete
 
-Syntax: Delete (St, Pos, Num)
+Sintaxe: Delete (St, Pos, Num)
 
-Delete removes a certain number (Num) of letters from a String variable (St), starting at
-position Pos. St is a String variable and both Pos and Num are Integer expressions. If
-Pos is greater than the length of St, no letters are removed. If an attempt
-is made to erase letters beyond the right end of the String, i.e. if
-Pos+Num is greater than the length of St, only characters within St are erased. If Pos
-is outside the range 0 to 255, a runtime error is given.
+Delete remove um certo número (Num) de letras de uma variável String (St), começando na
+posição Pos. St é uma variável String e tanto Pos quanto Num são expressões Integer. Se
+Pos for maior que o comprimento de St, nenhuma letra é removida. Se houver tentativa
+de apagar letras além da extremidade direita da String, ou seja se
+Pos+Num for maior que o comprimento de St, apenas caracteres dentro de St são apagados. Se Pos
+estiver fora da faixa de 0 a 255, um erro de runtime é gerado.
 
-If St has the value 'ABCDEFG', then St assumes the adjacent values under the following conditions:
+Se St tiver o valor 'ABCDEFG', então St assume os valores adjacentes sob as seguintes condições:
 
 
 
-Delete (St, 2, 4)        yields a value of 'AFG'
+Delete (St, 2, 4)        produz um valor de 'AFG'
 
-Delete (St, 2, 10)       yields a value of 'A'
+Delete (St, 2, 10)       produz um valor de 'A'
 
-Delete (St, 10, 1)       does nothing!!
+Delete (St, 10, 1)       não faz nada!!
 
 8.4.2 Insert
 
-Syntax: Insert (Obj, Target, Pos)
+Sintaxe: Insert (Obj, Target, Pos)
 
-Insert inserts the String Obj into the String Target at position Pos. Obj is a String
-expression, Target a String variable and Pos an Integer number. If Pos is greater than the
-length of the String variable Target, Obj is appended to Target. If
-the result is longer than the maximum length of the variable Target, the excess
-letters disappear and Target contains only the leftmost letters of Obj. If Pos
-is outside the range 0 to 255, a runtime error is given.
-
-
-
-If St has the value 'ABCDEFG', then St assumes the adjacent value under the following condition:
+Insert insere a String Obj na String Target na posição Pos. Obj é uma String
+expressão, Target uma variável String e Pos um número Integer. Se Pos for maior que o
+comprimento da variável String Target, Obj é acrescentada a Target. Se
+o resultado for mais longo que o comprimento máximo da variável Target, o excesso
+de letras desaparece e Target contém apenas as letras mais à esquerda de Obj. Se Pos
+estiver fora da faixa de 0 a 255, um erro de runtime é gerado.
 
 
 
-Insert ('XX', St, 3)        yields a value: 'ABXXCDEFG'.
+Se St tiver o valor 'ABCDEFG', então St assume o valor adjacente sob a seguinte condição:
+
+
+
+Insert ('XX', St, 3)        produz um valor: 'ABXXCDEFG'.
 
 8.4.3 Str
 
-Syntax: Str (Value, St)
+Sintaxe: Str (Value, St)
 
-The Str procedure converts the numeric value Value to a String and stores it in St.
-Value is a write parameter of the type Real, Longint or Integer, St is a String
-variable. Write parameters are expressions with special formatting commands (see
-chapter 13.11.1).
-
-
-
-If I has the value 1234, then:
+O procedimento Str converte o valor numérico Value em uma String e o armazena em St.
+Value é um parâmetro de escrita do tipo Real, Longint ou Integer, St é uma String
+variável. Parâmetros de escrita são expressões com comandos especiais de formatação (veja
+capítulo 13.11.1).
 
 
 
-Str (I:5, St)               St gets the value ' 1234'
+Se I tiver o valor 1234, então:
 
 
 
-If X has the value 2.5E4, then:
+Str (I:5, St)               St recebe o valor ' 1234'
 
 
 
-Str (X:10:0, St)            St gets the value ' 25000'
+Se X tiver o valor 2.5E4, então:
 
 
 
-Warning: A function containing the Str procedure may never be used
-in an expression inside a Write or WriteLn.
+Str (X:10:0, St)            St recebe o valor ' 25000'
+
+
+
+Aviso: Uma função contendo o procedimento Str nunca pode ser usada
+em uma expressão dentro de um Write ou WriteLn.
 
 8.4.4 Val
 
-Syntax: Val (St, Var, Code)
+Sintaxe: Val (St, Var, Code)
 
-Val converts the String expression St to a Longint, Integer or Real value (depending
-on the type of the variable Var) and stores it in the variable Var. St must be a String
-representing a numeric value according to the rules for numeric
-constants (see chapter 3.2). No blank characters are allowed before or after. Var
-must be an Integer or Real variable. If no errors are found, the
-variable Code is set to 0, otherwise Code contains the position of the first erroneous character, and
-the value of Var remains undefined.
-
-
-
-If St has the value '234', then:
+Val converte a expressão String St em um valor Longint, Integer ou Real (dependendo
+do tipo da variável Var) e o armazena na variável Var. St deve ser uma String
+representando um valor numérico de acordo com as regras para constantes
+numéricas (veja capítulo 3.2). Nenhum caractere em branco é permitido antes ou depois. Var
+deve ser uma variável Integer ou Real. Se nenhum erro for encontrado, a
+variável Code é ajustada para 0, caso contrário Code contém a posição do primeiro caractere errôneo, e
+o valor de Var permanece indefinido.
 
 
 
-Val (St, I, Result)          I gets the value 234 and Result becomes 0
+Se St tiver o valor '234', então:
 
 
 
-If St has the value '12x', then:
+Val (St, I, Result)          I recebe o valor 234 e Result se torna 0
 
 
 
-Val (St, I, Result)          I remains undefined and Result becomes 3
+Se St tiver o valor '12x', então:
 
 
 
-If St has the value '2.5E4' and X is a real variable, then:
+Val (St, I, Result)          I permanece indefinido e Result se torna 3
 
 
 
-Val (St, X, Result)          X gets the value 25000 and Result becomes 0
+Se St tiver o valor '2.5E4' e X for uma variável real, então:
 
 
 
-Warning: A function using the Val procedure may never be called in an expression in
-a Write or WriteLn.
+Val (St, X, Result)          X recebe o valor 25000 e Result se torna 0
 
-8.5 String functions
 
-The following standard functions for Strings are applicable in Turbo Pascal:
+
+Aviso: Uma função usando o procedimento Val nunca pode ser chamada em uma expressão em
+um Write ou WriteLn.
+
+8.5 Funções de string
+
+As seguintes funções padrão para Strings são aplicáveis em Turbo Pascal:
 
 8.5.1 Copy
 
-Syntax: Copy (St, Pos, Num)
+Sintaxe: Copy (St, Pos, Num)
 
-Copy returns part of the String St containing a certain number (Num) of letters,
-counted from position Pos. St is a String expression, Pos and Num are Integer expressions.
-If the value of Pos exceeds the length of the String, an empty String is
-returned. If an attempt is made to obtain characters to the right outside the String, i.e. if
-Pos+Num is greater than the length of the String, only the letters within the
-String are returned. If Pos is outside the range 0 to 255, a
-runtime error is given.
-
-
-
-If St has the value 'ABCDEFG', then:
+Copy retorna parte da String St contendo um certo número (Num) de letras,
+contadas a partir da posição Pos. St é uma expressão String, Pos e Num são expressões Integer.
+Se o valor de Pos exceder o comprimento da String, uma String vazia é
+retornada. Se houver tentativa de obter caracteres à direita fora da String, ou seja se
+Pos+Num for maior que o comprimento da String, apenas as letras dentro da
+String são retornadas. Se Pos estiver fora da faixa de 0 a 255, um
+erro de runtime é gerado.
 
 
 
-Copy (St, 3, 2)            returns the value 'CD'
+Se St tiver o valor 'ABCDEFG', então:
 
-Copy (St, 4, 10)           returns the value 'DEFG'
 
-Copy (St, 4, 2)            returns the value 'DE'
+
+Copy (St, 3, 2)            retorna o valor 'CD'
+
+Copy (St, 4, 10)           retorna o valor 'DEFG'
+
+Copy (St, 4, 2)            retorna o valor 'DE'
 
 8.5.2 Concat
 
-Syntax: Concat (St1, St2[, StN])
+Sintaxe: Concat (St1, St2[, StN])
 
-The Concat function returns a combined String composed of an arbitrary number of
-Strings in the stated order (St1..StN). If the result exceeds
-255 characters, a runtime error is given. As already
-stated in chapter 8.2, the '+' operator does the same thing in a simpler way. Concat
-was only included in Turbo Pascal to preserve compatibility with other Pascal
-compilers.
-
-
-
-If St1 has the value 'TURBO' and St2 the value ' is the fastest', then:
+A função Concat retorna uma String combinada composta de um número arbitrário de
+Strings na ordem indicada (St1..StN). Se o resultado exceder
+255 caracteres, um erro de runtime é gerado. Como já
+afirmado no capítulo 8.2, o operador '+' faz a mesma coisa de forma mais simples. Concat
+foi incluída em Turbo Pascal apenas para preservar compatibilidade com outros compiladores
+Pascal.
 
 
 
-Concat (St1, ' Pascal', St2)  yields the value 'Turbo Pascal is the fastest'
+Se St1 tiver o valor 'TURBO' e St2 o valor ' e o mais rapido', então:
+
+
+
+Concat (St1, ' Pascal', St2)  produz o valor 'Turbo Pascal e o mais rapido'
 
 8.5.3 Length
 
-Syntax: Length (St)
+Sintaxe: Length (St)
 
-Returns the length of the String expression St, that is the number of characters the String
-contains. The result is an Integer.
-
-
-
-If St has the value '123456789', then:
+Retorna o comprimento da expressão String St, ou seja o número de caracteres que a String
+contém. O resultado é um Integer.
 
 
 
-Length (St)  the value 9.
+Se St tiver o valor '123456789', então:
+
+
+
+Length (St)  o valor 9.
 
 8.5.4 Pos
 
-Syntax: Pos (Obj, Target)
+Sintaxe: Pos (Obj, Target)
 
-This function searches the String Target for the first occurrence of the String
-expression Obj. The result is an Integer giving the position in the String expression Target
-of the first character of Obj. The first position in a String is 1. If the
-character combination Obj is not found, Pos returns the value 0.
-
-
-
-If St has the value 'ABCDEFG', then:
+Esta função procura na String Target pela primeira ocorrência da String
+expressão Obj. O resultado é um Integer dando a posição na expressão String Target
+do primeiro caractere de Obj. A primeira posição em uma String é 1. Se a
+combinação de caracteres Obj não for encontrada, Pos retorna o valor 0.
 
 
 
-Pos ('DE', St)                the value 4
-
-Pos ('H', St)                 the value 0
-
-8.6 Strings and characters
-
-The data type String and the scalar data type Char are interchangeable. For example, where a
-String value is expected, a character value may also be entered and vice versa.
-In addition, Strings and characters can also be mixed in expressions. When a character
-is converted to a String, the length must be defined as '1', otherwise
-a runtime error is given. The characters of a String can be accessed
-through String indexing. For this, an Integer number in
-square brackets is appended to the String variable.
+Se St tiver o valor 'ABCDEFG', então:
 
 
 
-Examples:
+Pos ('DE', St)                o valor 4
+
+Pos ('H', St)                 o valor 0
+
+8.6 Strings e caracteres
+
+Os tipos de dados String e o tipo de dado escalar Char são intercambiáveis. Por exemplo, onde um
+valor String é esperado, um valor de caractere também pode ser inserido e vice-versa.
+Além disso, Strings e caracteres também podem ser misturados em expressões. Quando um caractere
+é convertido em uma String, o comprimento deve ser definido como '1', caso contrário
+um erro de runtime é gerado. Os caracteres de uma String podem ser acessados
+através de indexação de String. Para isso, um número Integer em
+colchetes é anexado à variável String.
+
+
+
+Exemplos:
 
 Buffer[5]
 
-Line [Length (Line)-1]
+Linha [Length (Linha)-1]
 
-Ord (Line [0])
-
-
-
-Because the first character of a String (at index '0') contains the length of the String,
-Length(String) is the same as Ord(String[0]). When the length indicator is used,
-the programmer must ensure that it is shorter than the maximum length of the
-String variable. If the compiler directive R is active ({$R+}), code is
-generated to guarantee that a String index expression will not exceed its maximum length.
-It is nevertheless still possible to form a String index
-that lies above the current dynamic length. Characters read in that way are
-undefined, and assignments beyond the current dynamic length do not change the
-String (the system may even hang on this).
-
-9. 	ARRAY TYPE
-
-An array is a structured data type with a fixed number of elements, all
-of the same type, the base type. Each element can be accessed
-by using indices. An index is an Integer expression placed in
-square brackets after the array name. Its data type is called the index type.
-
-9.1 Array definition
-
-The definition of an array consists of the reserved word array followed by the index
-type in square brackets. Then comes the reserved word of followed by the
-base type.
+Ord (Linha [0])
 
 
 
-Examples:
+Porque o primeiro caractere de uma String (no índice '0') contém o comprimento da String,
+Length(String) é o mesmo que Ord(String[0]). Quando o indicador de comprimento é usado,
+o programador deve garantir que ele seja mais curto que o comprimento máximo da
+variável String. Se a diretiva de compilador R estiver ativa ({$R+}), código é
+gerado para garantir que uma expressão de índice de String não excederá seu comprimento máximo.
+É no entanto ainda possível formar um índice de String
+que fique acima do comprimento dinâmico atual. Caracteres lidos dessa forma são
+indefinidos, e atribuições além do comprimento dinâmico atual não alteram a
+String (o sistema pode até travar com isso).
 
-type 
+9. 	TIPO ARRAY
 
-  Day=(Mon, Tue, Wed, Thu, Fri, Sat, Sun);
+Um array é um tipo de dado estruturado com um número fixo de elementos, todos
+do mesmo tipo, o tipo base. Cada elemento pode ser acessado
+usando índices. Um índice é uma expressão Integer colocada em
+colchetes após o nome do array. Seu tipo de dado é chamado de tipo de índice.
+
+9.1 Definição de array
+
+A definição de um array consiste na palavra reservada array seguida do tipo de
+índice entre colchetes. Depois vem a palavra reservada of seguida pelo
+tipo base.
+
+
+
+Exemplos:
+
+type
+
+  Dia=(Seg, Ter, Qua, Qui, Sex, Sab, Dom);
 
 var
 
-  WorkHours : array[1..8] of Integer;
+  HorasTrabalho : array[1..8] of Integer;
 
-  Week      : array[1..7] of Day;
+  Semana      : array[1..7] of Dia;
 
 
 
 type
 
-  Players= (Player1, Player2, Player3, Player4);
+  Jogadores= (Jogador1, Jogador2, Jogador3, Jogador4);
 
   Hand   = (One, Two, Pair, TwoPair, Three, Straight,
 
@@ -2225,47 +2225,47 @@ type
 
   GoodBid= 1..200;
 
-  Bid    = array[Players] of GoodBid;
+  Bid    = array[Jogadores] of GoodBid;
 
 var
 
-  Player : array[Players] of Hand;
+  Jogador : array[Jogadores] of Hand;
 
   Pot    : Bid;
 
 
 
-An array element is accessed by appending an index in square brackets to the variable name:
+Um elemento de array é acessado anexando um índice entre colchetes ao nome da variável:
 
 
 
-Player[Player3]:=FullHouse;
+Jogador[Jogador3]:=FullHouse;
 
-Pot[Player3]   :=100;
+Pot[Jogador3]   :=100;
 
-Player[Player4]:=Flush;
+Jogador[Jogador4]:=Flush;
 
-Pot[Player4]   :=50;
-
-
-
-Because assignments between any two variables are allowed, provided they are of
-the same type, whole arrays can be copied with a single assignment.
+Pot[Jogador4]   :=50;
 
 
 
-The compiler directive R checks during code generation whether array indexings
-are within range. The default setting is inactive. The {$R+}
-setting causes all array indexings to be checked for whether they fall within the limits.
-
-9.2 Multidimensional arrays
-
-The elements of an array can be of any data type, which means that
-the elements may also be arrays. Such a structure is called multidimensional arrays.
+Porque atribuições entre quaisquer duas variáveis são permitidas, desde que sejam do
+mesmo tipo, arrays inteiros podem ser copiados com uma única atribuição.
 
 
 
-Example:
+A diretiva de compilador R verifica durante a geração de código se indexações de array
+estão dentro da faixa. A configuração padrão é inativa. A configuração
+{$R+} faz com que todas as indexações de array sejam verificadas quanto a caírem dentro dos limites.
+
+9.2 Arrays multidimensionais
+
+Os elementos de um array podem ser de qualquer tipo de dado, o que significa que
+os elementos também podem ser arrays. Tal estrutura é chamada de arrays multidimensionais.
+
+
+
+Exemplo:
 
 type
 
@@ -2273,17 +2273,17 @@ type
 
            Nine, Ten, Jack, Queen, King, Ace );
 
-  Trump =( Hearts, Spades, Clubs, Diamonds );
+  Trump =( Copas, Espadas, Paus, Ouros );
 
   AllCards = array[Trump] of array [1..13] of Card;
 
 var
 
-  Deck : AllCards;
+  Baralho : AllCards;
 
 
 
-The multidimensional array can also be defined more simply:
+O array multidimensional também pode ser definido mais simplesmente:
 
 
 
@@ -2293,159 +2293,159 @@ type
 
 
 
-Such a shorthand also applies to references to array elements:
+Tal abreviatura também se aplica a referências a elementos de array:
 
 
 
-Deck[Hearts,10] is the same as Deck[Hearts][10]
+Baralho[Copas,10] é o mesmo que Baralho[Copas][10]
 
 
 
-It is of course also possible to make multidimensional arrays of previously defined
-array types.
+É claro também possível fazer arrays multidimensionais de tipos de
+array previamente definidos.
 
 
 
-Example:
+Exemplo:
 
 type
 
-  Pupils = string[20];
+  Alunos = string[20];
 
-  Class  = array[1..30] of Pupils;
+  Turma  = array[1..30] of Alunos;
 
-  School = array[1..50] of Class;
+  Escola = array[1..50] of Turma;
 
 var
 
   J, P, Free  : Integer;
 
-  ClassA,ClassB : Class;
+  TurmaA,TurmaB : Turma;
 
-  MarySchool : School;
-
-
-
-After this definition the following assignments are possible:
+  MarySchool : Escola;
 
 
 
-ClassA[J]          :='Peter';
-
-MarySchool[5][21]:='Peter Brown';
-
-MarySchool[8,J]  := MarySchool[7,J]; {pupil J changes class}
-
-ClassA[Free]     := ClassB[P];  {pupil P changes class and number}
-
-9.3 Character arrays
-
-Character arrays are arrays with elements of the scalar data type Char. Character arrays
-can be seen as Strings with a constant length.
+Após esta definição as seguintes atribuições são possíveis:
 
 
 
-In Turbo Pascal, character arrays can appear in String expressions. In that case the
-array is converted to a String of the corresponding length. Arrays and
-Strings can thus be compared and handled in the same way, and String constants can be
-assigned to character arrays as long as they have the same length. String variables and
-values from String expressions cannot be assigned to character arrays.
+TurmaA[J]          :='Pedro';
 
-9.4 Predefined arrays
+MarySchool[5][21]:='Pedro Brown';
 
-Turbo Pascal knows two predefined arrays of the type Byte, namely: Mem and
-Port. These serve as direct access to the CPU memory and the data ports.
+MarySchool[8,J]  := MarySchool[7,J]; {aluno J muda de turma}
 
-9.4.1 Mem array
+TurmaA[Free]     := TurmaB[P];  {aluno P muda de turma e numero}
 
-The predefined array Mem is used to gain direct access to
-memory. When a value is assigned to an element of Mem, that
-value is placed directly into the corresponding memory location. A value read comes
-directly from the associated memory location.
+9.3 Arrays de caracteres
 
-9.4.2 Port array
-
-The predefined array Port is used to gain direct access to the data
-ports of the computer. When a value is assigned to an element of Port,
-that value is sent directly to the corresponding port. A value read
-is first fetched from the associated port.
+Arrays de caracteres são arrays com elementos do tipo de dado escalar Char. Arrays de caracteres
+podem ser vistos como Strings com comprimento constante.
 
 
 
-For the Port array the restriction applies that it may not be used without an index.
-It is therefore not possible to assign all port values to another
-array in a single assignment.
+Em Turbo Pascal, arrays de caracteres podem aparecer em expressões String. Nesse caso o
+array é convertido em uma String do comprimento correspondente. Arrays e
+Strings podem assim ser comparados e tratados da mesma forma, e constantes String podem ser
+atribuídas a arrays de caracteres desde que tenham o mesmo comprimento. Variáveis String e
+valores de expressões String não podem ser atribuídos a arrays de caracteres.
 
-10. 	RECORD TYPE
+9.4 Arrays predefinidos
 
-A record is a data type consisting of a fixed number of elements called fields.
-The fields may consist of different data types and each field
-is named with a field name (field identifier). This is used for field selection in
-a record.
+Turbo Pascal conhece dois arrays predefinidos do tipo Byte, a saber: Mem e
+Port. Estes servem como acesso direto à memória da CPU e às portas de dados.
 
-10.1 Record definition
+9.4.1 Array Mem
 
-The definition of the data type record consists of the reserved word record followed by
-a list of the individual fields (the field list). Then comes the reserved word
-end. The field list is a sequence of lines (record sections) separated by
-semicolons. Each line consists of one or more field names followed
-by a colon and a data type name or data type description. Thus each
-line determines the type and name of one or more fields.
+O array predefinido Mem é usado para obter acesso direto à
+memória. Quando um valor é atribuído a um elemento de Mem, esse
+valor é colocado diretamente na posição de memória correspondente. Um valor lido vem
+diretamente da posição de memória associada.
+
+9.4.2 Array Port
+
+O array predefinido Port é usado para obter acesso direto às portas de
+dados do computador. Quando um valor é atribuído a um elemento de Port,
+esse valor é enviado diretamente à porta correspondente. Um valor lido
+é primeiro obtido da porta associada.
 
 
 
-Examples:
+Para o array Port aplica-se a restrição de que ele não pode ser usado sem um índice.
+Portanto não é possível atribuir todos os valores de porta a outro
+array em uma única atribuição.
 
-type 
+10. 	TIPO RECORD
 
-  Date=record
+Um record é um tipo de dado consistindo em um número fixo de elementos chamados campos.
+Os campos podem consistir em diferentes tipos de dados e cada campo
+é nomeado com um nome de campo (identificador de campo). Isto é usado para seleção de campo em
+um record.
 
-          Day   : 1..31;
+10.1 Definição de record
 
-          Month :( Jan, Feb, Mar, April, May, June,
+A definição do tipo de dado record consiste na palavra reservada record seguida por
+uma lista dos campos individuais (a lista de campos). Depois vem a palavra reservada
+end. A lista de campos é uma sequência de linhas (seções de record) separadas por
+ponto e vírgulas. Cada linha consiste em um ou mais nomes de campo seguidos
+por dois pontos e um nome de tipo de dado ou descrição de tipo de dado. Assim cada
+linha determina o tipo e o nome de um ou mais campos.
 
-                   July, Aug, Sep, Oct, Nov, Dec );
 
-          Year  : 1900..1999;
+
+Exemplos:
+
+type
+
+  Data=record
+
+          Dia   : 1..31;
+
+          Mes :( Jan, Fev, Mar, Abr, Mai, Jun,
+
+                   Jul, Ago, Set, Out, Nov, Dez );
+
+          Ano  : 1900..1999;
 
         end;
 
 var
 
-  Birth : Date;
+  Nascimento : Data;
 
-  WorkDay : array[1..5] of Date;
-
-
-
-Day, Month and Year are field names. A field name is only valid within the record
-in which it is defined. A field is separated from the variable name by a dot.
+  DiaUtil : array[1..5] of Data;
 
 
 
-Examples:
-
-Birth.Month  := June;
-
-Birth.Year   := 1950;
-
-WorkDay[Current]:= WorkDay[Current-1];
+Dia, Mes e Ano são nomes de campo. Um nome de campo só é válido dentro do record
+em que é definido. Um campo é separado do nome da variável por um ponto.
 
 
 
-Note that, as with arrays, an assignment between whole records of the same type
-is possible. Because the individual elements may have arbitrary data types, the
-following nested constructions are possible:
+Exemplos:
+
+Nascimento.Mes  := Jun;
+
+Nascimento.Ano   := 1950;
+
+DiaUtil[Current]:= DiaUtil[Current-1];
 
 
 
-type 
+Note que, como com arrays, uma atribuição entre records inteiros do mesmo tipo
+é possível. Porque os elementos individuais podem ter tipos de dados arbitrários, as
+seguintes construções aninhadas são possíveis:
+
+
+
+type
 
   Name = record
 
-           FamilyName : string[32];
+           Sobrenome : string[32];
 
-           FirstName  : array[1..3] of string[16];
+           PrimeiroNome  : array[1..3] of string[16];
 
          end;
 
@@ -2457,15 +2457,15 @@ type
 
          end;
 
-  Date = record
+  Data = record
 
-            Day   : 1..31;
+            Dia   : 1..31;
 
-            Month : (Jan, Feb, Mar, April, May, June,
+            Mes : (Jan, Fev, Mar, Abr, Mai, Jun,
 
-                     July, Aug, Sep, Oct, Nov, Dec);
+                     Jul, Ago, Set, Out, Nov, Dez);
 
-            Year  : 1900..1999;
+            Ano  : 1900..1999;
 
           end;
 
@@ -2473,13 +2473,13 @@ type
 
               ID   : Name;
 
-              Time : Date;
+              Time : Data;
 
             end;
 
   Wage = record
 
-           Employee : Person;
+           Funcionario : Person;
 
            Cost     : Hours;
 
@@ -2487,47 +2487,47 @@ type
 
 
 
-var Salary, Reward : Wage;
+var Salario, Reward : Wage;
 
 
 
-After this example the following assignments would be possible:
+Após este exemplo as seguintes atribuições seriam possíveis:
 
 
 
-Salary := Reward;
+Salario := Reward;
 
-Salary.Cost.Overtime := 950;
+Salario.Cost.Overtime := 950;
 
-Salary.Employee.Time := Reward.Employee.Time
+Salario.Funcionario.Time := Reward.Funcionario.Time
 
-Salary.Employee.ID.FamilyName := 'Jansen';
+Salario.Funcionario.ID.Sobrenome := 'Jansen';
 
-10.2 With statement
+10.2 Comando with
 
-Using records as described above can lead to very long
-statements. It would often be more convenient if each field could be approached with only its
-field name. This is possible with the with statement. It 'opens' a record in such a way that
-all field names can be used as variable names
-
-
-
-The with statement consists of the reserved word with, followed by a list of
-record variables separated by commas and followed by the reserved word do
-and finally a statement.
+Usar records como descrito acima pode levar a declarações
+muito longas. Frequentemente seria mais conveniente se cada campo pudesse ser acessado apenas com seu
+nome de campo. Isto é possível com o comando with. Ele 'abre' um record de tal forma que
+todos os nomes de campo podem ser usados como nomes de variáveis
 
 
 
-Within the with statement the field can be approached by using only the field name.
-The record name is then no longer needed.
+O comando with consiste na palavra reservada with, seguida de uma lista de
+variáveis record separadas por vírgulas e seguida da palavra reservada do
+e finalmente uma declaração.
 
 
 
-with Salary do
+Dentro do comando with o campo pode ser acessado usando apenas o nome do campo.
+O nome do record então não é mais necessário.
+
+
+
+with Salario do
 
 begin
 
-  Employee := Newcomer;
+  Funcionario := Newcomer;
 
   Cost     := StandardHours;
 
@@ -2535,46 +2535,46 @@ end;
 
 
 
-Records can be nested within with statements, so records of records can
-be 'opened' as below:
+Records podem ser aninhados dentro de comandos with, de modo que records de records podem
+ser 'abertos' como abaixo:
 
 
 
 {$W3}
 
-with Salary, Employee, ID do
+with Salario, Funcionario, ID do
 
 begin
 
-  FamilyName := 'Jansen';
+  Sobrenome := 'Jansen';
 
-  FirstName[1] := 'Joseph';
+  PrimeiroNome[1] := 'Jose';
 
 end;
 
 
 
-This is the same as:
+Isto é o mesmo que:
 
 
 
-  with Salary do with Employee do with ID do
+  with Salario do with Funcionario do with ID do
 
   ...
 
 
 
-The maximum nesting depth of the with statement can be set with the W
-compiler directive. The default depth is 2 {$W2}. However, this may differ per version of Turbo
+A profundidade máxima de aninhamento do comando with pode ser ajustada com a
+diretiva de compilador W. A profundidade padrão é 2 {$W2}. No entanto, isto pode diferir por versão do Turbo
 Pascal.
 
-10.3 Variant records
+10.3 Records variantes
 
-The notation of the record type also provides for variant records, in other
-words a record structure in which the fields within a record can change,
-usually depending on the value of a tag field.
+A notação do tipo record também prevê records variantes, em outras
+palavras uma estrutura de record na qual os campos dentro de um record podem mudar,
+geralmente dependendo do valor de um campo discriminante.
 
-Let us assume that the following type exists:
+Vamos supor que exista o seguinte tipo:
 
 
 
@@ -2582,8 +2582,8 @@ Origin = (Local, FromElsewhere);
 
 
 
-and the types Name and Date as in chapter 10.1. The following record has different
-fields depending on whether the value of OriginPlace is Local or FromElsewhere.
+e os tipos Name e Data como no capítulo 10.1. O seguinte record tem diferentes
+campos dependendo se o valor de OriginPlace é Local ou FromElsewhere.
 
 
 
@@ -2591,9 +2591,9 @@ type
 
   Person=record
 
-            FirstName:Name;
+            PrimeiroNome:Name;
 
-            BirthDate:Date
+            BirthDate:Data
 
             case OriginPlace : Origin of
 
@@ -2601,49 +2601,49 @@ type
 
               FromElsewhere:(BirthCountry      :Name;
 
-                         RegistrationDate  :Date;
+                         RegistrationDate  :Data;
 
-                         PermitUntil       :Date;
+                         PermitUntil       :Data;
 
-                         PlaceOfEntry:Date);
+                         PlaceOfEntry:Data);
 
             end;
 
 
 
-In this variant record definition a tag field can be handled
-in the same way as normal fields. So if Passenger is of the type Person, the following
-statements are allowed:
+Nesta definição de record variante um campo discriminante pode ser tratado
+da mesma forma que campos normais. Então se Passenger é do tipo Person, as seguintes
+declarações são permitidas:
 
 
 
 Passenger.OriginPlace:=Local;
 
-with Passenger, FirstName do
+with Passenger, PrimeiroNome do
 
-  if OriginPlace=FromElsewhere then Write(FamilyName);
-
-
-
-The fixed part of a record, the part containing the normal fields, must always
-precede the variant part. In the above example the fields
-FirstName and BirthDate are the fixed fields. In the variant part the
-field names must be in round brackets, even if there is nothing inside these brackets.
+  if OriginPlace=FromElsewhere then Write(Sobrenome);
 
 
 
-Keeping track of and handling the tag field is a responsibility of the
-programmer, not of Turbo Pascal. In the type Person the field
-RegistrationDate can be accessed even if the tag field OriginPlace holds the value
-Local instead of FromElsewhere.
+A parte fixa de um record, a parte contendo os campos normais, deve sempre
+preceder a parte variante. No exemplo acima os campos
+PrimeiroNome e BirthDate são os campos fixos. Na parte variante os
+nomes de campo devem estar entre parênteses, mesmo se não houver nada dentro destes parênteses.
 
 
 
-The value of the tag field OriginPlace can be ignored completely so that only
-the type name remains. This is called working with free unions.
-Using the tag field is called working with discriminated
-unions. The use of free unions is very unusual and should only be used
-by very experienced programmers.
+Acompanhar e tratar o campo discriminante é uma responsabilidade do
+programador, não do Turbo Pascal. No tipo Person o campo
+RegistrationDate pode ser acessado mesmo se o campo discriminante OriginPlace tiver o valor
+Local em vez de FromElsewhere.
+
+
+
+O valor do campo discriminante OriginPlace pode ser completamente ignorado de modo que apenas
+o nome do tipo permaneça. Isto é chamado de trabalho com uniões livres.
+Usar o campo discriminante é chamado de trabalho com uniões
+discriminadas. O uso de uniões livres é muito incomum e só deve ser usado
+por programadores muito experientes.
 
 11. 	SETS
 
