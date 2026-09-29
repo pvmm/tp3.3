@@ -1,17 +1,17 @@
-PROGRAM example_SetTime;
+PROGRAM exemplo_SetTime;
 
-VAR hour,min,sec : BYTE;
-    success      : BOOLEAN;
+VAR hora,min,seg : BYTE;
+    sucesso      : BOOLEAN;
 
 BEGIN
   REPEAT
     CLRSCR;
-    WRITE('hour (0..23):');
-    READLN(hour);
-    WRITE('minutes (0..59):');
+    WRITE('hora (0..23):');
+    READLN(hora);
+    WRITE('minutos (0..59):');
     READLN(min);
-    WRITE('seconds (0..59):');
-    READLN(sec);
-    success:=SetTime(hour,min,sec);
-  UNTIL success;
+    WRITE('segundos (0..59):');
+    READLN(seg);
+    sucesso:=SetTime(hora,min,seg);
+  UNTIL sucesso;
 END.

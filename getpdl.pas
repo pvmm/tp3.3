@@ -1,13 +1,13 @@
-PROGRAM example_GetPdl;
+PROGRAM exemplo_GetPdl;
 
-VAR port1,port2 : BOOLEAN;
-    i           : INTEGER;
+VAR porta1,porta2 : BOOLEAN;
+    i             : INTEGER;
 
 FUNCTION Paddle (n : INTEGER) : INTEGER;
-VAR value : INTEGER;
+VAR valor : INTEGER;
 BEGIN
-  value:=GetPdl(n);
-  Paddle:=value-(value AND 128) SHL 1
+  valor:=GetPdl(n);
+  Paddle:=valor-(valor AND 128) SHL 1
 END;
 
 BEGIN

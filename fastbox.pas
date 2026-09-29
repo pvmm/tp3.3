@@ -1,10 +1,10 @@
-PROGRAM example_FastBox;
+PROGRAM exemplo_FastBox;
 
 BEGIN
   Screen(5);
   Actpage:=0;
-  Atrbyt:=255;            {  (foreground * 16)+background }
+  Atrbyt:=255;            {  (frente * 16)+fundo }
   FastBox(10,30,250,190);
-  READLN;                 { wait for return }
+  READLN;                 { aguarde retorno }
   Screen(0);
 END.

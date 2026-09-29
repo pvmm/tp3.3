@@ -1,4 +1,4 @@
-PROGRAM example_PSet;
+PROGRAM exemplo_PSet;
 
 VAR x,y : BYTE;
 

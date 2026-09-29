@@ -1,6 +1,6 @@
-PROGRAM example_SpritesOff;
+PROGRAM exemplo_SpritesOff;
 
-VAR counter : BYTE;
+VAR contador : BYTE;
 
 BEGIN
   Screen(5);

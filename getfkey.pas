@@ -1,13 +1,13 @@
-PROGRAM example_GetFkey;
+PROGRAM exemplo_GetFkey;
 
-VAR which : INTEGER;
+VAR qual : INTEGER;
 
 BEGIN
   CLRSCR;
   REPEAT
-    which:=GetFkey;
+    qual:=GetFkey;
     GOTOXY(1,4);
-    IF which<>0 THEN
-      WRITELN('You pressed function key ',which,'.   ')
+    IF qual<>0 THEN
+      WRITELN('Você pressionou a tecla de função ',qual,'.   ')
   UNTIL KEYPRESSED;
 END.

@@ -1,4 +1,4 @@
-PROGRAM example_ReadVDP;
+PROGRAM exemplo_ReadVDP;
 
 BEGIN
   WRITE(ReadVDP(1));

@@ -1,8 +1,8 @@
-PROGRAM example_ReadPSG;
+PROGRAM exemplo_ReadPSG;
 
-VAR counter : BYTE;
+VAR contador : BYTE;
 
 BEGIN
-  FOR counter:=0 TO 13 DO
-    WRITELN('Register ',counter,' contains the value ',ReadPSG(counter));
+  FOR contador:=0 TO 13 DO
+    WRITELN('Registrador ',contador,' contém o valor ',ReadPSG(contador));
 END.

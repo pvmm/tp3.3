@@ -1,4 +1,4 @@
-PROGRAM example_SavePicture;
+PROGRAM exemplo_SavePicture;
 
 BEGIN
   Screen(5);

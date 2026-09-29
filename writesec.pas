@@ -1,9 +1,9 @@
-PROGRAM example_WriteSector;
+PROGRAM exemplo_WriteSector;
 
-VAR content : ARRAY[0..511] OF BYTE;
+VAR conteudo : ARRAY[0..511] OF BYTE;
 
 BEGIN
-  ReadSector(0,0,ADDR(content[0]),1);     { read sector 0 }
-  READLN;                                { wait for return }
-  WriteSector(0,0,ADDR(content[0]),1);    { write sector 0 back }
+  ReadSector(0,0,ADDR(conteudo[0]),1);     { lê o setor 0 }
+  READLN;                                { aguarde retorno }
+  WriteSector(0,0,ADDR(conteudo[0]),1);    { escreve o setor 0 de volta }
 END.

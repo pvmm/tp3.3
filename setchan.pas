@@ -1,9 +1,9 @@
-PROGRAM example_SetChannel;
+PROGRAM exemplo_SetChannel;
 
 BEGIN
   ClearMem;
   WRITELN(SetMem(2));
   SetChannel(1,0);
-  READLN;                       { wait for return }
+  READLN;                       { aguarde retorno }
   ClearMem;
 END.

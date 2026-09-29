@@ -1,10 +1,10 @@
-PROGRAM example_Strig;
+PROGRAM exemplo_Strig;
 
-CONST button : ARRAY[0..4] OF STRING[15] = ('button 0 (space)',
-                         'button 1 port 1','button 1 port 2',
-                         'button 2 port 1','button 2 port 2');
+CONST botao : ARRAY[0..4] OF STRING[15] = ('botão 0 (espaço)',
+                         'botão 1 porta 1','botão 1 porta 2',
+                         'botão 2 porta 1','botão 2 porta 2');
 
-VAR counter : BYTE;
+VAR contador : BYTE;
          k : CHAR;
 
 BEGIN
@@ -12,8 +12,8 @@ BEGIN
   REPEAT
     k:=' ';
     GOTOXY(1,1);
-    FOR counter:=0 TO 4 DO
-      WRITELN(button[counter],'=',Strig(counter));
+    FOR contador:=0 TO 4 DO
+      WRITELN(botao[contador],'=',Strig(contador));
     IF KEYPRESSED THEN READ(KBD,k)
   UNTIL k=#13;
 END.

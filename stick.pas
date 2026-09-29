@@ -1,8 +1,8 @@
-PROGRAM example_Stick;
+PROGRAM exemplo_Stick;
 
 BEGIN
   CLRSCR;
-  WRITELN('Cursor       Joystick port 1         Joystick port 2');
+  WRITELN('Cursor       Joystick porta 1         Joystick porta 2');
   REPEAT
     GOTOXY(3,3);
     WRITE(Stick(0));

@@ -1,9 +1,9 @@
-PROGRAM example_time;
+PROGRAM exemplo_time;
 
-VAR hour,min,sec : BYTE;
+VAR hora,min,seg : BYTE;
 
 BEGIN
-  Time(hour,min,sec);
-  WRITELN('It is now ',hour,' hours ',min,' minutes and ',sec,
-          ' seconds.   ');
+  Time(hora,min,seg);
+  WRITELN('Agora são ',hora,' horas ',min,' minutos e ',seg,
+          ' segundos.   ');
 END.

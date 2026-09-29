@@ -1,15 +1,15 @@
-PROGRAM example_WriteVDP;
+PROGRAM exemplo_WriteVDP;
 
-VAR counter,data : BYTE;
+VAR contador,dados : BYTE;
 
 BEGIN
-  FOR counter:=1 TO 20 DO
-  WRITELN('Example with WRITEVDP');
-  data:=0;
+  FOR contador:=1 TO 20 DO
+  WRITELN('Exemplo com WRITEVDP');
+  dados:=0;
   REPEAT
-    WriteVDP(23,data);
-    data:=(data+1) mod 8;
-    DELAY(2)                    { Short pause }
+    WriteVDP(23,dados);
+    dados:=(dados+1) mod 8;
+    DELAY(2)                    { Pausa curta }
   UNTIL KEYPRESSED;
   WriteVDP(23,0);
 END.

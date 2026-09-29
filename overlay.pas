@@ -2,34 +2,34 @@
 
 TYPE Str63 = STRING[12];
 
-VAR Maximum: INTEGER;
-    OverlayBaseAddress: ARRAY[0..1] OF LONGINT;
+VAR Maximo: INTEGER;
+    EnderecoBaseOverlay: ARRAY[0..1] OF LONGINT;
 
-procedure _OverlayProc0_2(Maximum: INTEGER); forward;
+procedure _OverlayProc0_2(Maximo: INTEGER); forward;
 
 overlay
-procedure OverLayProc0_1(Maximum: INTEGER);
+procedure OverLayProc0_1(Maximo: INTEGER);
 begin
-   writeln('Overlay 0--routine 1 ',Maximum);
+   writeln('Overlay 0--rotina 1 ',Maximo);
 
-   if Maximum < 2 then _OverlayProc0_2(Maximum+1);
+   if Maximo < 2 then _OverlayProc0_2(Maximo+1);
 
-   writeln('Overlay 0, routine 1 ',Maximum);
+   writeln('Overlay 0, rotina 1 ',Maximo);
 end;
 
 overlay
-procedure OverLayProc0_2(Maximum: INTEGER);
+procedure OverLayProc0_2(Maximo: INTEGER);
 begin
-   writeln('Overlay 0--routine 2 ',Maximum);
+   writeln('Overlay 0--rotina 2 ',Maximo);
 
-   if Maximum < 2 then OverlayProc0_1(Maximum+1);
+   if Maximo < 2 then OverlayProc0_1(Maximo+1);
 
-   writeln('Overlay 0, routine 2 ',Maximum);
+   writeln('Overlay 0, rotina 2 ',Maximo);
 end;
 
 procedure _OverlayProc0_2;
 begin
-   OverlayProc0_2(Maximum);
+   OverlayProc0_2(Maximo);
 end;
 
 procedure Dummy_0;
@@ -39,38 +39,38 @@ end;
 overlay
 procedure OverLayProc1_1;
 begin
-   writeln('Overlay 1, routine 1');
+   writeln('Overlay 1, rotina 1');
 end;
 
 overlay
 procedure OverLayProc1_2;
 begin
-   writeln('Overlay 1, routine 2');
+   writeln('Overlay 1, rotina 2');
 end;
 
 overlay
-function ReverseString(S: Str63): Str63;
+function InverteString(S: Str63): Str63;
 var C: CHAR;
 begin
    if length(S) = 0 then exit;
 
    if length(S) = 1 then
    begin
-      ReverseString:=S;
+      InverteString:=S;
       exit;
    end;
 
    C:=S[1];
 
-   ReverseString:=ReverseString(copy(S,2,length(S))) + C;
+   InverteString:=InverteString(copy(S,2,length(S))) + C;
 end;
 
-procedure OverlayHandler(Address: INTEGER; Pos: LONGINT; DataLength: INTEGER;
-			 OverlayNum: INTEGER; VAR Name: Str63);
+procedure ManipulaOverlay(Endereco: INTEGER; Pos: LONGINT; TamDados: INTEGER;
+			 NumOverlay: INTEGER; VAR Nome: Str63);
 begin
-   writeln('OverlayHandler ',OverlayNum,' ',Pos,' - ',DataLength,' ',Name);
-   setchannel(0,OverlayBaseAddress[OverlayNum] + Pos);
-   readmem(0,Address,DataLength);
+   writeln('ManipulaOverlay ',NumOverlay,' ',Pos,' - ',TamDados,' ',Nome);
+   setchannel(0,EnderecoBaseOverlay[NumOverlay] + Pos);
+   readmem(0,Endereco,TamDados);
 
    if (pos = 0) and (overlaynum = 0) then
    begin
@@ -80,28 +80,28 @@ begin
 end;
 
 begin
-   Maximum:=SetMem(1);
+   Maximo:=SetMem(1);
 
-   if Maximum < 1 then
+   if Maximo < 1 then
    begin
-      writeln('Not enough memory');
+      writeln('Memória insuficiente');
       halt;
    end;
 
    writeln('SetChannel');
    SetChannel(0,0);
-   OverlayBaseAddress[0]:=GetChannel(0);
+   EnderecoBaseOverlay[0]:=GetChannel(0);
 
    writeln('MemReadFile overlay 0');
    MemReadFile(0,0,102400,'overlay.000');
 
    if GetError <> 0 then
    begin
-      writeln('Error reading overlay file');
+      writeln('Erro ao ler arquivo de overlay');
       halt;
    end;
 
-   OverlayBaseAddress[1]:=GetChannel(0);
+   EnderecoBaseOverlay[1]:=GetChannel(0);
 
    writeln('MemReadFile overlay 1');
 
@@ -109,19 +109,18 @@ begin
 
    if GetError <> 0 then
    begin
-      writeln('Error reading overlay file');
+      writeln('Erro ao ler arquivo de overlay');
       halt;
    end;
 
-   writeln('Overlay 0 BaseAddress: ',OverlayBaseAddress[0]);
-   writeln('Overlay 1 BaseAddress: ',OverlayBaseAddress[1]);
+   writeln('Overlay 0 EnderecoBase: ',EnderecoBaseOverlay[0]);
+   writeln('Overlay 1 EnderecoBase: ',EnderecoBaseOverlay[1]);
 
    writeln('OverlayPTR');
-   OverlayPTR:=ADDR(OverlayHandler);
+   OverlayPTR:=ADDR(ManipulaOverlay);
 
    writeln('Frits Hilderink');
 
-   writeln(ReverseString('Frits Hilderink'));
+   writeln(InverteString('Frits Hilderink'));
 
 end.
-

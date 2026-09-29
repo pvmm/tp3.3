@@ -1,7 +1,8 @@
-# Turbo Pascal 3.3f for MSX-DOS (English translation)
+# Turbo Pascal 3.3f for MSX-DOS (Brazilian Portuguese translation)
 
-> **Archived.** This English translation is now archived and no longer
-> updated. The original Dutch version is preserved in the `original` branch.
+> **Archived.** This Brazilian Portuguese translation is now archived and no
+> longer updated. The original Dutch version is preserved in the `original`
+> branch.
 
 Z80 TURBO Pascal compiler, Version 3.3.
 
@@ -35,7 +36,7 @@ MSX graphics, sprites, sound (PSG), memory mapper, clock, joystick/mouse
 version for cross-compilation.
 
 This directory (`turbo33f`) is **not** the official 3.3f distribution —
-it is only an **English translation** of it (see [About this copy](#about-this-copy)
+it is only a **Brazilian Portuguese translation** of it (see [About this copy](#about-this-copy)
 and [Repository contents](#repository-contents) below). The official
 distribution (`turbo33f.zip`, hosted with the author's permission) is linked
 under [Sources and further reading](#sources-and-further-reading).
@@ -43,12 +44,13 @@ under [Sources and further reading](#sources-and-further-reading).
 ## About this copy
 
 The manual and the example programs were originally written in **Dutch**.
-In this copy they have been translated into **English** (program
-identifiers converted to valid English Pascal names; GIOS/Turbo Pascal API
-names such as `Actpage`, `Atrbyt`, `Logopr`, `FillBox`, `SpriteColor`
-kept unchanged; filenames inside programs kept unchanged). The file
-`document.txt` was also converted from its original ISO-8859-1 (Latin-1)
-encoding to UTF-8. The `.com`/`.sys`/`.tsr` binaries are untouched.
+In this copy they have been translated into **Brazilian Portuguese**
+(program identifiers converted to valid Portuguese Pascal names; GIOS/Turbo
+Pascal API names such as `Actpage`, `Atrbyt`, `Logopr`, `FillBox`,
+`SpriteColor` kept unchanged; filenames inside programs kept unchanged). The
+file `document.txt` was also converted from its original ISO-8859-1
+(Latin-1) encoding to UTF-8. The `.com`/`.sys`/`.tsr` binaries are
+untouched.
 
 `contents.txt` was formerly `inhoud.txt` (`inhoud` = "contents" in Dutch).
 
@@ -110,7 +112,7 @@ configuration is needed:
   (`Code: 56 bytes`, `Data: 263 bytes` for the hello-world test) and
   correct link sizes (`HELLO.COM` = 11675-byte runtime + `.CHN`).
 
-### Example programs (`*.pas`, one per GIOS routine, translated to English)
+### Example programs (`*.pas`, one per GIOS routine, translated to pt-BR)
 
 Graphics:
 
@@ -172,7 +174,7 @@ System clock, disk and VDP:
 Demo programs:
 
 - `gios.asc` — Bezier-curve demo for GIOS (©1991 MSX Computer Magazine),
-  Turbo Pascal source using `{$IGIOS.INC}` (translated to English).
+  Turbo Pascal source using `{$IGIOS.INC}` (translated to pt-BR).
 
 ## Sources and further reading
 
@@ -193,6 +195,6 @@ Demo programs:
   Hilderink / MSX Computer Club Enschede, (C) 1993–1996, distributed with
   the author's permission via the site above.
 - MSX is a trademark of MSX Licensing Corporation.
-- This English translation is provided for preservation/study purposes; the
-  original Dutch texts remain the authoritative reference for the author's
-  intent.
+- This Brazilian Portuguese translation is provided for preservation/study
+  purposes; the original Dutch texts remain the authoritative reference for
+  the author's intent.

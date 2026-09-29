@@ -1,8 +1,8 @@
-PROGRAM example_VPoke;
+PROGRAM exemplo_VPoke;
 
-VAR counter : BYTE;
+VAR contador : BYTE;
 
 BEGIN;
-  FOR counter:= 1 TO 255 DO
-    VPoke(counter*2,counter);
+  FOR contador:= 1 TO 255 DO
+    VPoke(contador*2,contador);
 END.

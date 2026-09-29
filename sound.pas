@@ -1,6 +1,6 @@
-PROGRAM example_Sound;
+PROGRAM exemplo_Sound;
 
-VAR counter : INTEGER;
+VAR contador : INTEGER;
 
 BEGIN
   Sound(7,63);
@@ -8,10 +8,10 @@ BEGIN
   Sound(11,106);
   Sound(12,246);
   Sound(13,1);
-  FOR counter:=4095 DOWNTO 1100 DO
+  FOR contador:=4095 DOWNTO 1100 DO
     BEGIN
-      Sound(0,counter MOD 256);
-      Sound(1,counter DIV 256);
+      Sound(0,contador MOD 256);
+      Sound(1,contador DIV 256);
       Sound(7,62)
     END;
 END.

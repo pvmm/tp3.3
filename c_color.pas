@@ -1,4 +1,4 @@
-PROGRAM example_ChangeColor;
+PROGRAM exemplo_ChangeColor;
 
 BEGIN
   Screen(5);
@@ -6,13 +6,13 @@ BEGIN
   Logopr:=0;
   Atrbyt:=8;
   Fillbox (40,40,200,150);
-  ChangeColor (8,3,3,3);   { dark gray }
+  ChangeColor (8,3,3,3);   { cinza escuro }
   READLN;
-  ChangeColor (8,0,0,7);   { dark blue }
+  ChangeColor (8,0,0,7);   { azul escuro }
   READLN;
-  ChangeColor (8,7,7,7);   { white }
+  ChangeColor (8,7,7,7);   { branco }
   READLN;
-  ChangeColor (8,5,0,0);   { red }
+  ChangeColor (8,5,0,0);   { vermelho }
   READLN;
   Screen(0);
 END.

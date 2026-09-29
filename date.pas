@@ -1,18 +1,18 @@
-PROGRAM Example_Date;
+PROGRAM Exemplo_Date;
 
-CONST weekdays : ARRAY[0..6] OF STRING[9]=
-               ('Sunday','Monday','Tuesday','Wednesday','Thursday',
-                'Friday','Saturday');
-      months : ARRAY[1..12] OF STRING[9]=
-               ('January','February','March','April','May','June',
-                'July','August','September','October','November',
-                'December');
+CONST diasSemana : ARRAY[0..6] OF STRING[9]=
+               ('domingo','segunda','terca','quarta','quinta',
+                'sexta','sabado');
+      meses : ARRAY[1..12] OF STRING[9]=
+               ('janeiro','fevereiro','marco','abril','maio','junho',
+                'julho','agosto','setembro','outubro','novembro',
+                'dezembro');
 
-VAR year              : INTEGER;
-    month,day,weekday : BYTE;
+VAR ano              : INTEGER;
+    mes,dia,diasemana : BYTE;
 
 BEGIN
-  Date(year,month,day,weekday);
-  WRITELN('Today is ',weekdays[weekday],' ',day,' ',months[month],
-          ' ',year);
+  Date(ano,mes,dia,diasemana);
+  WRITELN('Hoje é ',diasSemana[diasemana],' ',dia,' ',meses[mes],
+          ' ',ano);
 END.

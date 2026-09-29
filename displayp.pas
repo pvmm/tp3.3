@@ -1,10 +1,10 @@
-PROGRAM example_DisplayPage;
+PROGRAM exemplo_DisplayPage;
 
 BEGIN
   Screen(5);
-  DisplayPage(0);     { This is the default setting!! }
-  READLN;             { wait for return }
+  DisplayPage(0);     { Esta é a configuração padrão!! }
+  READLN;             { aguarde retorno }
   DisplayPage(2);
-  READLN;             { wait for return }
+  READLN;             { aguarde retorno }
   Screen(0);
 END.
