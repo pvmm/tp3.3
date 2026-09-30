@@ -2,9 +2,8 @@
 # Run tp3.exe (Turbo Pascal 3.3f PC cross-compiler) in DOSBox.
 #
 #   ./run-tp3.sh           show the compiler banner/options, then quit
-#   ./run-tp3.sh hello[.pas] compile HELLO.PAS and link HELLO.COM, like
-#                          turbopc.bat does (produces HELLO.CHN via tp3,
-#                          then joins runtime.com + HELLO.CHN).
+#   ./run-tp3.sh hello[.pas] compile HELLO.PAS to HELLO.COM using the /C
+#                          flag (compiles directly to COM, no copy step).
 #                          An optional .pas extension (any case) is accepted
 #                          and stripped: 'hello.pas' works like 'hello'.
 #                          NOTE: the .COM contains Z80 code for MSX --
@@ -37,8 +36,7 @@ bat="$DIR/__tp3run.bat"
 if [[ -z "$base" ]]; then
   printf '@echo off\r\ntp3\r\n' > "$bat"
 else
-  printf '@echo off\r\ntp3 %s\r\ncopy runtime.com/b + %s.chn/b %s.com\r\n' \
-    "$base" "$base" "$base" > "$bat"
+  printf '@echo off\r\ntp3 %s /C\r\n' "$base" > "$bat"
 fi
 
 "${BASE[@]}" __tp3run.bat
@@ -47,5 +45,5 @@ rm -f "$bat"
 if [[ -n "$base" ]]; then
   upper="$(echo "$base" | tr '[:lower:]' '[:upper:]')"
   echo "--- produced files ---"
-  ls -la "$DIR/$upper.CHN" "$DIR/$upper.COM" 2>/dev/null || true
+  ls -la "$DIR/$upper.COM" 2>/dev/null || true
 fi
